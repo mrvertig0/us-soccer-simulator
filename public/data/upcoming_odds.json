@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-01T12:24:15.005401+00:00",
+    "scraper_status": "live_scraped",
+    "fixture_count": 3
+  },
+  "fixtures": [
+    {
+      "fixture_id": "fix_001",
+      "league": "USL Championship",
+      "kickoff_iso": "2026-11-01T14:00:00-05:00",
+      "home_team": "Lexington SC",
+      "away_team": "Colorado Springs Switchbacks",
+      "simulated_odds": {
+        "home_xg": 1.41,
+        "away_xg": 1.39,
+        "probabilities": {
+          "home": 38.1,
+          "draw": 25.5,
+          "away": 36.4,
+          "over_25": 52.4,
+          "btts": 56.9
+        },
+        "odds": {
+          "home": "+163",
+          "draw": "+292",
+          "away": "+175",
+          "over_25": "-110",
+          "under_25": "+110",
+          "btts_yes": "-132",
+          "btts_no": "+132"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_002",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T17:00:00-05:00",
+      "home_team": "Gotham FC",
+      "away_team": "Utah Royals",
+      "simulated_odds": {
+        "home_xg": 1.81,
+        "away_xg": 0.99,
+        "probabilities": {
+          "home": 57.1,
+          "draw": 23.0,
+          "away": 20.0,
+          "over_25": 53.6,
+          "btts": 52.9
+        },
+        "odds": {
+          "home": "-133",
+          "draw": "+336",
+          "away": "+401",
+          "over_25": "-116",
+          "under_25": "+116",
+          "btts_yes": "-112",
+          "btts_no": "+112"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_003",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T17:00:00-05:00",
+      "home_team": "North Carolina Courage",
+      "away_team": "Denver Summit FC",
+      "simulated_odds": {
+        "home_xg": 1.71,
+        "away_xg": 1.09,
+        "probabilities": {
+          "home": 51.5,
+          "draw": 24.3,
+          "away": 24.2,
+          "over_25": 53.4,
+          "btts": 55.2
+        },
+        "odds": {
+          "home": "-106",
+          "draw": "+312",
+          "away": "+313",
+          "over_25": "-114",
+          "under_25": "+114",
+          "btts_yes": "-123",
+          "btts_no": "+123"
+        }
+      }
+    }
+  ]
+}
