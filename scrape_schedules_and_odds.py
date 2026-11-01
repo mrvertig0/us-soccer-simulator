@@ -16,9 +16,8 @@ LEAGUES_TO_SCRAPE = [
     {"slug": "usa.1", "name": "MLS"},
     {"slug": "usa.nwsl", "name": "NWSL"},
     {"slug": "usa.usl.1", "name": "USL Championship"},
-    {"slug": "usa.usl.2", "name": "USL League One"},
     {"slug": "usa.usl.l1", "name": "USL League One"},
-    {"slug": "usa.mls_next", "name": "MLS NEXT Pro"},
+    {"slug": "usa.mls.next", "name": "MLS NEXT Pro"},
     {"slug": "usa.w.usl.1", "name": "USL Super League"}
 ]
 
