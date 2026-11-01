@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T19:29:25.818190+00:00",
-    "engine_status": "robust_colors_active",
+    "generated_at": "2026-11-01T19:31:57.795484+00:00",
+    "engine_status": "multisource_active",
     "fixture_count": 21
   },
   "fixtures": [
@@ -2191,9 +2191,9 @@
       "kickoff_iso": "2026-11-02T02:45Z",
       "home_team": "Portland Timbers",
       "away_team": "Houston Dynamo FC",
-      "home_color": "#B31B1B",
+      "home_color": "#004812",
       "away_color": "#FF6B00",
-      "home_emoji": "\ud83c\udf39",
+      "home_emoji": "\ud83e\ude93",
       "away_emoji": "\u26a1",
       "model_markets": {
         "home_xg": 2.01,
