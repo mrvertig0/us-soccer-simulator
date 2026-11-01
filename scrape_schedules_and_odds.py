@@ -4,7 +4,6 @@ import logging
 import math
 import os
 import urllib.request
-import urllib.error
 import numpy as np
 from datetime import datetime, timezone
 
@@ -259,24 +258,41 @@ def fetch_espn_events():
     return events_found
 
 def fetch_mls_next_pro_events():
-    # Automated web fetch from official MLS NEXT Pro / MLS digital data feeds
     events_found = []
-    url = "https://www.mlsnextpro.com/schedule/matches"
+    url = "https://stats-api.mlssoccer.com/matches?competition_id=40"  # Official MLS NEXT Pro competition ID feed
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
     try:
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=8) as resp:
             if resp.status == 200:
-                html = resp.read().decode("utf-8", errors="ignore")
-                # Parse or extract json data embedded in page or fallback to active playoff fixtures if available
-                # For demonstration of robust automated fallback: if mlsnextpro schedule page is active, we parse or inject live upcoming matches
-                logging.info("Connected to MLS NEXT Pro schedule feed successfully.")
+                data = json.loads(resp.read().decode("utf-8"))
+                matches = data if isinstance(data, list) else data.get("matches", [])
+                for match in matches:
+                    mid = match.get("match_id") or match.get("id")
+                    home_team = match.get("home_team_name") or match.get("homeTeam", {}).get("name")
+                    away_team = match.get("away_team_name") or match.get("awayTeam", {}).get("name")
+                    match_date = match.get("match_date") or match.get("date")
+                    if home_team and away_team and match_date:
+                        h_color, h_emoji = get_club_identity(home_team)
+                        a_color, a_emoji = get_club_identity(away_team)
+                        events_found.append({
+                            "id": f"mlsnp_{mid}",
+                            "slug": "usa.mls_next",
+                            "league": "MLS NEXT Pro",
+                            "home": home_team,
+                            "away": away_team,
+                            "home_color": h_color,
+                            "away_color": a_color,
+                            "home_emoji": h_emoji,
+                            "away_emoji": a_emoji,
+                            "time": match_date
+                        })
     except Exception as e:
-        logging.warning(f"MLS NEXT Pro feed warning: {e}")
+        logging.warning(f"MLS NEXT Pro feed fetch warning: {e}")
     return events_found
 
 def run_pipeline():
-    logging.info("Executing Automated Multi-Source Pipeline...")
+    logging.info("Executing Automated Multi-Source Pipeline (ESPN + MLS Stats API)...")
     live_slate = fetch_espn_events() + fetch_mls_next_pro_events()
     live_slate.sort(key=lambda x: x["time"])
 
@@ -302,7 +318,7 @@ def run_pipeline():
     payload = {
         "metadata": {
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "engine_status": "multisource_active",
+            "engine_status": "multisource_mlsnp_active",
             "fixture_count": len(output_fixtures)
         },
         "fixtures": output_fixtures
