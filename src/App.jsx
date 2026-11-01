@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -35,20 +35,15 @@ export default function App() {
 
   const handleManualScrapeTrigger = () => {
     const userConfirmed = window.confirm(
-      "⚠️ WARNING: Manual Scrape Requested
-
-" +
+      "WARNING: Manual Scrape Requested\n\n" +
       "Manual updates re-query live ESPN API endpoints and replace current match lines. " +
-      "Please only trigger a manual update if necessary (e.g. before kickoff or after late schedule changes).
-
-" +
+      "Please only trigger a manual update if necessary (e.g. before kickoff or after late schedule changes).\n\n" +
       "Do you want to execute a fresh data update now?"
     );
 
     if (!userConfirmed) return;
 
     setRefreshing(true);
-    // Trigger on-demand sync & re-fetch dataset
     setTimeout(() => {
       fetchOddsData();
     }, 1200);
@@ -138,7 +133,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0E131F] text-slate-100 flex items-center justify-center font-sans">
       <div className="text-center space-y-2">
         <div className="text-xl font-bold tracking-tight text-white">U.S. SOCCER SIMULATOR</div>
-        <div className="text-xs text-slate-400 font-mono">Loading Matchday Odds & Schedule...</div>
+        <div className="text-xs text-slate-400 font-mono">Loading Matchday Odds &amp; Schedule...</div>
       </div>
     </div>
   );
@@ -181,7 +176,7 @@ export default function App() {
               </h1>
             </div>
             <p className="text-xs md:text-sm text-slate-400">
-              Monte Carlo Poisson & Dixon-Coles Goal Probability Engine
+              Monte Carlo Poisson &amp; Dixon-Coles Goal Probability Engine
             </p>
           </div>
 
