@@ -1,3 +1,4 @@
+Set-Content -Path "src/App.jsx" -Value @'
 import React, { useState, useEffect } from 'react';
 
 export default function App() {
@@ -11,9 +12,9 @@ export default function App() {
   const [simResult, setSimResult] = useState(null);
 
   useEffect(() => {
-    fetch(/data/upcoming_odds.json?t= + Date.now())
+    fetch('/data/upcoming_odds.json?t=' + Date.now())
       .then((res) => {
-        if (!res.ok) throw new Error(HTTP error! status:  + res.status);
+        if (!res.ok) throw new Error('HTTP error! status: ' + res.status);
         return res.json();
       })
       .then((jsonData) => {
@@ -21,7 +22,7 @@ export default function App() {
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Failed to load live odds:", err);
+        console.error('Failed to load live odds:', err);
         setError(err.message);
         setLoading(false);
       });
@@ -112,11 +113,11 @@ export default function App() {
             <button
               key={lg}
               onClick={() => setSelectedLeague(lg)}
-              className={px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap  + (
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
                 selectedLeague === lg
                   ? 'bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20'
                   : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
-              )}
+              }`}
             >
               {lg}
             </button>
@@ -260,3 +261,4 @@ export default function App() {
     </div>
   );
 }
+'@
