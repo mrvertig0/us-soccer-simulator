@@ -77,7 +77,7 @@ def to_american(prob):
     else:
         return f"+{int(round(((1 - prob) / prob) * 100))}"
 
-def calculate_dk_markets(home_team, away_team, home_r, away_r):
+def calculate_model_markets(home_team, away_team, home_r, away_r):
     home_comp = (0.40 * home_r["elo"]) + (0.30 * home_r["player_rating"] * 180) + (0.20 * math.log10(max(home_r["val"], 100000)) * 180) + (0.10 * (home_r["form"] - 6.0) * 120) + 35
     away_comp = (0.40 * away_r["elo"]) + (0.30 * away_r["player_rating"] * 180) + (0.20 * math.log10(max(away_r["val"], 100000)) * 180) + (0.10 * (away_r["form"] - 6.0) * 120)
     
@@ -106,8 +106,8 @@ def calculate_dk_markets(home_team, away_team, home_r, away_r):
     totals = {}
     for line in [1.5, 2.5, 3.5]:
         p_over = float(sum(matrix[h, a] for h in range(6) for a in range(6) if (h + a) > line))
-        totals[f"over_{str(line).replace('.', '_')}"] = {"prob": round(p_over * 100, 1), "american": to_american(p_over)}
-        totals[f"under_{str(line).replace('.', '_')}"] = {"prob": round((1 - p_over) * 100, 1), "american": to_american(1 - p_over)}
+        totals[f"over_{str(line).replace('.', '_')}"] = {"prob": round(p_over * 100, 1), "fair_american": to_american(p_over)}
+        totals[f"under_{str(line).replace('.', '_')}"] = {"prob": round((1 - p_over) * 100, 1), "fair_american": to_american(1 - p_over)}
 
     p_home_m15 = float(sum(matrix[h, a] for h in range(6) for a in range(6) if (h - a) > 1.5))
     p_away_p15 = 1.0 - p_home_m15
@@ -125,27 +125,27 @@ def calculate_dk_markets(home_team, away_team, home_r, away_r):
             player_props.append({
                 "player_name": pl["name"],
                 "team": team_name,
-                "anytime_goalscorer": {"prob": round(p_goal * 100, 1), "american": to_american(p_goal), "dk_default": "+180"},
-                "anytime_assist": {"prob": round(p_assist * 100, 1), "american": to_american(p_assist), "dk_default": "+240"},
-                "shots_over_25": {"prob": round(p_shots_o25 * 100, 1), "american": to_american(p_shots_o25), "dk_default": "-115"}
+                "anytime_goalscorer": {"prob": round(p_goal * 100, 1), "fair_american": to_american(p_goal)},
+                "anytime_assist": {"prob": round(p_assist * 100, 1), "fair_american": to_american(p_assist)},
+                "shots_over_25": {"prob": round(p_shots_o25 * 100, 1), "fair_american": to_american(p_shots_o25)}
             })
 
     return {
         "home_xg": round(home_xg, 2),
         "away_xg": round(away_xg, 2),
         "moneyline": {
-            "home": {"prob": round(p_home * 100, 1), "american": to_american(p_home), "dk_default": "-110"},
-            "draw": {"prob": round(p_draw * 100, 1), "american": to_american(p_draw), "dk_default": "+250"},
-            "away": {"prob": round(p_away * 100, 1), "american": to_american(p_away), "dk_default": "+260"}
+            "home": {"prob": round(p_home * 100, 1), "fair_american": to_american(p_home)},
+            "draw": {"prob": round(p_draw * 100, 1), "fair_american": to_american(p_draw)},
+            "away": {"prob": round(p_away * 100, 1), "fair_american": to_american(p_away)}
         },
         "tie_no_bet": {
-            "home": {"prob": round(p_tnb_home * 100, 1), "american": to_american(p_tnb_home), "dk_default": "-180"},
-            "away": {"prob": round(p_tnb_away * 100, 1), "american": to_american(p_tnb_away), "dk_default": "+140"}
+            "home": {"prob": round(p_tnb_home * 100, 1), "fair_american": to_american(p_tnb_home)},
+            "away": {"prob": round(p_tnb_away * 100, 1), "fair_american": to_american(p_tnb_away)}
         },
         "totals": totals,
         "spread": {
-            "home_minus_1_5": {"prob": round(p_home_m15 * 100, 1), "american": to_american(p_home_m15), "dk_default": "+175"},
-            "away_plus_1_5": {"prob": round(p_away_p15 * 100, 1), "american": to_american(p_away_p15), "dk_default": "-210"}
+            "home_minus_1_5": {"prob": round(p_home_m15 * 100, 1), "fair_american": to_american(p_home_m15)},
+            "away_plus_1_5": {"prob": round(p_away_p15 * 100, 1), "fair_american": to_american(p_away_p15)}
         },
         "player_props": player_props
     }
@@ -160,10 +160,9 @@ def load_history():
     return {"stats": {"correct_predictions": 38, "total_predictions": 48, "accuracy_pct": 79.2}, "evaluated": [], "pending": []}
 
 def run_pipeline():
-    logging.info("Generating DraftKings Slate with Chronological Sorting...")
+    logging.info("Generating Pure Model Output Across US Soccer Leagues...")
     history_data = load_history()
 
-    # Chronologically ordered slate
     baseline_slate = [
         {"id": "fix_uslc_1", "slug": "usa.usl.1", "league": "USL Championship", "home": "Lexington SC", "away": "Colorado Springs Switchbacks", "time": "2026-11-01T16:00:00-05:00"},
         {"id": "fix_usl1_2", "slug": "usa.usl.2", "league": "USL League One", "home": "Greenville Triumph SC", "away": "Charlotte Independence", "time": "2026-11-01T16:30:00-05:00"},
@@ -178,14 +177,13 @@ def run_pipeline():
         {"id": "fix_usls_2", "slug": "usa.usl.super", "league": "USL Super League", "home": "Brooklyn FC", "away": "Dallas Trinity FC", "time": "2026-11-02T20:30:00-05:00"}
     ]
 
-    # Ensure chronological sorting
     baseline_slate.sort(key=lambda x: x["time"])
 
     output_fixtures = []
     for item in baseline_slate:
         home_r = get_team_rating(item["home"])
         away_r = get_team_rating(item["away"])
-        dk_markets = calculate_dk_markets(item["home"], item["away"], home_r, away_r)
+        model_markets = calculate_model_markets(item["home"], item["away"], home_r, away_r)
 
         output_fixtures.append({
             "fixture_id": item["id"],
@@ -193,13 +191,13 @@ def run_pipeline():
             "kickoff_iso": item["time"],
             "home_team": item["home"],
             "away_team": item["away"],
-            "dk_markets": dk_markets
+            "model_markets": model_markets
         })
 
     payload = {
         "metadata": {
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "scraper_status": "dk_7_markets_ready",
+            "engine_status": "model_pure_active",
             "fixture_count": len(output_fixtures),
             "stats": history_data["stats"]
         },
@@ -210,7 +208,7 @@ def run_pipeline():
     with open(ODDS_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
 
-    logging.info("Payload written with chronological sorting & stats.")
+    logging.info("Pure Model dataset successfully created.")
 
 if __name__ == "__main__":
     run_pipeline()
