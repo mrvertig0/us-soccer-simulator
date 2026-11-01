@@ -1,0 +1,342 @@
+{
+  "north carolina courage": {
+    "color": "#002B49",
+    "emoji": "\ud83e\udd85",
+    "display_name": "North Carolina Courage"
+  },
+  "washington spirit": {
+    "color": "#E31837",
+    "emoji": "\ud83e\udd85",
+    "display_name": "Washington Spirit"
+  },
+  "gotham fc": {
+    "color": "#80D8DA",
+    "emoji": "\ud83d\uddfd",
+    "display_name": "Gotham FC"
+  },
+  "denver summit fc": {
+    "color": "#8B2332",
+    "emoji": "\ud83c\udfd4\ufe0f",
+    "display_name": "Denver Summit FC"
+  },
+  "portland thorns fc": {
+    "color": "#B31B1B",
+    "emoji": "\ud83c\udf39",
+    "display_name": "Portland Thorns FC"
+  },
+  "orlando pride": {
+    "color": "#632E8E",
+    "emoji": "\ud83e\udd81",
+    "display_name": "Orlando Pride"
+  },
+  "kansas city current": {
+    "color": "#C8102E",
+    "emoji": "\ud83c\udf0a",
+    "display_name": "Kansas City Current"
+  },
+  "angel city fc": {
+    "color": "#E17000",
+    "emoji": "\ud83d\udc7c",
+    "display_name": "Angel City FC"
+  },
+  "chicago stars fc": {
+    "color": "#41B6E6",
+    "emoji": "\u2b50",
+    "display_name": "Chicago Stars FC"
+  },
+  "san diego wave fc": {
+    "color": "#E5007D",
+    "emoji": "\ud83c\udf0a",
+    "display_name": "San Diego Wave FC"
+  },
+  "bay fc": {
+    "color": "#111827",
+    "emoji": "\ud83c\udf09",
+    "display_name": "Bay FC"
+  },
+  "houston dash": {
+    "color": "#F6821F",
+    "emoji": "\u26a1",
+    "display_name": "Houston Dash"
+  },
+  "racing louisville fc": {
+    "color": "#7B2CBF",
+    "emoji": "\ud83c\udfc7",
+    "display_name": "Racing Louisville FC"
+  },
+  "utah royals": {
+    "color": "#D11242",
+    "emoji": "\ud83d\udc51",
+    "display_name": "Utah Royals"
+  },
+  "seattle reign fc": {
+    "color": "#002B49",
+    "emoji": "\ud83d\udc51",
+    "display_name": "Seattle Reign FC"
+  },
+  "inter miami cf": {
+    "color": "#F7B5CD",
+    "emoji": "\ud83e\udda9",
+    "display_name": "Inter Miami CF"
+  },
+  "atlanta united": {
+    "color": "#800020",
+    "emoji": "\ud83d\udd34",
+    "display_name": "Atlanta United"
+  },
+  "columbus crew": {
+    "color": "#FED100",
+    "emoji": "\ud83d\udc77",
+    "display_name": "Columbus Crew"
+  },
+  "fc cincinnati": {
+    "color": "#F05A22",
+    "emoji": "\ud83e\udd81",
+    "display_name": "FC Cincinnati"
+  },
+  "seattle sounders fc": {
+    "color": "#5D9741",
+    "emoji": "\ud83c\udf32",
+    "display_name": "Seattle Sounders FC"
+  },
+  "la galaxy": {
+    "color": "#00245D",
+    "emoji": "\ud83c\udf0c",
+    "display_name": "LA Galaxy"
+  },
+  "los angeles fc": {
+    "color": "#C39E67",
+    "emoji": "\ud83d\udda4",
+    "display_name": "Los Angeles FC"
+  },
+  "vancouver whitecaps": {
+    "color": "#00205B",
+    "emoji": "\ud83c\udfd4\ufe0f",
+    "display_name": "Vancouver Whitecaps FC"
+  },
+  "charlotte fc": {
+    "color": "#1A85C8",
+    "emoji": "\ud83d\udc51",
+    "display_name": "Charlotte FC"
+  },
+  "new york city fc": {
+    "color": "#6CACE4",
+    "emoji": "\ud83d\uddfd",
+    "display_name": "New York City FC"
+  },
+  "new york red bulls": {
+    "color": "#ED1E24",
+    "emoji": "\ud83d\udc02",
+    "display_name": "New York Red Bulls"
+  },
+  "philadelphia union": {
+    "color": "#002D55",
+    "emoji": "\u26a1",
+    "display_name": "Philadelphia Union"
+  },
+  "new england revolution": {
+    "color": "#0A2240",
+    "emoji": "\ud83c\udf32",
+    "display_name": "New England Revolution"
+  },
+  "toronto fc": {
+    "color": "#B81137",
+    "emoji": "\ud83c\udde8\ud83c\udde6",
+    "display_name": "Toronto FC"
+  },
+  "cf montreal": {
+    "color": "#00205B",
+    "emoji": "\u269c\ufe0f",
+    "display_name": "CF Montr\u00e9al"
+  },
+  "dc united": {
+    "color": "#EF3E42",
+    "emoji": "\ud83e\udd85",
+    "display_name": "D.C. United"
+  },
+  "orlando city sc": {
+    "color": "#632E8E",
+    "emoji": "\ud83e\udd81",
+    "display_name": "Orlando City SC"
+  },
+  "nashville sc": {
+    "color": "#ECE81A",
+    "emoji": "\ud83c\udfb8",
+    "display_name": "Nashville SC"
+  },
+  "st. louis city sc": {
+    "color": "#DD004A",
+    "emoji": "\ud83c\udfd9\ufe0f",
+    "display_name": "St. Louis CITY SC"
+  },
+  "minnesota united fc": {
+    "color": "#8CD2F4",
+    "emoji": "\ud83e\udd86",
+    "display_name": "Minnesota United FC"
+  },
+  "sporting kansas city": {
+    "color": "#91B0D5",
+    "emoji": "\u26bd",
+    "display_name": "Sporting Kansas City"
+  },
+  "colorado rapids": {
+    "color": "#862633",
+    "emoji": "\ud83c\udfd4\ufe0f",
+    "display_name": "Colorado Rapids"
+  },
+  "real salt lake": {
+    "color": "#B30838",
+    "emoji": "\ud83d\udc51",
+    "display_name": "Real Salt Lake"
+  },
+  "portland timbers": {
+    "color": "#004812",
+    "emoji": "\ud83e\ude93",
+    "display_name": "Portland Timbers"
+  },
+  "san jose earthquakes": {
+    "color": "#0051BA",
+    "emoji": "\u26a1",
+    "display_name": "San Jose Earthquakes"
+  },
+  "austin fc": {
+    "color": "#00B140",
+    "emoji": "\ud83c\udf33",
+    "display_name": "Austin FC"
+  },
+  "houston dynamo fc": {
+    "color": "#FF6B00",
+    "emoji": "\u26a1",
+    "display_name": "Houston Dynamo FC"
+  },
+  "fc dallas": {
+    "color": "#E31B23",
+    "emoji": "\ud83e\udd20",
+    "display_name": "FC Dallas"
+  },
+  "lexington sc": {
+    "color": "#00529B",
+    "emoji": "\ud83d\udc0e",
+    "display_name": "Lexington SC"
+  },
+  "colorado springs switchbacks": {
+    "color": "#00205B",
+    "emoji": "\ud83c\udfd4\ufe0f",
+    "display_name": "Colorado Springs Switchbacks FC"
+  },
+  "louisville city fc": {
+    "color": "#5A2A82",
+    "emoji": "\u269c\ufe0f",
+    "display_name": "Louisville City FC"
+  },
+  "indy eleven": {
+    "color": "#00205B",
+    "emoji": "\ud83c\udfce\ufe0f",
+    "display_name": "Indy Eleven"
+  },
+  "charleston battery": {
+    "color": "#FFC72C",
+    "emoji": "\ud83d\udd0b",
+    "display_name": "Charleston Battery"
+  },
+  "tampa bay rowdies": {
+    "color": "#005A36",
+    "emoji": "\u26bd",
+    "display_name": "Tampa Bay Rowdies"
+  },
+  "phoenix rising fc": {
+    "color": "#C8102E",
+    "emoji": "\ud83e\udd85",
+    "display_name": "Phoenix Rising FC"
+  },
+  "sacramento republic fc": {
+    "color": "#8A1538",
+    "emoji": "\ud83d\udc3b",
+    "display_name": "Sacramento Republic FC"
+  },
+  "greenville triumph sc": {
+    "color": "#00A859",
+    "emoji": "\ud83c\udfc6",
+    "display_name": "Greenville Triumph SC"
+  },
+  "charlotte independence": {
+    "color": "#00205B",
+    "emoji": "\ud83e\udd85",
+    "display_name": "Charlotte Independence"
+  },
+  "forward madison fc": {
+    "color": "#EE3524",
+    "emoji": "\ud83e\udda9",
+    "display_name": "Forward Madison FC"
+  },
+  "union omaha": {
+    "color": "#002244",
+    "emoji": "\ud83e\udd89",
+    "display_name": "Union Omaha"
+  },
+  "spokane velocity fc": {
+    "color": "#008080",
+    "emoji": "\u26a1",
+    "display_name": "Spokane Velocity FC"
+  },
+  "one knoxville sc": {
+    "color": "#003366",
+    "emoji": "\u26f0\ufe0f",
+    "display_name": "One Knoxville SC"
+  },
+  "richmond kickers": {
+    "color": "#C8102E",
+    "emoji": "\ud83d\udd34",
+    "display_name": "Richmond Kickers"
+  },
+  "south georgia tormenta fc": {
+    "color": "#002B49",
+    "emoji": "\u26c8\ufe0f",
+    "display_name": "South Georgia Tormenta FC"
+  },
+  "chattanooga red wolves sc": {
+    "color": "#D11242",
+    "emoji": "\ud83d\udc3a",
+    "display_name": "Chattanooga Red Wolves SC"
+  },
+  "carolina core fc": {
+    "color": "#002B49",
+    "emoji": "\ud83e\udd8a",
+    "display_name": "Carolina Core FC"
+  },
+  "crown legacy fc": {
+    "color": "#0F172A",
+    "emoji": "\ud83d\udc51",
+    "display_name": "Crown Legacy FC"
+  },
+  "carolina ascent fc": {
+    "color": "#0047AB",
+    "emoji": "\ud83c\udfd4\ufe0f",
+    "display_name": "Carolina Ascent FC"
+  },
+  "tampa bay sun fc": {
+    "color": "#FF8C00",
+    "emoji": "\u2600\ufe0f",
+    "display_name": "Tampa Bay Sun FC"
+  },
+  "brooklyn fc": {
+    "color": "#111827",
+    "emoji": "\ud83c\udf09",
+    "display_name": "Brooklyn FC"
+  },
+  "dallas trinity fc": {
+    "color": "#002D62",
+    "emoji": "\ud83e\udd20",
+    "display_name": "Dallas Trinity FC"
+  },
+  "spokane zephyr fc": {
+    "color": "#008080",
+    "emoji": "\ud83c\udf2a\ufe0f",
+    "display_name": "Spokane Zephyr FC"
+  },
+  "lexington SC women": {
+    "color": "#00529B",
+    "emoji": "\ud83d\udc0e",
+    "display_name": "Lexington SC Women"
+  }
+}
