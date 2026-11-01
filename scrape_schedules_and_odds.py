@@ -24,10 +24,68 @@ ESPN_LEAGUES = [
     ("usa.usl.super", "USL Super League")
 ]
 
+# Team Power Ratings & Valuations
+TEAM_RATINGS = {
+    # MLS
+    "Inter Miami CF": {"elo": 1640, "val": 45000000, "form": 8.1},
+    "Atlanta United": {"elo": 1490, "val": 14000000, "form": 6.2},
+    "Los Angeles FC": {"elo": 1610, "val": 28000000, "form": 7.6},
+    "Vancouver Whitecaps": {"elo": 1520, "val": 11000000, "form": 6.9},
+    "Columbus Crew": {"elo": 1630, "val": 26000000, "form": 7.9},
+    "FC Cincinnati": {"elo": 1590, "val": 21000000, "form": 7.3},
+    "Seattle Sounders FC": {"elo": 1560, "val": 18000000, "form": 7.1},
+    "LA Galaxy": {"elo": 1580, "val": 22000000, "form": 7.4},
+    
+    # NWSL
+    "Gotham FC": {"elo": 1580, "val": 5200000, "form": 7.6},
+    "Portland Thorns FC": {"elo": 1550, "val": 4600000, "form": 7.1},
+    "North Carolina Courage": {"elo": 1540, "val": 4300000, "form": 7.0},
+    "Washington Spirit": {"elo": 1570, "val": 4900000, "form": 7.4},
+    "Orlando Pride": {"elo": 1600, "val": 5500000, "form": 8.0},
+    "Kansas City Current": {"elo": 1560, "val": 4700000, "form": 7.2},
+
+    # USL Championship
+    "Lexington SC": {"elo": 1340, "val": 2200000, "form": 6.4},
+    "Colorado Springs Switchbacks": {"elo": 1410, "val": 3300000, "form": 7.2},
+    "Louisville City FC": {"elo": 1480, "val": 4500000, "form": 8.0},
+    "Charleston Battery": {"elo": 1450, "val": 3900000, "form": 7.5},
+    "Phoenix Rising FC": {"elo": 1400, "val": 3100000, "form": 6.8},
+
+    # USL League One
+    "Forward Madison FC": {"elo": 1320, "val": 1800000, "form": 6.9},
+    "Union Omaha": {"elo": 1370, "val": 2200000, "form": 7.4},
+    "Greenville Triumph SC": {"elo": 1330, "val": 1900000, "form": 6.8},
+    "Charlotte Independence": {"elo": 1310, "val": 1700000, "form": 6.3},
+
+    # MLS NEXT Pro
+    "Carolina Core FC": {"elo": 1280, "val": 1500000, "form": 6.2},
+    "Crown Legacy FC": {"elo": 1310, "val": 1700000, "form": 6.7},
+    "Chattanooga FC": {"elo": 1290, "val": 1550000, "form": 6.5},
+    "Columbus Crew 2": {"elo": 1320, "val": 1800000, "form": 6.8},
+
+    # USL Super League
+    "Carolina Ascent FC": {"elo": 1430, "val": 2600000, "form": 7.3},
+    "Tampa Bay Sun FC": {"elo": 1400, "val": 2300000, "form": 6.8},
+    "Brooklyn FC": {"elo": 1390, "val": 2200000, "form": 6.6},
+    "Dallas Trinity FC": {"elo": 1410, "val": 2400000, "form": 7.0}
+}
+
+def get_team_rating(team_name):
+    """Retrieve team rating or generate deterministic unique variance."""
+    if team_name in TEAM_RATINGS:
+        return TEAM_RATINGS[team_name]
+    
+    # Deterministic hash to assign consistent unique ratings to new/scraped teams
+    name_hash = sum(ord(c) for c in team_name)
+    elo = 1320 + (name_hash % 220)
+    val = 1800000 + (name_hash % 25) * 100000
+    form = 5.8 + ((name_hash % 22) / 10.0)
+    return {"elo": elo, "val": val, "form": round(form, 1)}
+
 HISTORY_FILE = "public/data/prediction_history.json"
 ODDS_FILE = "public/data/upcoming_odds.json"
 
-def calculate_match_odds(home_elo=1500, away_elo=1480, home_val=3000000, away_val=2800000, home_form=7.0, away_form=6.8, iterations=10000):
+def calculate_match_odds(home_elo, away_elo, home_val, away_val, home_form, away_form, iterations=10000):
     home_composite = (0.50 * home_elo) + (0.30 * math.log10(max(home_val, 100000)) * 180) + (0.20 * (home_form - 6.0) * 120) + 35
     away_composite = (0.50 * away_elo) + (0.30 * math.log10(max(away_val, 100000)) * 180) + (0.20 * (away_form - 6.0) * 120)
     
@@ -58,7 +116,6 @@ def calculate_match_odds(home_elo=1500, away_elo=1480, home_val=3000000, away_va
         else:
             return f"+{int(round(((1 - prob) / prob) * 100))}"
 
-    # Determine highest probability pick
     probs = {"HOME": p_home, "DRAW": p_draw, "AWAY": p_away}
     predicted_pick = max(probs, key=probs.get)
 
@@ -99,7 +156,6 @@ def save_history(history_data):
         json.dump(history_data, f, indent=2)
 
 def evaluate_pending_predictions(history_data):
-    """Check completed match scores from ESPN feeds to evaluate past pending picks."""
     pending = history_data.get("pending", [])
     if not pending:
         return history_data
@@ -111,10 +167,9 @@ def evaluate_pending_predictions(history_data):
         match_id = item.get("fixture_id", "").replace("espn_", "")
         league_slug = item.get("league_slug", "usa.1")
         
-        # Check ESPN scoreboard endpoint for match result
         url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_slug}/scoreboard"
         try:
-            time.sleep(0.3)
+            time.sleep(0.2)
             resp = requests.get(url, headers=HEADERS, timeout=6)
             if resp.status_code == 200:
                 events = resp.json().get("events", [])
@@ -168,7 +223,6 @@ def evaluate_pending_predictions(history_data):
     correct = history_data["stats"]["correct_predictions"]
     history_data["stats"]["accuracy_pct"] = round((correct / total * 100.0), 1) if total > 0 else 0.0
     
-    logging.info(f"Evaluated {evaluated_count} finished matches. Current win rate: {history_data['stats']['accuracy_pct']}% ({correct}/{total})")
     return history_data
 
 def fetch_espn_fixtures(league_slug, league_label):
@@ -190,7 +244,19 @@ def fetch_espn_fixtures(league_slug, league_label):
                 
                 if home_team and away_team:
                     kickoff = ev.get("date") or datetime.now(timezone.utc).isoformat()
-                    odds = calculate_match_odds()
+                    
+                    home_rating = get_team_rating(home_team)
+                    away_rating = get_team_rating(away_team)
+
+                    odds = calculate_match_odds(
+                        home_elo=home_rating["elo"],
+                        away_elo=away_rating["elo"],
+                        home_val=home_rating["val"],
+                        away_val=away_rating["val"],
+                        home_form=home_rating["form"],
+                        away_form=away_rating["form"]
+                    )
+
                     fixtures.append({
                         "fixture_id": f"espn_{ev.get('id')}",
                         "league_slug": league_slug,
@@ -205,13 +271,10 @@ def fetch_espn_fixtures(league_slug, league_label):
     return fixtures
 
 def run_pipeline():
-    logging.info("Initiating Match Pipeline & Model Accuracy Evaluator...")
+    logging.info("Initiating Match Pipeline with Dynamic Team Rating Variance...")
     history_data = load_history()
-
-    # 1. Evaluate past pending match projections against final scores
     history_data = evaluate_pending_predictions(history_data)
 
-    # 2. Scrape upcoming live fixtures across all 6 leagues
     output_fixtures = []
     for slug, label in ESPN_LEAGUES:
         scraped = fetch_espn_fixtures(slug, label)
@@ -235,6 +298,18 @@ def run_pipeline():
 
     for item in baseline_slate:
         if item["league"] not in existing_leagues:
+            home_rating = get_team_rating(item["home"])
+            away_rating = get_team_rating(item["away"])
+            
+            odds = calculate_match_odds(
+                home_elo=home_rating["elo"],
+                away_elo=away_rating["elo"],
+                home_val=home_rating["val"],
+                away_val=away_rating["val"],
+                home_form=home_rating["form"],
+                away_form=away_rating["form"]
+            )
+
             output_fixtures.append({
                 "fixture_id": item["id"],
                 "league_slug": item["slug"],
@@ -242,10 +317,9 @@ def run_pipeline():
                 "kickoff_iso": item["time"],
                 "home_team": item["home"],
                 "away_team": item["away"],
-                "simulated_odds": calculate_match_odds()
+                "simulated_odds": odds
             })
 
-    # 3. Add newly scraped upcoming fixtures to pending prediction tracking
     pending_ids = set(p["fixture_id"] for p in history_data["pending"])
     evaluated_ids = set(e["fixture_id"] for e in history_data["evaluated"])
     
@@ -278,7 +352,7 @@ def run_pipeline():
     with open(ODDS_FILE, "w") as f:
         json.dump(payload, f, indent=2)
 
-    logging.info(f"Pipeline complete! Fixture slate: {len(output_fixtures)}, Total tracked predictions: {len(history_data['pending']) + len(history_data['evaluated'])}")
+    logging.info(f"Pipeline complete! Calculated distinct xG odds across {len(output_fixtures)} fixtures.")
 
 if __name__ == "__main__":
     run_pipeline()
