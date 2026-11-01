@@ -1,4 +1,3 @@
-Set-Content -Path "src/App.jsx" -Value @'
 import React, { useState, useEffect } from 'react';
 
 export default function App() {
@@ -113,11 +112,12 @@ export default function App() {
             <button
               key={lg}
               onClick={() => setSelectedLeague(lg)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
-                selectedLeague === lg
-                  ? 'bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20'
-                  : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
-              }`}
+              className={
+                "px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap " +
+                (selectedLeague === lg
+                  ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20"
+                  : "bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800")
+              }
             >
               {lg}
             </button>
@@ -261,4 +261,3 @@ export default function App() {
     </div>
   );
 }
-'@
