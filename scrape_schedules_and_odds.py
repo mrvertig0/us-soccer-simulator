@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import json
 import logging
 import math
@@ -17,40 +17,105 @@ LEAGUES_TO_SCRAPE = [
     {"slug": "usa.nwsl", "name": "NWSL"},
     {"slug": "usa.usl.1", "name": "USL Championship"},
     {"slug": "usa.usl.l1", "name": "USL League One"},
-    {"slug": "usa.mls.next", "name": "MLS NEXT Pro"},
+    {"slug": "usa.mls_next.1", "name": "MLS NEXT Pro"},
     {"slug": "usa.w.usl.1", "name": "USL Super League"}
 ]
 
-TEAM_RATINGS = {
+# Comprehensive Master Club Registry with Vibrant Colors & Unique Emojis
+MASTER_CLUB_REGISTRY = {
     # NWSL
-    "North Carolina Courage": {"elo": 1540, "val": 4300000, "form": 7.0, "player_rating": 7.6, "key_players": [{"name": "Ashley Sanchez", "goal_share": 0.29, "xa_per90": 0.31, "shots_per90": 2.8}]},
-    "Denver Summit FC": {"elo": 1510, "val": 4000000, "form": 7.2, "player_rating": 7.3, "key_players": [{"name": "Summit Forward", "goal_share": 0.33, "xa_per90": 0.22, "shots_per90": 3.0}]},
-    "Washington Spirit": {"elo": 1570, "val": 4900000, "form": 7.5, "player_rating": 8.0, "key_players": [{"name": "Trinity Rodman", "goal_share": 0.34, "xa_per90": 0.29, "shots_per90": 3.6}]},
-    "Chicago Stars FC": {"elo": 1420, "val": 3500000, "form": 5.8, "player_rating": 6.8, "key_players": [{"name": "Mallory Swanson", "goal_share": 0.38, "xa_per90": 0.25, "shots_per90": 3.4}]},
-    "Gotham FC": {"elo": 1580, "val": 5200000, "form": 7.7, "player_rating": 8.2, "key_players": [{"name": "Esther Gonzalez", "goal_share": 0.36, "xa_per90": 0.24, "shots_per90": 3.2}]},
-    "Portland Thorns FC": {"elo": 1550, "val": 4600000, "form": 7.1, "player_rating": 7.8, "key_players": [{"name": "Sophia Smith", "goal_share": 0.42, "xa_per90": 0.26, "shots_per90": 4.1}]},
+    "courage": {"color": "#002B49", "emoji": "🦅"},
+    "north carolina": {"color": "#002B49", "emoji": "🦅"},
+    "spirit": {"color": "#E31837", "emoji": "🐉"},
+    "washington": {"color": "#E31837", "emoji": "🐉"},
+    "gotham": {"color": "#80D8DA", "emoji": "🗽"},
+    "denver": {"color": "#8B2332", "emoji": "🏔️"},
+    "thorns": {"color": "#B31B1B", "emoji": "🌹"},
+    "portland": {"color": "#B31B1B", "emoji": "🌹"},
+    "pride": {"color": "#632E8E", "emoji": "🦁"},
+    "orlando": {"color": "#632E8E", "emoji": "🦁"},
+    "current": {"color": "#C8102E", "emoji": "🌊"},
+    "kansas city": {"color": "#C8102E", "emoji": "🌊"},
+    "angel city": {"color": "#E17000", "emoji": "👼"},
+    "chicago stars": {"color": "#41B6E6", "emoji": "⭐"},
+    "chicago": {"color": "#41B6E6", "emoji": "⭐"},
+    "san diego": {"color": "#E5007D", "emoji": "🌊"},
+    "wave": {"color": "#E5007D", "emoji": "🌊"},
+    "bay fc": {"color": "#111827", "emoji": "🌉"},
+    "houston dash": {"color": "#F6821F", "emoji": "⚡"},
+    "louisville": {"color": "#7B2CBF", "emoji": "🏇"},
+    "racing": {"color": "#7B2CBF", "emoji": "🏇"},
+    "utah royals": {"color": "#D11242", "emoji": "👑"},
+    "seattle reign": {"color": "#002B49", "emoji": "👑"},
+    "boston legacy": {"color": "#0F172A", "emoji": "🍀"},
 
     # MLS
+    "inter miami": {"color": "#F7B5CD", "emoji": "🦩"},
+    "atlanta": {"color": "#800020", "emoji": "🚂"},
+    "columbus": {"color": "#FED100", "emoji": "👷"},
+    "cincinnati": {"color": "#F05A22", "emoji": "🦁"},
+    "sounders": {"color": "#5D9741", "emoji": "🌲"},
+    "la galaxy": {"color": "#00245D", "emoji": "🌌"},
+    "los angeles fc": {"color": "#C39E67", "emoji": "🖤"},
+    "lafc": {"color": "#C39E67", "emoji": "🖤"},
+    "vancouver": {"color": "#00205B", "emoji": "🏔️"},
+    "charlotte fc": {"color": "#1A85C8", "emoji": "👑"},
+    "new york city": {"color": "#6CACE4", "emoji": "🗽"},
+    "nycfc": {"color": "#6CACE4", "emoji": "🗽"},
+    "red bull": {"color": "#ED1E24", "emoji": "🐂"},
+    "philadelphia": {"color": "#002D55", "emoji": "🔔"},
+    "new england": {"color": "#0A2240", "emoji": "🎩"},
+    "toronto": {"color": "#B81137", "emoji": "🍁"},
+    "montreal": {"color": "#00205B", "emoji": "⚜️"},
+    "dc united": {"color": "#EF3E42", "emoji": "🦅"},
+    "nashville": {"color": "#ECE81A", "emoji": "🎸"},
+    "st. louis": {"color": "#DD004A", "emoji": "⚽"},
+    "minnesota": {"color": "#8CD2F4", "emoji": "🦆"},
+    "sporting kansas": {"color": "#91B0D5", "emoji": "⚽"},
+    "colorado rapids": {"color": "#862633", "emoji": "🏔️"},
+    "real salt lake": {"color": "#B30838", "emoji": "👑"},
+    "timbers": {"color": "#004812", "emoji": "🪓"},
+    "earthquakes": {"color": "#0051BA", "emoji": "⚡"},
+    "austin": {"color": "#00B140", "emoji": "🌳"},
+    "houston dynamo": {"color": "#FF6B00", "emoji": "⚡"},
+    "fc dallas": {"color": "#E31B23", "emoji": "🤠"},
+
+    # USL & Others
+    "lexington": {"color": "#00529B", "emoji": "🐎"},
+    "switchbacks": {"color": "#00205B", "emoji": "🏔️"},
+    "indy eleven": {"color": "#00205B", "emoji": "🏎️"},
+    "charleston": {"color": "#FFC72C", "emoji": "🔋"},
+    "tampa bay": {"color": "#005A36", "emoji": "🌴"},
+    "phoenix rising": {"color": "#C8102E", "emoji": "🔥"},
+    "sacramento": {"color": "#8A1538", "emoji": "🦁"},
+    "greenville": {"color": "#00A859", "emoji": "🏆"},
+    "madison": {"color": "#EE3524", "emoji": "🦩"},
+    "omaha": {"color": "#002244", "emoji": "🦉"},
+    "spokane": {"color": "#008080", "emoji": "🌪️"},
+    "knoxville": {"color": "#003366", "emoji": "⛰️"},
+    "carolina core": {"color": "#002B49", "emoji": "🦊"},
+    "crown legacy": {"color": "#0F172A", "emoji": "👑"},
+    "carolina ascent": {"color": "#0047AB", "emoji": "⚽"},
+    "brooklyn": {"color": "#111827", "emoji": "🌉"},
+    "dallas trinity": {"color": "#002D62", "emoji": "🤠"}
+}
+
+TEAM_RATINGS = {
+    "North Carolina Courage": {"elo": 1540, "val": 4300000, "form": 7.0, "player_rating": 7.6, "key_players": [{"name": "Ashley Sanchez", "goal_share": 0.29, "xa_per90": 0.31, "shots_per90": 2.8}]},
+    "Washington Spirit": {"elo": 1570, "val": 4900000, "form": 7.5, "player_rating": 8.0, "key_players": [{"name": "Trinity Rodman", "goal_share": 0.34, "xa_per90": 0.29, "shots_per90": 3.6}]},
     "Inter Miami CF": {"elo": 1650, "val": 45000000, "form": 8.4, "player_rating": 8.9, "key_players": [{"name": "Lionel Messi", "goal_share": 0.38, "xa_per90": 0.42, "shots_per90": 4.2}]},
-    "Atlanta United": {"elo": 1470, "val": 14000000, "form": 5.9, "player_rating": 7.0, "key_players": [{"name": "Saba Lobjanidze", "goal_share": 0.28, "xa_per90": 0.22, "shots_per90": 2.6}]},
-    "FC Cincinnati": {"elo": 1610, "val": 26000000, "form": 7.8, "player_rating": 8.2, "key_players": [{"name": "Lucho Acosta", "goal_share": 0.34, "xa_per90": 0.38, "shots_per90": 3.5}]},
     "Columbus Crew": {"elo": 1630, "val": 31000000, "form": 8.1, "player_rating": 8.5, "key_players": [{"name": "Cucho Hernandez", "goal_share": 0.40, "xa_per90": 0.30, "shots_per90": 4.1}]}
 }
 
 def get_team_rating(team_name):
     if team_name in TEAM_RATINGS:
         return TEAM_RATINGS[team_name]
-    # Unique deterministic positional ratings per team name string
     name_sum = sum(ord(c) * (i + 1) for i, c in enumerate(team_name))
-    elo = 1250 + (name_sum % 350)
-    val = 1500000 + (name_sum % 40) * 200000
-    form = round(4.5 + ((name_sum % 45) / 10.0), 1)
-    player_rating = round(5.0 + ((name_sum % 38) / 10.0), 1)
     return {
-        "elo": elo,
-        "val": val,
-        "form": form,
-        "player_rating": player_rating,
+        "elo": 1250 + (name_sum % 350),
+        "val": 1500000 + (name_sum % 40) * 200000,
+        "form": round(4.5 + ((name_sum % 45) / 10.0), 1),
+        "player_rating": round(5.0 + ((name_sum % 38) / 10.0), 1),
         "key_players": [
             {"name": f"Key Attacker ({team_name[:3]})", "goal_share": 0.30, "xa_per90": 0.20, "shots_per90": 2.8}
         ]
@@ -76,7 +141,6 @@ def calculate_model_markets(home_team, away_team, home_r, away_r):
     away_comp = (0.45 * away_r["elo"]) + (0.25 * away_r["player_rating"] * 180) + (0.15 * math.log10(max(away_r["val"], 100000)) * 180) + (0.15 * (away_r["form"] - 5.0) * 100)
     
     diff = home_comp - away_comp
-    
     home_xg = max(0.40, round(1.48 + (diff / 220.0), 2))
     away_xg = max(0.30, round(1.18 - (diff / 220.0), 2))
 
@@ -145,6 +209,17 @@ def calculate_model_markets(home_team, away_team, home_r, away_r):
         "player_props": player_props
     }
 
+def get_club_identity(team_name):
+    clean = str(team_name).lower().strip()
+    for key, data in MASTER_CLUB_REGISTRY.items():
+        if key in clean:
+            return data["color"], data["emoji"]
+    
+    # Fallback vibrant hash color & soccer ball
+    palette = ["#DC2626", "#2563EB", "#059669", "#D97706", "#7C3AED", "#0891B2", "#DB2777", "#0284C7", "#E11D48", "#9333EA"]
+    col = palette[sum(ord(c) for c in clean) % len(palette)]
+    return col, "⚽"
+
 def fetch_live_espn_events():
     events_found = []
     seen_ids = set()
@@ -172,19 +247,28 @@ def fetch_live_espn_events():
                         home_team, away_team = None, None
 
                         for comp in competitors:
-                            t_name = comp.get("team", {}).get("displayName") or comp.get("team", {}).get("name")
+                            t_info = comp.get("team", {})
+                            t_name = t_info.get("displayName") or t_info.get("name")
+
                             if comp.get("homeAway") == "home":
                                 home_team = t_name
                             else:
                                 away_team = t_name
 
                         if home_team and away_team:
+                            h_color, h_emoji = get_club_identity(home_team)
+                            a_color, a_emoji = get_club_identity(away_team)
+
                             events_found.append({
                                 "id": f"espn_{eid}",
                                 "slug": lg["slug"],
                                 "league": lg["name"],
                                 "home": home_team,
                                 "away": away_team,
+                                "home_color": h_color,
+                                "away_color": a_color,
+                                "home_emoji": h_emoji,
+                                "away_emoji": a_emoji,
                                 "time": event_date
                             })
         except Exception as e:
@@ -193,11 +277,8 @@ def fetch_live_espn_events():
     return events_found
 
 def run_pipeline():
-    logging.info("Executing Dynamic Live ESPN Scoreboard Scraper Pipeline...")
-    
+    logging.info("Executing Pipeline with Robust Partial Substring Color Matching...")
     live_slate = fetch_live_espn_events()
-    logging.info(f"Live API scraper retrieved {len(live_slate)} match events from ESPN endpoints.")
-
     live_slate.sort(key=lambda x: x["time"])
 
     output_fixtures = []
@@ -212,13 +293,17 @@ def run_pipeline():
             "kickoff_iso": item["time"],
             "home_team": item["home"],
             "away_team": item["away"],
+            "home_color": item["home_color"],
+            "away_color": item["away_color"],
+            "home_emoji": item["home_emoji"],
+            "away_emoji": item["away_emoji"],
             "model_markets": model_markets
         })
 
     payload = {
         "metadata": {
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "engine_status": "live_espn_scraper_active",
+            "engine_status": "robust_colors_active",
             "fixture_count": len(output_fixtures)
         },
         "fixtures": output_fixtures
@@ -228,7 +313,7 @@ def run_pipeline():
     with open(ODDS_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
 
-    logging.info(f"Updated {ODDS_FILE} with {len(output_fixtures)} dynamic live fixtures.")
+    logging.info(f"Updated {ODDS_FILE} with explicit colors for {len(output_fixtures)} matches.")
 
 if __name__ == "__main__":
     run_pipeline()

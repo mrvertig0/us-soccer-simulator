@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T19:21:14.272335+00:00",
-    "engine_status": "live_espn_scraper_active",
+    "generated_at": "2026-11-01T19:23:26.301864+00:00",
+    "engine_status": "robust_colors_active",
     "fixture_count": 21
   },
   "fixtures": [
@@ -11,6 +11,10 @@
       "kickoff_iso": "2026-11-01T19:00Z",
       "home_team": "Lexington",
       "away_team": "Colorado Springs Switchbacks FC",
+      "home_color": "#00529B",
+      "away_color": "#00205B",
+      "home_emoji": "\ud83d\udc0e",
+      "away_emoji": "\ud83c\udfd4\ufe0f",
       "model_markets": {
         "home_xg": 0.99,
         "away_xg": 1.67,
@@ -116,6 +120,10 @@
       "kickoff_iso": "2026-11-01T20:30Z",
       "home_team": "Vancouver Whitecaps",
       "away_team": "Seattle Sounders FC",
+      "home_color": "#00205B",
+      "away_color": "#5D9741",
+      "home_emoji": "\ud83c\udfd4\ufe0f",
+      "away_emoji": "\ud83c\udf32",
       "model_markets": {
         "home_xg": 1.39,
         "away_xg": 1.27,
@@ -221,6 +229,10 @@
       "kickoff_iso": "2026-11-01T21:30Z",
       "home_team": "Atlanta United FC",
       "away_team": "Toronto FC",
+      "home_color": "#800020",
+      "away_color": "#B81137",
+      "home_emoji": "\ud83d\ude82",
+      "away_emoji": "\ud83c\udf41",
       "model_markets": {
         "home_xg": 1.07,
         "away_xg": 1.59,
@@ -326,6 +338,10 @@
       "kickoff_iso": "2026-11-01T21:30Z",
       "home_team": "Nashville SC",
       "away_team": "Red Bull New York",
+      "home_color": "#ECE81A",
+      "away_color": "#ED1E24",
+      "home_emoji": "\ud83c\udfb8",
+      "away_emoji": "\ud83d\udc02",
       "model_markets": {
         "home_xg": 1.0,
         "away_xg": 1.66,
@@ -431,6 +447,10 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Angel City FC",
       "away_team": "Boston Legacy FC",
+      "home_color": "#E17000",
+      "away_color": "#0F172A",
+      "home_emoji": "\ud83d\udc7c",
+      "away_emoji": "\ud83c\udf40",
       "model_markets": {
         "home_xg": 1.64,
         "away_xg": 1.02,
@@ -536,6 +556,10 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Bay FC",
       "away_team": "San Diego Wave FC",
+      "home_color": "#111827",
+      "away_color": "#E5007D",
+      "home_emoji": "\ud83c\udf09",
+      "away_emoji": "\ud83c\udf0a",
       "model_markets": {
         "home_xg": 1.76,
         "away_xg": 0.9,
@@ -641,100 +665,104 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Gotham FC",
       "away_team": "Utah Royals",
+      "home_color": "#80D8DA",
+      "away_color": "#D11242",
+      "home_emoji": "\ud83d\uddfd",
+      "away_emoji": "\ud83d\udc51",
       "model_markets": {
-        "home_xg": 1.77,
-        "away_xg": 0.89,
+        "home_xg": 0.82,
+        "away_xg": 1.84,
         "moneyline": {
           "home": {
-            "prob": 56.3,
-            "fair_american": "-129"
+            "prob": 15.0,
+            "fair_american": "+567"
           },
           "draw": {
-            "prob": 26.3,
-            "fair_american": "+280"
+            "prob": 25.3,
+            "fair_american": "+295"
           },
           "away": {
-            "prob": 17.3,
-            "fair_american": "+476"
+            "prob": 59.7,
+            "fair_american": "-148"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 76.5,
-            "fair_american": "-325"
+            "prob": 20.1,
+            "fair_american": "+398"
           },
           "away": {
-            "prob": 23.5,
-            "fair_american": "+325"
+            "prob": 79.9,
+            "fair_american": "-398"
           }
         },
         "totals": {
           "over_1_5": {
-            "prob": 75.6,
-            "fair_american": "-310"
+            "prob": 75.5,
+            "fair_american": "-308"
           },
           "under_1_5": {
-            "prob": 24.4,
-            "fair_american": "+310"
+            "prob": 24.5,
+            "fair_american": "+308"
           },
           "over_2_5": {
             "prob": 49.1,
-            "fair_american": "+103"
+            "fair_american": "+104"
           },
           "under_2_5": {
             "prob": 50.9,
-            "fair_american": "-103"
+            "fair_american": "-104"
           },
           "over_3_5": {
-            "prob": 27.0,
-            "fair_american": "+271"
+            "prob": 26.9,
+            "fair_american": "+272"
           },
           "under_3_5": {
-            "prob": 73.0,
-            "fair_american": "-271"
+            "prob": 73.1,
+            "fair_american": "-272"
           }
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 32.5,
-            "fair_american": "+208"
+            "prob": 5.0,
+            "fair_american": "+1919"
           },
           "away_plus_1_5": {
-            "prob": 67.5,
-            "fair_american": "-208"
+            "prob": 95.0,
+            "fair_american": "-1919"
           }
         },
         "player_props": [
           {
-            "player_name": "Esther Gonzalez",
+            "player_name": "Key Attacker (Got)",
             "team": "Gotham FC",
             "anytime_goalscorer": {
-              "prob": 47.1,
-              "fair_american": "+112"
+              "prob": 21.8,
+              "fair_american": "+359"
             },
             "anytime_assist": {
-              "prob": 34.6,
-              "fair_american": "+189"
+              "prob": 15.1,
+              "fair_american": "+561"
             },
             "shots_over_25": {
-              "prob": 76.9,
-              "fair_american": "-332"
+              "prob": 22.7,
+              "fair_american": "+340"
             }
           },
           {
             "player_name": "Key Attacker (Uta)",
             "team": "Utah Royals",
             "anytime_goalscorer": {
-              "prob": 23.4,
-              "fair_american": "+327"
+              "prob": 42.4,
+              "fair_american": "+136"
             },
             "anytime_assist": {
-              "prob": 16.3,
-              "fair_american": "+513"
+              "prob": 30.8,
+              "fair_american": "+225"
             },
             "shots_over_25": {
-              "prob": 26.4,
-              "fair_american": "+279"
+              "prob": 71.1,
+              "fair_american": "-246"
             }
           }
         ]
@@ -746,67 +774,71 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Houston Dash",
       "away_team": "Portland Thorns FC",
+      "home_color": "#F6821F",
+      "away_color": "#B31B1B",
+      "home_emoji": "\u26a1",
+      "away_emoji": "\ud83c\udf39",
       "model_markets": {
-        "home_xg": 1.08,
-        "away_xg": 1.58,
+        "home_xg": 2.0,
+        "away_xg": 0.66,
         "moneyline": {
           "home": {
-            "prob": 24.5,
-            "fair_american": "+308"
+            "prob": 67.2,
+            "fair_american": "-205"
           },
           "draw": {
-            "prob": 28.4,
-            "fair_american": "+252"
+            "prob": 22.5,
+            "fair_american": "+344"
           },
           "away": {
-            "prob": 47.1,
-            "fair_american": "+112"
+            "prob": 10.2,
+            "fair_american": "+877"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 34.2,
-            "fair_american": "+192"
+            "prob": 86.8,
+            "fair_american": "-657"
           },
           "away": {
-            "prob": 65.8,
-            "fair_american": "-192"
+            "prob": 13.2,
+            "fair_american": "+657"
           }
         },
         "totals": {
           "over_1_5": {
-            "prob": 75.8,
-            "fair_american": "-313"
+            "prob": 75.2,
+            "fair_american": "-303"
           },
           "under_1_5": {
-            "prob": 24.2,
-            "fair_american": "+313"
+            "prob": 24.8,
+            "fair_american": "+303"
           },
           "over_2_5": {
-            "prob": 49.3,
-            "fair_american": "+103"
+            "prob": 48.8,
+            "fair_american": "+105"
           },
           "under_2_5": {
-            "prob": 50.7,
-            "fair_american": "-103"
+            "prob": 51.2,
+            "fair_american": "-105"
           },
           "over_3_5": {
-            "prob": 27.2,
-            "fair_american": "+267"
+            "prob": 26.5,
+            "fair_american": "+278"
           },
           "under_3_5": {
-            "prob": 72.8,
-            "fair_american": "-267"
+            "prob": 73.5,
+            "fair_american": "-278"
           }
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 9.8,
-            "fair_american": "+917"
+            "prob": 42.5,
+            "fair_american": "+135"
           },
           "away_plus_1_5": {
-            "prob": 90.2,
-            "fair_american": "-917"
+            "prob": 57.5,
+            "fair_american": "-135"
           }
         },
         "player_props": [
@@ -814,32 +846,32 @@
             "player_name": "Key Attacker (Hou)",
             "team": "Houston Dash",
             "anytime_goalscorer": {
-              "prob": 27.7,
-              "fair_american": "+261"
+              "prob": 45.1,
+              "fair_american": "+122"
             },
             "anytime_assist": {
-              "prob": 19.4,
-              "fair_american": "+415"
+              "prob": 33.0,
+              "fair_american": "+203"
             },
             "shots_over_25": {
-              "prob": 36.7,
-              "fair_american": "+173"
+              "prob": 76.2,
+              "fair_american": "-320"
             }
           },
           {
-            "player_name": "Sophia Smith",
+            "player_name": "Key Attacker (Por)",
             "team": "Portland Thorns FC",
             "anytime_goalscorer": {
-              "prob": 48.5,
-              "fair_american": "+106"
+              "prob": 18.0,
+              "fair_american": "+457"
             },
             "anytime_assist": {
-              "prob": 33.7,
-              "fair_american": "+197"
+              "prob": 12.4,
+              "fair_american": "+709"
             },
             "shots_over_25": {
-              "prob": 84.0,
-              "fair_american": "-526"
+              "prob": 14.8,
+              "fair_american": "+578"
             }
           }
         ]
@@ -851,67 +883,71 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "North Carolina Courage",
       "away_team": "Denver Summit FC",
+      "home_color": "#002B49",
+      "away_color": "#8B2332",
+      "home_emoji": "\ud83e\udd85",
+      "away_emoji": "\ud83c\udfd4\ufe0f",
       "model_markets": {
-        "home_xg": 1.77,
-        "away_xg": 0.89,
+        "home_xg": 1.87,
+        "away_xg": 0.79,
         "moneyline": {
           "home": {
-            "prob": 56.3,
-            "fair_american": "-129"
+            "prob": 61.1,
+            "fair_american": "-157"
           },
           "draw": {
-            "prob": 26.3,
-            "fair_american": "+280"
+            "prob": 24.8,
+            "fair_american": "+303"
           },
           "away": {
-            "prob": 17.3,
-            "fair_american": "+476"
+            "prob": 14.0,
+            "fair_american": "+612"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 76.5,
-            "fair_american": "-325"
+            "prob": 81.3,
+            "fair_american": "-436"
           },
           "away": {
-            "prob": 23.5,
-            "fair_american": "+325"
+            "prob": 18.7,
+            "fair_american": "+436"
           }
         },
         "totals": {
           "over_1_5": {
-            "prob": 75.6,
-            "fair_american": "-310"
+            "prob": 75.4,
+            "fair_american": "-307"
           },
           "under_1_5": {
-            "prob": 24.4,
-            "fair_american": "+310"
+            "prob": 24.6,
+            "fair_american": "+307"
           },
           "over_2_5": {
-            "prob": 49.1,
-            "fair_american": "+103"
+            "prob": 49.0,
+            "fair_american": "+104"
           },
           "under_2_5": {
-            "prob": 50.9,
-            "fair_american": "-103"
+            "prob": 51.0,
+            "fair_american": "-104"
           },
           "over_3_5": {
-            "prob": 27.0,
-            "fair_american": "+271"
+            "prob": 26.8,
+            "fair_american": "+273"
           },
           "under_3_5": {
-            "prob": 73.0,
-            "fair_american": "-271"
+            "prob": 73.2,
+            "fair_american": "-273"
           }
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 32.5,
-            "fair_american": "+208"
+            "prob": 36.7,
+            "fair_american": "+172"
           },
           "away_plus_1_5": {
-            "prob": 67.5,
-            "fair_american": "-208"
+            "prob": 63.3,
+            "fair_american": "-172"
           }
         },
         "player_props": [
@@ -919,32 +955,32 @@
             "player_name": "Ashley Sanchez",
             "team": "North Carolina Courage",
             "anytime_goalscorer": {
-              "prob": 40.1,
-              "fair_american": "+149"
+              "prob": 41.9,
+              "fair_american": "+139"
             },
             "anytime_assist": {
-              "prob": 42.2,
-              "fair_american": "+137"
+              "prob": 44.0,
+              "fair_american": "+127"
             },
             "shots_over_25": {
-              "prob": 68.6,
-              "fair_american": "-219"
+              "prob": 72.1,
+              "fair_american": "-259"
             }
           },
           {
-            "player_name": "Summit Forward",
+            "player_name": "Key Attacker (Den)",
             "team": "Denver Summit FC",
             "anytime_goalscorer": {
-              "prob": 25.4,
-              "fair_american": "+293"
+              "prob": 21.1,
+              "fair_american": "+374"
             },
             "anytime_assist": {
-              "prob": 17.8,
-              "fair_american": "+462"
+              "prob": 14.6,
+              "fair_american": "+584"
             },
             "shots_over_25": {
-              "prob": 29.8,
-              "fair_american": "+235"
+              "prob": 21.1,
+              "fair_american": "+373"
             }
           }
         ]
@@ -956,6 +992,10 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Racing Louisville FC",
       "away_team": "Kansas City Current",
+      "home_color": "#7B2CBF",
+      "away_color": "#C8102E",
+      "home_emoji": "\ud83c\udfc7",
+      "away_emoji": "\ud83c\udf0a",
       "model_markets": {
         "home_xg": 1.07,
         "away_xg": 1.59,
@@ -1061,6 +1101,10 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Seattle Reign FC",
       "away_team": "Orlando Pride",
+      "home_color": "#002B49",
+      "away_color": "#632E8E",
+      "home_emoji": "\ud83d\udc51",
+      "away_emoji": "\ud83e\udd81",
       "model_markets": {
         "home_xg": 1.13,
         "away_xg": 1.53,
@@ -1166,67 +1210,71 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Washington Spirit",
       "away_team": "Chicago Stars FC",
+      "home_color": "#E31837",
+      "away_color": "#41B6E6",
+      "home_emoji": "\ud83d\udc09",
+      "away_emoji": "\u2b50",
       "model_markets": {
-        "home_xg": 2.35,
-        "away_xg": 0.31,
+        "home_xg": 2.11,
+        "away_xg": 0.55,
         "moneyline": {
           "home": {
-            "prob": 82.1,
-            "fair_american": "-459"
+            "prob": 72.2,
+            "fair_american": "-260"
           },
           "draw": {
-            "prob": 14.9,
-            "fair_american": "+571"
+            "prob": 20.3,
+            "fair_american": "+392"
           },
           "away": {
-            "prob": 3.0,
-            "fair_american": "+3273"
+            "prob": 7.5,
+            "fair_american": "+1237"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 96.5,
-            "fair_american": "-2770"
+            "prob": 90.6,
+            "fair_american": "-965"
           },
           "away": {
-            "prob": 3.5,
-            "fair_american": "+2770"
+            "prob": 9.4,
+            "fair_american": "+965"
           }
         },
         "totals": {
           "over_1_5": {
-            "prob": 74.2,
-            "fair_american": "-288"
+            "prob": 74.9,
+            "fair_american": "-299"
           },
           "under_1_5": {
-            "prob": 25.8,
-            "fair_american": "+288"
+            "prob": 25.1,
+            "fair_american": "+299"
           },
           "over_2_5": {
-            "prob": 47.9,
-            "fair_american": "+109"
+            "prob": 48.6,
+            "fair_american": "+106"
           },
           "under_2_5": {
-            "prob": 52.1,
-            "fair_american": "-109"
+            "prob": 51.4,
+            "fair_american": "-106"
           },
           "over_3_5": {
-            "prob": 25.3,
-            "fair_american": "+296"
+            "prob": 26.2,
+            "fair_american": "+282"
           },
           "under_3_5": {
-            "prob": 74.7,
-            "fair_american": "-296"
+            "prob": 73.8,
+            "fair_american": "-282"
           }
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 58.8,
-            "fair_american": "-143"
+            "prob": 47.6,
+            "fair_american": "+110"
           },
           "away_plus_1_5": {
-            "prob": 41.2,
-            "fair_american": "+143"
+            "prob": 52.4,
+            "fair_american": "-110"
           }
         },
         "player_props": [
@@ -1234,32 +1282,32 @@
             "player_name": "Trinity Rodman",
             "team": "Washington Spirit",
             "anytime_goalscorer": {
-              "prob": 55.0,
-              "fair_american": "-122"
+              "prob": 51.2,
+              "fair_american": "-105"
             },
             "anytime_assist": {
-              "prob": 49.4,
-              "fair_american": "+102"
+              "prob": 45.8,
+              "fair_american": "+118"
             },
             "shots_over_25": {
-              "prob": 94.0,
-              "fair_american": "-1564"
+              "prob": 90.7,
+              "fair_american": "-974"
             }
           },
           {
-            "player_name": "Mallory Swanson",
+            "player_name": "Key Attacker (Chi)",
             "team": "Chicago Stars FC",
             "anytime_goalscorer": {
-              "prob": 11.1,
-              "fair_american": "+800"
+              "prob": 15.2,
+              "fair_american": "+557"
             },
             "anytime_assist": {
-              "prob": 7.5,
-              "fair_american": "+1241"
+              "prob": 10.4,
+              "fair_american": "+860"
             },
             "shots_over_25": {
-              "prob": 4.1,
-              "fair_american": "+2346"
+              "prob": 10.0,
+              "fair_american": "+904"
             }
           }
         ]
@@ -1271,6 +1319,10 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Dallas Trinity FC",
       "away_team": "Fort Lauderdale United FC",
+      "home_color": "#002D62",
+      "away_color": "#059669",
+      "home_emoji": "\ud83e\udd20",
+      "away_emoji": "\u26bd",
       "model_markets": {
         "home_xg": 1.27,
         "away_xg": 1.39,
@@ -1376,6 +1428,10 @@
       "kickoff_iso": "2026-11-01T22:00Z",
       "home_team": "Tampa Bay Sun FC",
       "away_team": "DC Power FC",
+      "home_color": "#005A36",
+      "away_color": "#2563EB",
+      "home_emoji": "\ud83c\udf34",
+      "away_emoji": "\u26bd",
       "model_markets": {
         "home_xg": 1.29,
         "away_xg": 1.37,
@@ -1481,6 +1537,10 @@
       "kickoff_iso": "2026-11-01T23:00Z",
       "home_team": "New Mexico United",
       "away_team": "Phoenix Rising FC",
+      "home_color": "#E11D48",
+      "away_color": "#C8102E",
+      "home_emoji": "\u26bd",
+      "away_emoji": "\ud83d\udd25",
       "model_markets": {
         "home_xg": 1.35,
         "away_xg": 1.31,
@@ -1586,6 +1646,10 @@
       "kickoff_iso": "2026-11-02T00:00Z",
       "home_team": "New England Revolution",
       "away_team": "Inter Miami CF",
+      "home_color": "#0A2240",
+      "away_color": "#F7B5CD",
+      "home_emoji": "\ud83c\udfa9",
+      "away_emoji": "\ud83e\udda9",
       "model_markets": {
         "home_xg": 0.98,
         "away_xg": 1.68,
@@ -1691,6 +1755,10 @@
       "kickoff_iso": "2026-11-02T00:00Z",
       "home_team": "Charlotte Independence",
       "away_team": "FC Naples",
+      "home_color": "#E11D48",
+      "away_color": "#DB2777",
+      "home_emoji": "\u26bd",
+      "away_emoji": "\u26bd",
       "model_markets": {
         "home_xg": 2.05,
         "away_xg": 0.61,
@@ -1796,6 +1864,10 @@
       "kickoff_iso": "2026-11-02T01:00Z",
       "home_team": "Athletic Club Boise",
       "away_team": "One Knoxville",
+      "home_color": "#059669",
+      "away_color": "#003366",
+      "home_emoji": "\u26bd",
+      "away_emoji": "\u26f0\ufe0f",
       "model_markets": {
         "home_xg": 1.38,
         "away_xg": 1.28,
@@ -1901,6 +1973,10 @@
       "kickoff_iso": "2026-11-02T01:30Z",
       "home_team": "LAFC",
       "away_team": "Minnesota United FC",
+      "home_color": "#C39E67",
+      "away_color": "#8CD2F4",
+      "home_emoji": "\ud83d\udda4",
+      "away_emoji": "\ud83e\udd86",
       "model_markets": {
         "home_xg": 1.53,
         "away_xg": 1.13,
@@ -2006,6 +2082,10 @@
       "kickoff_iso": "2026-11-02T02:00Z",
       "home_team": "Sacramento Republic FC",
       "away_team": "FC Tulsa",
+      "home_color": "#8A1538",
+      "away_color": "#DB2777",
+      "home_emoji": "\ud83e\udd81",
+      "away_emoji": "\u26bd",
       "model_markets": {
         "home_xg": 1.36,
         "away_xg": 1.3,
@@ -2111,6 +2191,10 @@
       "kickoff_iso": "2026-11-02T02:45Z",
       "home_team": "Portland Timbers",
       "away_team": "Houston Dynamo FC",
+      "home_color": "#B31B1B",
+      "away_color": "#FF6B00",
+      "home_emoji": "\ud83c\udf39",
+      "away_emoji": "\u26a1",
       "model_markets": {
         "home_xg": 2.01,
         "away_xg": 0.65,
