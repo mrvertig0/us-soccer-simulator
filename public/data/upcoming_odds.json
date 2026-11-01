@@ -1,356 +1,146 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T16:47:21.070201+00:00",
-    "engine_status": "full_22_slate_ready",
-    "fixture_count": 22
+    "generated_at": "2026-11-01T16:57:28.996208+00:00",
+    "engine_status": "live_espn_scraper_active",
+    "fixture_count": 21
   },
   "fixtures": [
     {
-      "fixture_id": "fix_uslc_1",
+      "fixture_id": "espn_401931658",
       "league": "USL Championship",
-      "kickoff_iso": "2026-11-01T14:00:00-05:00",
-      "home_team": "Lexington SC",
-      "away_team": "Colorado Springs Switchbacks",
+      "kickoff_iso": "2026-11-01T19:00Z",
+      "home_team": "Lexington",
+      "away_team": "Colorado Springs Switchbacks FC",
       "model_markets": {
-        "home_xg": 1.19,
-        "away_xg": 1.47,
+        "home_xg": 0.99,
+        "away_xg": 1.67,
         "moneyline": {
           "home": {
-            "prob": 29.1,
-            "fair_american": "+244"
+            "prob": 21.0,
+            "fair_american": "+377"
           },
           "draw": {
-            "prob": 29.1,
-            "fair_american": "+244"
+            "prob": 27.5,
+            "fair_american": "+263"
           },
           "away": {
-            "prob": 41.8,
-            "fair_american": "+139"
+            "prob": 51.5,
+            "fair_american": "-106"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 41.0,
-            "fair_american": "+144"
+            "prob": 29.0,
+            "fair_american": "+245"
           },
           "away": {
-            "prob": 59.0,
-            "fair_american": "-144"
+            "prob": 71.0,
+            "fair_american": "-245"
           }
         },
         "totals": {
           "over_1_5": {
-            "prob": 75.9,
-            "fair_american": "-314"
+            "prob": 75.7,
+            "fair_american": "-312"
           },
           "under_1_5": {
-            "prob": 24.1,
-            "fair_american": "+314"
+            "prob": 24.3,
+            "fair_american": "+312"
           },
           "over_2_5": {
-            "prob": 49.4,
+            "prob": 49.3,
             "fair_american": "+103"
           },
           "under_2_5": {
-            "prob": 50.6,
+            "prob": 50.7,
             "fair_american": "-103"
           },
           "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
+            "prob": 27.1,
+            "fair_american": "+269"
           },
           "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
+            "prob": 72.9,
+            "fair_american": "-269"
           }
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 12.5,
-            "fair_american": "+699"
-          },
-          "away_plus_1_5": {
-            "prob": 87.5,
-            "fair_american": "-699"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Cameron Lancaster",
-            "team": "Lexington SC",
-            "anytime_goalscorer": {
-              "prob": 32.5,
-              "fair_american": "+208"
-            },
-            "anytime_assist": {
-              "prob": 19.3,
-              "fair_american": "+419"
-            },
-            "shots_over_25": {
-              "prob": 44.7,
-              "fair_american": "+124"
-            }
-          },
-          {
-            "player_name": "Ronaldo Damus",
-            "team": "Colorado Springs Switchbacks",
-            "anytime_goalscorer": {
-              "prob": 42.0,
-              "fair_american": "+138"
-            },
-            "anytime_assist": {
-              "prob": 24.4,
-              "fair_american": "+310"
-            },
-            "shots_over_25": {
-              "prob": 63.1,
-              "fair_american": "-171"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_uslc_2",
-      "league": "USL Championship",
-      "kickoff_iso": "2026-11-01T15:00:00-05:00",
-      "home_team": "Louisville City FC",
-      "away_team": "Indy Eleven",
-      "model_markets": {
-        "home_xg": 2.09,
-        "away_xg": 0.57,
-        "moneyline": {
-          "home": {
-            "prob": 71.3,
-            "fair_american": "-248"
-          },
-          "draw": {
-            "prob": 20.7,
-            "fair_american": "+382"
-          },
-          "away": {
             "prob": 7.9,
-            "fair_american": "+1158"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 90.0,
-            "fair_american": "-897"
-          },
-          "away": {
-            "prob": 10.0,
-            "fair_american": "+897"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.0,
-            "fair_american": "-300"
-          },
-          "under_1_5": {
-            "prob": 25.0,
-            "fair_american": "+300"
-          },
-          "over_2_5": {
-            "prob": 48.6,
-            "fair_american": "+106"
-          },
-          "under_2_5": {
-            "prob": 51.4,
-            "fair_american": "-106"
-          },
-          "over_3_5": {
-            "prob": 26.2,
-            "fair_american": "+281"
-          },
-          "under_3_5": {
-            "prob": 73.8,
-            "fair_american": "-281"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 46.7,
-            "fair_american": "+114"
+            "fair_american": "+1163"
           },
           "away_plus_1_5": {
-            "prob": 53.3,
-            "fair_american": "-114"
+            "prob": 92.1,
+            "fair_american": "-1163"
           }
         },
         "player_props": [
           {
-            "player_name": "Wilson Harris",
-            "team": "Louisville City FC",
+            "player_name": "Key Attacker (Lex)",
+            "team": "Lexington",
             "anytime_goalscorer": {
-              "prob": 54.8,
-              "fair_american": "-121"
+              "prob": 25.7,
+              "fair_american": "+289"
             },
             "anytime_assist": {
-              "prob": 34.2,
-              "fair_american": "+193"
+              "prob": 18.0,
+              "fair_american": "+457"
             },
             "shots_over_25": {
-              "prob": 88.2,
-              "fair_american": "-744"
+              "prob": 31.8,
+              "fair_american": "+215"
             }
           },
           {
-            "player_name": "Augi Williams",
-            "team": "Indy Eleven",
+            "player_name": "Key Attacker (Col)",
+            "team": "Colorado Springs Switchbacks FC",
             "anytime_goalscorer": {
-              "prob": 17.6,
-              "fair_american": "+468"
+              "prob": 39.4,
+              "fair_american": "+154"
             },
             "anytime_assist": {
-              "prob": 9.2,
-              "fair_american": "+983"
+              "prob": 28.4,
+              "fair_american": "+252"
             },
             "shots_over_25": {
-              "prob": 10.8,
-              "fair_american": "+828"
+              "prob": 64.9,
+              "fair_american": "-185"
             }
           }
         ]
       }
     },
     {
-      "fixture_id": "fix_uslc_3",
-      "league": "USL Championship",
-      "kickoff_iso": "2026-11-01T15:30:00-05:00",
-      "home_team": "Charleston Battery",
-      "away_team": "Tampa Bay Rowdies",
+      "fixture_id": "espn_761927",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-01T20:30Z",
+      "home_team": "Vancouver Whitecaps",
+      "away_team": "Seattle Sounders FC",
       "model_markets": {
-        "home_xg": 1.91,
-        "away_xg": 0.75,
+        "home_xg": 1.39,
+        "away_xg": 1.27,
         "moneyline": {
           "home": {
-            "prob": 63.0,
-            "fair_american": "-171"
+            "prob": 38.1,
+            "fair_american": "+163"
           },
           "draw": {
-            "prob": 24.2,
-            "fair_american": "+314"
+            "prob": 29.3,
+            "fair_american": "+241"
           },
           "away": {
-            "prob": 12.8,
-            "fair_american": "+681"
+            "prob": 32.6,
+            "fair_american": "+207"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 83.1,
-            "fair_american": "-492"
+            "prob": 53.9,
+            "fair_american": "-117"
           },
           "away": {
-            "prob": 16.9,
-            "fair_american": "+492"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.4,
-            "fair_american": "-306"
-          },
-          "under_1_5": {
-            "prob": 24.6,
-            "fair_american": "+306"
-          },
-          "over_2_5": {
-            "prob": 49.0,
-            "fair_american": "+104"
-          },
-          "under_2_5": {
-            "prob": 51.0,
-            "fair_american": "-104"
-          },
-          "over_3_5": {
-            "prob": 26.7,
-            "fair_american": "+274"
-          },
-          "under_3_5": {
-            "prob": 73.3,
-            "fair_american": "-274"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 38.5,
-            "fair_american": "+160"
-          },
-          "away_plus_1_5": {
-            "prob": 61.5,
-            "fair_american": "-160"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Nick Markanich",
-            "team": "Charleston Battery",
-            "anytime_goalscorer": {
-              "prob": 55.2,
-              "fair_american": "-123"
-            },
-            "anytime_assist": {
-              "prob": 33.0,
-              "fair_american": "+203"
-            },
-            "shots_over_25": {
-              "prob": 89.0,
-              "fair_american": "-809"
-            }
-          },
-          {
-            "player_name": "Cal Jennings",
-            "team": "Tampa Bay Rowdies",
-            "anytime_goalscorer": {
-              "prob": 23.7,
-              "fair_american": "+323"
-            },
-            "anytime_assist": {
-              "prob": 12.6,
-              "fair_american": "+692"
-            },
-            "shots_over_25": {
-              "prob": 21.8,
-              "fair_american": "+358"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_uslc_4",
-      "league": "USL Championship",
-      "kickoff_iso": "2026-11-01T16:00:00-05:00",
-      "home_team": "Phoenix Rising FC",
-      "away_team": "Sacramento Republic FC",
-      "model_markets": {
-        "home_xg": 1.36,
-        "away_xg": 1.3,
-        "moneyline": {
-          "home": {
-            "prob": 36.7,
-            "fair_american": "+173"
-          },
-          "draw": {
-            "prob": 29.4,
-            "fair_american": "+240"
-          },
-          "away": {
-            "prob": 33.9,
-            "fair_american": "+195"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 51.9,
-            "fair_american": "-108"
-          },
-          "away": {
-            "prob": 48.1,
-            "fair_american": "+108"
+            "prob": 46.1,
+            "fair_american": "+117"
           }
         },
         "totals": {
@@ -381,396 +171,81 @@
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 17.4,
-            "fair_american": "+475"
+            "prob": 18.3,
+            "fair_american": "+445"
           },
           "away_plus_1_5": {
-            "prob": 82.6,
-            "fair_american": "-475"
+            "prob": 81.7,
+            "fair_american": "-445"
           }
         },
         "player_props": [
           {
-            "player_name": "Remi Cabral",
-            "team": "Phoenix Rising FC",
+            "player_name": "Key Attacker (Van)",
+            "team": "Vancouver Whitecaps",
             "anytime_goalscorer": {
-              "prob": 36.2,
-              "fair_american": "+177"
+              "prob": 34.1,
+              "fair_american": "+193"
             },
             "anytime_assist": {
-              "prob": 22.8,
-              "fair_american": "+339"
+              "prob": 24.3,
+              "fair_american": "+312"
             },
             "shots_over_25": {
-              "prob": 48.7,
-              "fair_american": "+105"
+              "prob": 52.6,
+              "fair_american": "-111"
             }
           },
           {
-            "player_name": "Kizza",
-            "team": "Sacramento Republic FC",
+            "player_name": "Key Attacker (Sea)",
+            "team": "Seattle Sounders FC",
             "anytime_goalscorer": {
-              "prob": 36.6,
-              "fair_american": "+174"
+              "prob": 31.7,
+              "fair_american": "+216"
             },
             "anytime_assist": {
-              "prob": 20.9,
-              "fair_american": "+379"
+              "prob": 22.4,
+              "fair_american": "+346"
             },
             "shots_over_25": {
-              "prob": 54.9,
-              "fair_american": "-122"
+              "prob": 46.6,
+              "fair_american": "+114"
             }
           }
         ]
       }
     },
     {
-      "fixture_id": "fix_usl1_1",
-      "league": "USL League One",
-      "kickoff_iso": "2026-11-01T16:30:00-05:00",
-      "home_team": "Greenville Triumph SC",
-      "away_team": "Charlotte Independence",
+      "fixture_id": "espn_761931",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-01T21:30Z",
+      "home_team": "Atlanta United FC",
+      "away_team": "Toronto FC",
       "model_markets": {
-        "home_xg": 1.78,
-        "away_xg": 0.88,
+        "home_xg": 1.07,
+        "away_xg": 1.59,
         "moneyline": {
           "home": {
-            "prob": 56.8,
-            "fair_american": "-132"
+            "prob": 24.1,
+            "fair_american": "+315"
           },
           "draw": {
-            "prob": 26.2,
-            "fair_american": "+282"
+            "prob": 28.3,
+            "fair_american": "+253"
           },
           "away": {
-            "prob": 17.0,
-            "fair_american": "+488"
+            "prob": 47.6,
+            "fair_american": "+110"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 77.0,
-            "fair_american": "-334"
+            "prob": 33.6,
+            "fair_american": "+198"
           },
           "away": {
-            "prob": 23.0,
-            "fair_american": "+334"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.6,
-            "fair_american": "-309"
-          },
-          "under_1_5": {
-            "prob": 24.4,
-            "fair_american": "+309"
-          },
-          "over_2_5": {
-            "prob": 49.1,
-            "fair_american": "+104"
-          },
-          "under_2_5": {
-            "prob": 50.9,
-            "fair_american": "-104"
-          },
-          "over_3_5": {
-            "prob": 27.0,
-            "fair_american": "+271"
-          },
-          "under_3_5": {
-            "prob": 73.0,
-            "fair_american": "-271"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 32.9,
-            "fair_american": "+204"
-          },
-          "away_plus_1_5": {
-            "prob": 67.1,
-            "fair_american": "-204"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Lycio Castro",
-            "team": "Greenville Triumph SC",
-            "anytime_goalscorer": {
-              "prob": 42.4,
-              "fair_american": "+136"
-            },
-            "anytime_assist": {
-              "prob": 26.1,
-              "fair_american": "+283"
-            },
-            "shots_over_25": {
-              "prob": 61.6,
-              "fair_american": "-160"
-            }
-          },
-          {
-            "player_name": "Juan Carlos Obregon",
-            "team": "Charlotte Independence",
-            "anytime_goalscorer": {
-              "prob": 27.2,
-              "fair_american": "+268"
-            },
-            "anytime_assist": {
-              "prob": 12.4,
-              "fair_american": "+709"
-            },
-            "shots_over_25": {
-              "prob": 27.6,
-              "fair_american": "+263"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_usl1_2",
-      "league": "USL League One",
-      "kickoff_iso": "2026-11-01T17:00:00-05:00",
-      "home_team": "Forward Madison FC",
-      "away_team": "Union Omaha",
-      "model_markets": {
-        "home_xg": 1.5,
-        "away_xg": 1.16,
-        "moneyline": {
-          "home": {
-            "prob": 43.3,
-            "fair_american": "+131"
-          },
-          "draw": {
-            "prob": 28.9,
-            "fair_american": "+246"
-          },
-          "away": {
-            "prob": 27.8,
-            "fair_american": "+260"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 60.9,
-            "fair_american": "-156"
-          },
-          "away": {
-            "prob": 39.1,
-            "fair_american": "+156"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.8,
-            "fair_american": "-314"
-          },
-          "under_1_5": {
-            "prob": 24.2,
-            "fair_american": "+314"
-          },
-          "over_2_5": {
-            "prob": 49.4,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.6,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 22.0,
-            "fair_american": "+354"
-          },
-          "away_plus_1_5": {
-            "prob": 78.0,
-            "fair_american": "-354"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Christian Chaney",
-            "team": "Forward Madison FC",
-            "anytime_goalscorer": {
-              "prob": 40.8,
-              "fair_american": "+145"
-            },
-            "anytime_assist": {
-              "prob": 21.3,
-              "fair_american": "+369"
-            },
-            "shots_over_25": {
-              "prob": 55.2,
-              "fair_american": "-123"
-            }
-          },
-          {
-            "player_name": "Steevan Dos Santos",
-            "team": "Union Omaha",
-            "anytime_goalscorer": {
-              "prob": 32.6,
-              "fair_american": "+207"
-            },
-            "anytime_assist": {
-              "prob": 20.7,
-              "fair_american": "+383"
-            },
-            "shots_over_25": {
-              "prob": 40.9,
-              "fair_american": "+144"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_nwsl_1",
-      "league": "NWSL",
-      "kickoff_iso": "2026-11-01T17:00:00-05:00",
-      "home_team": "Gotham FC",
-      "away_team": "Portland Thorns FC",
-      "model_markets": {
-        "home_xg": 1.85,
-        "away_xg": 0.81,
-        "moneyline": {
-          "home": {
-            "prob": 60.2,
-            "fair_american": "-151"
-          },
-          "draw": {
-            "prob": 25.1,
-            "fair_american": "+298"
-          },
-          "away": {
-            "prob": 14.7,
-            "fair_american": "+582"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 80.4,
-            "fair_american": "-410"
-          },
-          "away": {
-            "prob": 19.6,
-            "fair_american": "+410"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.5,
-            "fair_american": "-308"
-          },
-          "under_1_5": {
-            "prob": 24.5,
-            "fair_american": "+308"
-          },
-          "over_2_5": {
-            "prob": 49.0,
-            "fair_american": "+104"
-          },
-          "under_2_5": {
-            "prob": 51.0,
-            "fair_american": "-104"
-          },
-          "over_3_5": {
-            "prob": 26.8,
-            "fair_american": "+273"
-          },
-          "under_3_5": {
-            "prob": 73.2,
-            "fair_american": "-273"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 35.9,
-            "fair_american": "+179"
-          },
-          "away_plus_1_5": {
-            "prob": 64.1,
-            "fair_american": "-179"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Esther Gonzalez",
-            "team": "Gotham FC",
-            "anytime_goalscorer": {
-              "prob": 48.6,
-              "fair_american": "+106"
-            },
-            "anytime_assist": {
-              "prob": 35.9,
-              "fair_american": "+179"
-            },
-            "shots_over_25": {
-              "prob": 79.4,
-              "fair_american": "-384"
-            }
-          },
-          {
-            "player_name": "Sophia Smith",
-            "team": "Portland Thorns FC",
-            "anytime_goalscorer": {
-              "prob": 28.8,
-              "fair_american": "+247"
-            },
-            "anytime_assist": {
-              "prob": 19.0,
-              "fair_american": "+427"
-            },
-            "shots_over_25": {
-              "prob": 42.3,
-              "fair_american": "+136"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_usl1_3",
-      "league": "USL League One",
-      "kickoff_iso": "2026-11-01T17:30:00-05:00",
-      "home_team": "Spokane Velocity FC",
-      "away_team": "One Knoxville SC",
-      "model_markets": {
-        "home_xg": 1.61,
-        "away_xg": 1.05,
-        "moneyline": {
-          "home": {
-            "prob": 48.6,
-            "fair_american": "+106"
-          },
-          "draw": {
-            "prob": 28.1,
-            "fair_american": "+255"
-          },
-          "away": {
-            "prob": 23.3,
-            "fair_american": "+329"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 67.6,
-            "fair_american": "-208"
-          },
-          "away": {
-            "prob": 32.4,
-            "fair_american": "+208"
+            "prob": 66.4,
+            "fair_american": "-198"
           }
         },
         "totals": {
@@ -792,6 +267,216 @@
           },
           "over_3_5": {
             "prob": 27.2,
+            "fair_american": "+267"
+          },
+          "under_3_5": {
+            "prob": 72.8,
+            "fair_american": "-267"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 9.6,
+            "fair_american": "+941"
+          },
+          "away_plus_1_5": {
+            "prob": 90.4,
+            "fair_american": "-941"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Atl)",
+            "team": "Atlanta United FC",
+            "anytime_goalscorer": {
+              "prob": 27.5,
+              "fair_american": "+264"
+            },
+            "anytime_assist": {
+              "prob": 19.3,
+              "fair_american": "+419"
+            },
+            "shots_over_25": {
+              "prob": 36.1,
+              "fair_american": "+177"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Tor)",
+            "team": "Toronto FC",
+            "anytime_goalscorer": {
+              "prob": 37.9,
+              "fair_american": "+164"
+            },
+            "anytime_assist": {
+              "prob": 27.2,
+              "fair_american": "+267"
+            },
+            "shots_over_25": {
+              "prob": 61.6,
+              "fair_american": "-160"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_761920",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-01T21:30Z",
+      "home_team": "Nashville SC",
+      "away_team": "Red Bull New York",
+      "model_markets": {
+        "home_xg": 1.0,
+        "away_xg": 1.66,
+        "moneyline": {
+          "home": {
+            "prob": 21.4,
+            "fair_american": "+368"
+          },
+          "draw": {
+            "prob": 27.6,
+            "fair_american": "+262"
+          },
+          "away": {
+            "prob": 51.0,
+            "fair_american": "-104"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 29.5,
+            "fair_american": "+239"
+          },
+          "away": {
+            "prob": 70.5,
+            "fair_american": "-239"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.7,
+            "fair_american": "-312"
+          },
+          "under_1_5": {
+            "prob": 24.3,
+            "fair_american": "+312"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.1,
+            "fair_american": "+268"
+          },
+          "under_3_5": {
+            "prob": 72.9,
+            "fair_american": "-268"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 8.1,
+            "fair_american": "+1132"
+          },
+          "away_plus_1_5": {
+            "prob": 91.9,
+            "fair_american": "-1132"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Nas)",
+            "team": "Nashville SC",
+            "anytime_goalscorer": {
+              "prob": 25.9,
+              "fair_american": "+286"
+            },
+            "anytime_assist": {
+              "prob": 18.1,
+              "fair_american": "+452"
+            },
+            "shots_over_25": {
+              "prob": 32.3,
+              "fair_american": "+209"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Red)",
+            "team": "Red Bull New York",
+            "anytime_goalscorer": {
+              "prob": 39.2,
+              "fair_american": "+155"
+            },
+            "anytime_assist": {
+              "prob": 28.3,
+              "fair_american": "+254"
+            },
+            "shots_over_25": {
+              "prob": 64.5,
+              "fair_american": "-181"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401854095",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Angel City FC",
+      "away_team": "Boston Legacy FC",
+      "model_markets": {
+        "home_xg": 1.64,
+        "away_xg": 1.02,
+        "moneyline": {
+          "home": {
+            "prob": 50.0,
+            "fair_american": "-100"
+          },
+          "draw": {
+            "prob": 27.8,
+            "fair_american": "+259"
+          },
+          "away": {
+            "prob": 22.1,
+            "fair_american": "+352"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 69.3,
+            "fair_american": "-226"
+          },
+          "away": {
+            "prob": 30.7,
+            "fair_american": "+226"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.7,
+            "fair_american": "-312"
+          },
+          "under_1_5": {
+            "prob": 24.3,
+            "fair_american": "+312"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.2,
             "fair_american": "+268"
           },
           "under_3_5": {
@@ -801,1211 +486,56 @@
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 26.1,
-            "fair_american": "+283"
+            "prob": 27.2,
+            "fair_american": "+267"
           },
           "away_plus_1_5": {
-            "prob": 73.9,
-            "fair_american": "-283"
+            "prob": 72.8,
+            "fair_american": "-267"
           }
         },
         "player_props": [
           {
-            "player_name": "Josh Dolling",
-            "team": "Spokane Velocity FC",
-            "anytime_goalscorer": {
-              "prob": 40.3,
-              "fair_american": "+148"
-            },
-            "anytime_assist": {
-              "prob": 25.2,
-              "fair_american": "+297"
-            },
-            "shots_over_25": {
-              "prob": 57.5,
-              "fair_american": "-135"
-            }
-          },
-          {
-            "player_name": "Kempes Tekiela",
-            "team": "One Knoxville SC",
-            "anytime_goalscorer": {
-              "prob": 27.0,
-              "fair_american": "+270"
-            },
-            "anytime_assist": {
-              "prob": 16.3,
-              "fair_american": "+512"
-            },
-            "shots_over_25": {
-              "prob": 26.9,
-              "fair_american": "+271"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_nwsl_2",
-      "league": "NWSL",
-      "kickoff_iso": "2026-11-01T18:00:00-05:00",
-      "home_team": "North Carolina Courage",
-      "away_team": "Washington Spirit",
-      "model_markets": {
-        "home_xg": 1.48,
-        "away_xg": 1.18,
-        "moneyline": {
-          "home": {
-            "prob": 42.3,
-            "fair_american": "+136"
-          },
-          "draw": {
-            "prob": 29.0,
-            "fair_american": "+244"
-          },
-          "away": {
-            "prob": 28.7,
-            "fair_american": "+249"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 59.6,
-            "fair_american": "-148"
-          },
-          "away": {
-            "prob": 40.4,
-            "fair_american": "+148"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.9,
-            "fair_american": "-314"
-          },
-          "under_1_5": {
-            "prob": 24.1,
-            "fair_american": "+314"
-          },
-          "over_2_5": {
-            "prob": 49.4,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.6,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 21.3,
-            "fair_american": "+369"
-          },
-          "away_plus_1_5": {
-            "prob": 78.7,
-            "fair_american": "-369"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Ashley Sanchez",
-            "team": "North Carolina Courage",
-            "anytime_goalscorer": {
-              "prob": 34.9,
-              "fair_american": "+187"
-            },
-            "anytime_assist": {
-              "prob": 36.8,
-              "fair_american": "+172"
-            },
-            "shots_over_25": {
-              "prob": 56.8,
-              "fair_american": "-131"
-            }
-          },
-          {
-            "player_name": "Trinity Rodman",
-            "team": "Washington Spirit",
-            "anytime_goalscorer": {
-              "prob": 33.0,
-              "fair_american": "+203"
-            },
-            "anytime_assist": {
-              "prob": 29.0,
-              "fair_american": "+245"
-            },
-            "shots_over_25": {
-              "prob": 58.4,
-              "fair_american": "-141"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_mnp_1",
-      "league": "MLS NEXT Pro",
-      "kickoff_iso": "2026-11-01T18:00:00-05:00",
-      "home_team": "Carolina Core FC",
-      "away_team": "Crown Legacy FC",
-      "model_markets": {
-        "home_xg": 1.45,
-        "away_xg": 1.21,
-        "moneyline": {
-          "home": {
-            "prob": 40.9,
-            "fair_american": "+145"
-          },
-          "draw": {
-            "prob": 29.2,
-            "fair_american": "+243"
-          },
-          "away": {
-            "prob": 29.9,
-            "fair_american": "+234"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 57.7,
-            "fair_american": "-137"
-          },
-          "away": {
-            "prob": 42.3,
-            "fair_american": "+137"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.9,
-            "fair_american": "-314"
-          },
-          "under_1_5": {
-            "prob": 24.1,
-            "fair_american": "+314"
-          },
-          "over_2_5": {
-            "prob": 49.4,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.6,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 20.3,
-            "fair_american": "+392"
-          },
-          "away_plus_1_5": {
-            "prob": 79.7,
-            "fair_american": "-392"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Papa Ndoye",
-            "team": "Carolina Core FC",
-            "anytime_goalscorer": {
-              "prob": 42.4,
-              "fair_american": "+136"
-            },
-            "anytime_assist": {
-              "prob": 18.4,
-              "fair_american": "+444"
-            },
-            "shots_over_25": {
-              "prob": 55.4,
-              "fair_american": "-124"
-            }
-          },
-          {
-            "player_name": "Iuri Tavares",
-            "team": "Crown Legacy FC",
-            "anytime_goalscorer": {
-              "prob": 32.9,
-              "fair_american": "+204"
-            },
-            "anytime_assist": {
-              "prob": 22.4,
-              "fair_american": "+346"
-            },
-            "shots_over_25": {
-              "prob": 39.0,
-              "fair_american": "+156"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_nwsl_3",
-      "league": "NWSL",
-      "kickoff_iso": "2026-11-01T18:30:00-05:00",
-      "home_team": "Orlando Pride",
-      "away_team": "San Diego Wave FC",
-      "model_markets": {
-        "home_xg": 2.22,
-        "away_xg": 0.44,
-        "moneyline": {
-          "home": {
-            "prob": 76.9,
-            "fair_american": "-333"
-          },
-          "draw": {
-            "prob": 17.9,
-            "fair_american": "+458"
-          },
-          "away": {
-            "prob": 5.2,
-            "fair_american": "+1839"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 93.7,
-            "fair_american": "-1491"
-          },
-          "away": {
-            "prob": 6.3,
-            "fair_american": "+1491"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 74.6,
-            "fair_american": "-294"
-          },
-          "under_1_5": {
-            "prob": 25.4,
-            "fair_american": "+294"
-          },
-          "over_2_5": {
-            "prob": 48.3,
-            "fair_american": "+107"
-          },
-          "under_2_5": {
-            "prob": 51.7,
-            "fair_american": "-107"
-          },
-          "over_3_5": {
-            "prob": 25.8,
-            "fair_american": "+288"
-          },
-          "under_3_5": {
-            "prob": 74.2,
-            "fair_american": "-288"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 52.7,
-            "fair_american": "-112"
-          },
-          "away_plus_1_5": {
-            "prob": 47.3,
-            "fair_american": "+112"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Banda",
-            "team": "Orlando Pride",
-            "anytime_goalscorer": {
-              "prob": 57.9,
-              "fair_american": "-138"
-            },
-            "anytime_assist": {
-              "prob": 42.6,
-              "fair_american": "+135"
-            },
-            "shots_over_25": {
-              "prob": 94.6,
-              "fair_american": "-1744"
-            }
-          },
-          {
-            "player_name": "Jaedyn Shaw",
-            "team": "San Diego Wave FC",
-            "anytime_goalscorer": {
-              "prob": 13.1,
-              "fair_american": "+661"
-            },
-            "anytime_assist": {
-              "prob": 11.6,
-              "fair_american": "+763"
-            },
-            "shots_over_25": {
-              "prob": 7.0,
-              "fair_american": "+1327"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_nwsl_4",
-      "league": "NWSL",
-      "kickoff_iso": "2026-11-01T19:00:00-05:00",
-      "home_team": "Kansas City Current",
-      "away_team": "Angel City FC",
-      "model_markets": {
-        "home_xg": 2.25,
-        "away_xg": 0.41,
-        "moneyline": {
-          "home": {
-            "prob": 78.2,
-            "fair_american": "-358"
-          },
-          "draw": {
-            "prob": 17.2,
-            "fair_american": "+480"
-          },
-          "away": {
-            "prob": 4.6,
-            "fair_american": "+2074"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 94.4,
-            "fair_american": "-1699"
-          },
-          "away": {
-            "prob": 5.6,
-            "fair_american": "+1699"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 74.5,
-            "fair_american": "-293"
-          },
-          "under_1_5": {
-            "prob": 25.5,
-            "fair_american": "+293"
-          },
-          "over_2_5": {
-            "prob": 48.2,
-            "fair_american": "+107"
-          },
-          "under_2_5": {
-            "prob": 51.8,
-            "fair_american": "-107"
-          },
-          "over_3_5": {
-            "prob": 25.7,
-            "fair_american": "+289"
-          },
-          "under_3_5": {
-            "prob": 74.3,
-            "fair_american": "-289"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 54.1,
-            "fair_american": "-118"
-          },
-          "away_plus_1_5": {
-            "prob": 45.9,
-            "fair_american": "+118"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Temwa Chawinga",
-            "team": "Kansas City Current",
-            "anytime_goalscorer": {
-              "prob": 62.8,
-              "fair_american": "-169"
-            },
-            "anytime_assist": {
-              "prob": 39.0,
-              "fair_american": "+156"
-            },
-            "shots_over_25": {
-              "prob": 96.8,
-              "fair_american": "-3055"
-            }
-          },
-          {
-            "player_name": "Alyssa Thompson",
+            "player_name": "Key Attacker (Ang)",
             "team": "Angel City FC",
             "anytime_goalscorer": {
-              "prob": 11.9,
-              "fair_american": "+738"
+              "prob": 38.9,
+              "fair_american": "+157"
             },
             "anytime_assist": {
-              "prob": 10.5,
-              "fair_american": "+854"
+              "prob": 28.0,
+              "fair_american": "+258"
             },
             "shots_over_25": {
-              "prob": 5.5,
-              "fair_american": "+1726"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_mls_1",
-      "league": "MLS",
-      "kickoff_iso": "2026-11-01T19:00:00-05:00",
-      "home_team": "Inter Miami CF",
-      "away_team": "Atlanta United",
-      "model_markets": {
-        "home_xg": 2.65,
-        "away_xg": 0.3,
-        "moneyline": {
-          "home": {
-            "prob": 85.8,
-            "fair_american": "-604"
-          },
-          "draw": {
-            "prob": 12.0,
-            "fair_american": "+732"
-          },
-          "away": {
-            "prob": 2.2,
-            "fair_american": "+4460"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 97.5,
-            "fair_american": "-3912"
-          },
-          "away": {
-            "prob": 2.5,
-            "fair_american": "+3912"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 78.7,
-            "fair_american": "-370"
-          },
-          "under_1_5": {
-            "prob": 21.3,
-            "fair_american": "+370"
-          },
-          "over_2_5": {
-            "prob": 54.1,
-            "fair_american": "-118"
-          },
-          "under_2_5": {
-            "prob": 45.9,
-            "fair_american": "+118"
-          },
-          "over_3_5": {
-            "prob": 30.5,
-            "fair_american": "+228"
-          },
-          "under_3_5": {
-            "prob": 69.5,
-            "fair_american": "-228"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 65.1,
-            "fair_american": "-186"
-          },
-          "away_plus_1_5": {
-            "prob": 34.9,
-            "fair_american": "+186"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Lionel Messi",
-            "team": "Inter Miami CF",
-            "anytime_goalscorer": {
-              "prob": 63.5,
-              "fair_american": "-174"
-            },
-            "anytime_assist": {
-              "prob": 67.1,
-              "fair_american": "-204"
-            },
-            "shots_over_25": {
-              "prob": 98.6,
-              "fair_american": "-6893"
+              "prob": 63.7,
+              "fair_american": "-175"
             }
           },
           {
-            "player_name": "Saba Lobjanidze",
-            "team": "Atlanta United",
+            "player_name": "Key Attacker (Bos)",
+            "team": "Boston Legacy FC",
             "anytime_goalscorer": {
-              "prob": 8.1,
-              "fair_american": "+1141"
+              "prob": 26.4,
+              "fair_american": "+279"
             },
             "anytime_assist": {
-              "prob": 6.4,
-              "fair_american": "+1466"
+              "prob": 18.5,
+              "fair_american": "+442"
             },
             "shots_over_25": {
-              "prob": 1.9,
-              "fair_american": "+5137"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_mnp_2",
-      "league": "MLS NEXT Pro",
-      "kickoff_iso": "2026-11-01T19:00:00-05:00",
-      "home_team": "Chattanooga FC",
-      "away_team": "Columbus Crew 2",
-      "model_markets": {
-        "home_xg": 1.34,
-        "away_xg": 1.32,
-        "moneyline": {
-          "home": {
-            "prob": 35.8,
-            "fair_american": "+180"
-          },
-          "draw": {
-            "prob": 29.4,
-            "fair_american": "+240"
-          },
-          "away": {
-            "prob": 34.8,
-            "fair_american": "+187"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 50.6,
-            "fair_american": "-103"
-          },
-          "away": {
-            "prob": 49.4,
-            "fair_american": "+103"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.9,
-            "fair_american": "-315"
-          },
-          "under_1_5": {
-            "prob": 24.1,
-            "fair_american": "+315"
-          },
-          "over_2_5": {
-            "prob": 49.4,
-            "fair_american": "+102"
-          },
-          "under_2_5": {
-            "prob": 50.6,
-            "fair_american": "-102"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 16.8,
-            "fair_american": "+496"
-          },
-          "away_plus_1_5": {
-            "prob": 83.2,
-            "fair_american": "-496"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Mehdi Ouamri",
-            "team": "Chattanooga FC",
-            "anytime_goalscorer": {
-              "prob": 34.9,
-              "fair_american": "+187"
-            },
-            "anytime_assist": {
-              "prob": 21.4,
-              "fair_american": "+367"
-            },
-            "shots_over_25": {
-              "prob": 42.8,
-              "fair_american": "+133"
-            }
-          },
-          {
-            "player_name": "Gerson Minsi",
-            "team": "Columbus Crew 2",
-            "anytime_goalscorer": {
-              "prob": 37.0,
-              "fair_american": "+170"
-            },
-            "anytime_assist": {
-              "prob": 25.2,
-              "fair_american": "+297"
-            },
-            "shots_over_25": {
-              "prob": 53.7,
-              "fair_american": "-116"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_usls_1",
-      "league": "USL Super League",
-      "kickoff_iso": "2026-11-01T19:00:00-05:00",
-      "home_team": "Carolina Ascent FC",
-      "away_team": "Tampa Bay Sun FC",
-      "model_markets": {
-        "home_xg": 1.85,
-        "away_xg": 0.81,
-        "moneyline": {
-          "home": {
-            "prob": 60.2,
-            "fair_american": "-151"
-          },
-          "draw": {
-            "prob": 25.1,
-            "fair_american": "+298"
-          },
-          "away": {
-            "prob": 14.7,
-            "fair_american": "+582"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 80.4,
-            "fair_american": "-410"
-          },
-          "away": {
-            "prob": 19.6,
-            "fair_american": "+410"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.5,
-            "fair_american": "-308"
-          },
-          "under_1_5": {
-            "prob": 24.5,
-            "fair_american": "+308"
-          },
-          "over_2_5": {
-            "prob": 49.0,
-            "fair_american": "+104"
-          },
-          "under_2_5": {
-            "prob": 51.0,
-            "fair_american": "-104"
-          },
-          "over_3_5": {
-            "prob": 26.8,
-            "fair_american": "+273"
-          },
-          "under_3_5": {
-            "prob": 73.2,
-            "fair_american": "-273"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 35.9,
-            "fair_american": "+179"
-          },
-          "away_plus_1_5": {
-            "prob": 64.1,
-            "fair_american": "-179"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Maddison Corbin",
-            "team": "Carolina Ascent FC",
-            "anytime_goalscorer": {
-              "prob": 47.7,
-              "fair_american": "+110"
-            },
-            "anytime_assist": {
               "prob": 33.4,
               "fair_american": "+199"
-            },
-            "shots_over_25": {
-              "prob": 75.7,
-              "fair_american": "-311"
-            }
-          },
-          {
-            "player_name": "Erika Tymrak",
-            "team": "Tampa Bay Sun FC",
-            "anytime_goalscorer": {
-              "prob": 21.6,
-              "fair_american": "+364"
-            },
-            "anytime_assist": {
-              "prob": 18.3,
-              "fair_american": "+446"
-            },
-            "shots_over_25": {
-              "prob": 20.7,
-              "fair_american": "+383"
             }
           }
         ]
       }
     },
     {
-      "fixture_id": "fix_mls_2",
-      "league": "MLS",
-      "kickoff_iso": "2026-11-01T19:30:00-05:00",
-      "home_team": "FC Cincinnati",
-      "away_team": "Columbus Crew",
-      "model_markets": {
-        "home_xg": 1.53,
-        "away_xg": 1.13,
-        "moneyline": {
-          "home": {
-            "prob": 44.7,
-            "fair_american": "+124"
-          },
-          "draw": {
-            "prob": 28.8,
-            "fair_american": "+248"
-          },
-          "away": {
-            "prob": 26.5,
-            "fair_american": "+277"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 62.7,
-            "fair_american": "-168"
-          },
-          "away": {
-            "prob": 37.3,
-            "fair_american": "+168"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.8,
-            "fair_american": "-314"
-          },
-          "under_1_5": {
-            "prob": 24.2,
-            "fair_american": "+314"
-          },
-          "over_2_5": {
-            "prob": 49.3,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.7,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+267"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-267"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 23.1,
-            "fair_american": "+333"
-          },
-          "away_plus_1_5": {
-            "prob": 76.9,
-            "fair_american": "-333"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Lucho Acosta",
-            "team": "FC Cincinnati",
-            "anytime_goalscorer": {
-              "prob": 40.6,
-              "fair_american": "+147"
-            },
-            "anytime_assist": {
-              "prob": 44.1,
-              "fair_american": "+127"
-            },
-            "shots_over_25": {
-              "prob": 73.5,
-              "fair_american": "-278"
-            }
-          },
-          {
-            "player_name": "Cucho Hernandez",
-            "team": "Columbus Crew",
-            "anytime_goalscorer": {
-              "prob": 36.4,
-              "fair_american": "+175"
-            },
-            "anytime_assist": {
-              "prob": 28.8,
-              "fair_american": "+248"
-            },
-            "shots_over_25": {
-              "prob": 64.2,
-              "fair_american": "-180"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_mls_3",
-      "league": "MLS",
-      "kickoff_iso": "2026-11-01T20:00:00-05:00",
-      "home_team": "Seattle Sounders FC",
-      "away_team": "LA Galaxy",
-      "model_markets": {
-        "home_xg": 1.47,
-        "away_xg": 1.19,
-        "moneyline": {
-          "home": {
-            "prob": 41.8,
-            "fair_american": "+139"
-          },
-          "draw": {
-            "prob": 29.1,
-            "fair_american": "+244"
-          },
-          "away": {
-            "prob": 29.1,
-            "fair_american": "+244"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 59.0,
-            "fair_american": "-144"
-          },
-          "away": {
-            "prob": 41.0,
-            "fair_american": "+144"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.9,
-            "fair_american": "-314"
-          },
-          "under_1_5": {
-            "prob": 24.1,
-            "fair_american": "+314"
-          },
-          "over_2_5": {
-            "prob": 49.4,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.6,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 21.0,
-            "fair_american": "+376"
-          },
-          "away_plus_1_5": {
-            "prob": 79.0,
-            "fair_american": "-376"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Jordan Morris",
-            "team": "Seattle Sounders FC",
-            "anytime_goalscorer": {
-              "prob": 40.2,
-              "fair_american": "+149"
-            },
-            "anytime_assist": {
-              "prob": 25.5,
-              "fair_american": "+293"
-            },
-            "shots_over_25": {
-              "prob": 63.1,
-              "fair_american": "-171"
-            }
-          },
-          {
-            "player_name": "Riqui Puig",
-            "team": "LA Galaxy",
-            "anytime_goalscorer": {
-              "prob": 28.3,
-              "fair_american": "+253"
-            },
-            "anytime_assist": {
-              "prob": 34.8,
-              "fair_american": "+187"
-            },
-            "shots_over_25": {
-              "prob": 62.6,
-              "fair_american": "-168"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_mnp_3",
-      "league": "MLS NEXT Pro",
-      "kickoff_iso": "2026-11-01T20:00:00-05:00",
-      "home_team": "Tacoma Defiance",
-      "away_team": "North Texas SC",
-      "model_markets": {
-        "home_xg": 1.49,
-        "away_xg": 1.17,
-        "moneyline": {
-          "home": {
-            "prob": 42.8,
-            "fair_american": "+134"
-          },
-          "draw": {
-            "prob": 29.0,
-            "fair_american": "+245"
-          },
-          "away": {
-            "prob": 28.2,
-            "fair_american": "+254"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 60.3,
-            "fair_american": "-152"
-          },
-          "away": {
-            "prob": 39.7,
-            "fair_american": "+152"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.8,
-            "fair_american": "-314"
-          },
-          "under_1_5": {
-            "prob": 24.2,
-            "fair_american": "+314"
-          },
-          "over_2_5": {
-            "prob": 49.4,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.6,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 21.7,
-            "fair_american": "+361"
-          },
-          "away_plus_1_5": {
-            "prob": 78.3,
-            "fair_american": "-361"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Minoungou",
-            "team": "Tacoma Defiance",
-            "anytime_goalscorer": {
-              "prob": 37.0,
-              "fair_american": "+170"
-            },
-            "anytime_assist": {
-              "prob": 25.8,
-              "fair_american": "+288"
-            },
-            "shots_over_25": {
-              "prob": 54.8,
-              "fair_american": "-121"
-            }
-          },
-          {
-            "player_name": "Pedrinho",
-            "team": "North Texas SC",
-            "anytime_goalscorer": {
-              "prob": 34.4,
-              "fair_american": "+191"
-            },
-            "anytime_assist": {
-              "prob": 23.6,
-              "fair_american": "+324"
-            },
-            "shots_over_25": {
-              "prob": 43.6,
-              "fair_american": "+129"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_usls_2",
-      "league": "USL Super League",
-      "kickoff_iso": "2026-11-01T20:30:00-05:00",
-      "home_team": "Brooklyn FC",
-      "away_team": "Dallas Trinity FC",
-      "model_markets": {
-        "home_xg": 1.53,
-        "away_xg": 1.13,
-        "moneyline": {
-          "home": {
-            "prob": 44.7,
-            "fair_american": "+124"
-          },
-          "draw": {
-            "prob": 28.8,
-            "fair_american": "+248"
-          },
-          "away": {
-            "prob": 26.5,
-            "fair_american": "+277"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 62.7,
-            "fair_american": "-168"
-          },
-          "away": {
-            "prob": 37.3,
-            "fair_american": "+168"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.8,
-            "fair_american": "-314"
-          },
-          "under_1_5": {
-            "prob": 24.2,
-            "fair_american": "+314"
-          },
-          "over_2_5": {
-            "prob": 49.3,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.7,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+267"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-267"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 23.1,
-            "fair_american": "+333"
-          },
-          "away_plus_1_5": {
-            "prob": 76.9,
-            "fair_american": "-333"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Jessica Garziano",
-            "team": "Brooklyn FC",
-            "anytime_goalscorer": {
-              "prob": 38.7,
-              "fair_american": "+158"
-            },
-            "anytime_assist": {
-              "prob": 27.5,
-              "fair_american": "+264"
-            },
-            "shots_over_25": {
-              "prob": 54.0,
-              "fair_american": "-118"
-            }
-          },
-          {
-            "player_name": "Amber Brooks",
-            "team": "Dallas Trinity FC",
-            "anytime_goalscorer": {
-              "prob": 27.1,
-              "fair_american": "+269"
-            },
-            "anytime_assist": {
-              "prob": 23.8,
-              "fair_american": "+321"
-            },
-            "shots_over_25": {
-              "prob": 32.8,
-              "fair_american": "+205"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "fix_usls_3",
-      "league": "USL Super League",
-      "kickoff_iso": "2026-11-01T21:00:00-05:00",
-      "home_team": "Spokane Zephyr FC",
-      "away_team": "Lexington SC Women",
+      "fixture_id": "espn_401854033",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Bay FC",
+      "away_team": "San Diego Wave FC",
       "model_markets": {
         "home_xg": 1.76,
         "away_xg": 0.9,
@@ -2071,15 +601,15 @@
         },
         "player_props": [
           {
-            "player_name": "Emina Ekic",
-            "team": "Spokane Zephyr FC",
+            "player_name": "Key Attacker (Bay)",
+            "team": "Bay FC",
             "anytime_goalscorer": {
-              "prob": 44.1,
-              "fair_american": "+127"
+              "prob": 41.0,
+              "fair_american": "+144"
             },
             "anytime_assist": {
-              "prob": 32.1,
-              "fair_american": "+211"
+              "prob": 29.7,
+              "fair_american": "+237"
             },
             "shots_over_25": {
               "prob": 68.3,
@@ -2087,229 +617,1594 @@
             }
           },
           {
-            "player_name": "Sydney Shepherd",
-            "team": "Lexington SC Women",
+            "player_name": "Key Attacker (San)",
+            "team": "San Diego Wave FC",
             "anytime_goalscorer": {
-              "prob": 23.0,
-              "fair_american": "+335"
+              "prob": 23.7,
+              "fair_american": "+323"
             },
             "anytime_assist": {
-              "prob": 15.0,
-              "fair_american": "+569"
+              "prob": 16.5,
+              "fair_american": "+507"
             },
             "shots_over_25": {
-              "prob": 18.6,
-              "fair_american": "+438"
+              "prob": 26.9,
+              "fair_american": "+271"
             }
           }
         ]
       }
     },
     {
-      "fixture_id": "fix_mls_4",
-      "league": "MLS",
-      "kickoff_iso": "2026-11-01T21:30:00-05:00",
-      "home_team": "Los Angeles FC",
-      "away_team": "Vancouver Whitecaps",
+      "fixture_id": "espn_401854034",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Gotham FC",
+      "away_team": "Utah Royals",
       "model_markets": {
-        "home_xg": 2.26,
-        "away_xg": 0.4,
+        "home_xg": 1.77,
+        "away_xg": 0.89,
         "moneyline": {
           "home": {
-            "prob": 78.6,
-            "fair_american": "-366"
+            "prob": 56.3,
+            "fair_american": "-129"
           },
           "draw": {
-            "prob": 17.0,
-            "fair_american": "+488"
+            "prob": 26.3,
+            "fair_american": "+280"
           },
           "away": {
-            "prob": 4.4,
-            "fair_american": "+2162"
+            "prob": 17.3,
+            "fair_american": "+476"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 94.7,
-            "fair_american": "-1777"
+            "prob": 76.5,
+            "fair_american": "-325"
           },
           "away": {
-            "prob": 5.3,
-            "fair_american": "+1777"
+            "prob": 23.5,
+            "fair_american": "+325"
           }
         },
         "totals": {
           "over_1_5": {
-            "prob": 74.5,
-            "fair_american": "-292"
+            "prob": 75.6,
+            "fair_american": "-310"
           },
           "under_1_5": {
-            "prob": 25.5,
-            "fair_american": "+292"
+            "prob": 24.4,
+            "fair_american": "+310"
           },
           "over_2_5": {
-            "prob": 48.2,
-            "fair_american": "+107"
+            "prob": 49.1,
+            "fair_american": "+103"
           },
           "under_2_5": {
-            "prob": 51.8,
-            "fair_american": "-107"
+            "prob": 50.9,
+            "fair_american": "-103"
           },
           "over_3_5": {
-            "prob": 25.6,
-            "fair_american": "+290"
+            "prob": 27.0,
+            "fair_american": "+271"
           },
           "under_3_5": {
-            "prob": 74.4,
-            "fair_american": "-290"
+            "prob": 73.0,
+            "fair_american": "-271"
           }
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 54.6,
-            "fair_american": "-120"
+            "prob": 32.5,
+            "fair_american": "+208"
           },
           "away_plus_1_5": {
-            "prob": 45.4,
-            "fair_american": "+120"
+            "prob": 67.5,
+            "fair_american": "-208"
           }
         },
         "player_props": [
           {
-            "player_name": "Denis Bouanga",
-            "team": "Los Angeles FC",
+            "player_name": "Esther Gonzalez",
+            "team": "Gotham FC",
             "anytime_goalscorer": {
-              "prob": 60.4,
-              "fair_american": "-153"
+              "prob": 47.1,
+              "fair_american": "+112"
             },
             "anytime_assist": {
-              "prob": 46.9,
-              "fair_american": "+113"
+              "prob": 34.6,
+              "fair_american": "+189"
             },
             "shots_over_25": {
-              "prob": 97.6,
-              "fair_american": "-4022"
+              "prob": 76.9,
+              "fair_american": "-332"
             }
           },
           {
-            "player_name": "Brian White",
-            "team": "Vancouver Whitecaps",
+            "player_name": "Key Attacker (Uta)",
+            "team": "Utah Royals",
             "anytime_goalscorer": {
-              "prob": 13.1,
-              "fair_american": "+665"
+              "prob": 23.4,
+              "fair_american": "+327"
             },
             "anytime_assist": {
-              "prob": 6.9,
-              "fair_american": "+1339"
+              "prob": 16.3,
+              "fair_american": "+513"
             },
             "shots_over_25": {
-              "prob": 6.1,
-              "fair_american": "+1552"
+              "prob": 26.4,
+              "fair_american": "+279"
             }
           }
         ]
       }
     },
     {
-      "fixture_id": "fix_usls_4",
+      "fixture_id": "espn_401854038",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Houston Dash",
+      "away_team": "Portland Thorns FC",
+      "model_markets": {
+        "home_xg": 1.08,
+        "away_xg": 1.58,
+        "moneyline": {
+          "home": {
+            "prob": 24.5,
+            "fair_american": "+308"
+          },
+          "draw": {
+            "prob": 28.4,
+            "fair_american": "+252"
+          },
+          "away": {
+            "prob": 47.1,
+            "fair_american": "+112"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 34.2,
+            "fair_american": "+192"
+          },
+          "away": {
+            "prob": 65.8,
+            "fair_american": "-192"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-313"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+313"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.2,
+            "fair_american": "+267"
+          },
+          "under_3_5": {
+            "prob": 72.8,
+            "fair_american": "-267"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 9.8,
+            "fair_american": "+917"
+          },
+          "away_plus_1_5": {
+            "prob": 90.2,
+            "fair_american": "-917"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Hou)",
+            "team": "Houston Dash",
+            "anytime_goalscorer": {
+              "prob": 27.7,
+              "fair_american": "+261"
+            },
+            "anytime_assist": {
+              "prob": 19.4,
+              "fair_american": "+415"
+            },
+            "shots_over_25": {
+              "prob": 36.7,
+              "fair_american": "+173"
+            }
+          },
+          {
+            "player_name": "Sophia Smith",
+            "team": "Portland Thorns FC",
+            "anytime_goalscorer": {
+              "prob": 48.5,
+              "fair_american": "+106"
+            },
+            "anytime_assist": {
+              "prob": 33.7,
+              "fair_american": "+197"
+            },
+            "shots_over_25": {
+              "prob": 84.0,
+              "fair_american": "-526"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401854096",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "North Carolina Courage",
+      "away_team": "Denver Summit FC",
+      "model_markets": {
+        "home_xg": 1.77,
+        "away_xg": 0.89,
+        "moneyline": {
+          "home": {
+            "prob": 56.3,
+            "fair_american": "-129"
+          },
+          "draw": {
+            "prob": 26.3,
+            "fair_american": "+280"
+          },
+          "away": {
+            "prob": 17.3,
+            "fair_american": "+476"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 76.5,
+            "fair_american": "-325"
+          },
+          "away": {
+            "prob": 23.5,
+            "fair_american": "+325"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.6,
+            "fair_american": "-310"
+          },
+          "under_1_5": {
+            "prob": 24.4,
+            "fair_american": "+310"
+          },
+          "over_2_5": {
+            "prob": 49.1,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.9,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.0,
+            "fair_american": "+271"
+          },
+          "under_3_5": {
+            "prob": 73.0,
+            "fair_american": "-271"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 32.5,
+            "fair_american": "+208"
+          },
+          "away_plus_1_5": {
+            "prob": 67.5,
+            "fair_american": "-208"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Ashley Sanchez",
+            "team": "North Carolina Courage",
+            "anytime_goalscorer": {
+              "prob": 40.1,
+              "fair_american": "+149"
+            },
+            "anytime_assist": {
+              "prob": 42.2,
+              "fair_american": "+137"
+            },
+            "shots_over_25": {
+              "prob": 68.6,
+              "fair_american": "-219"
+            }
+          },
+          {
+            "player_name": "Summit Forward",
+            "team": "Denver Summit FC",
+            "anytime_goalscorer": {
+              "prob": 25.4,
+              "fair_american": "+293"
+            },
+            "anytime_assist": {
+              "prob": 17.8,
+              "fair_american": "+462"
+            },
+            "shots_over_25": {
+              "prob": 29.8,
+              "fair_american": "+235"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401854036",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Racing Louisville FC",
+      "away_team": "Kansas City Current",
+      "model_markets": {
+        "home_xg": 1.07,
+        "away_xg": 1.59,
+        "moneyline": {
+          "home": {
+            "prob": 24.1,
+            "fair_american": "+315"
+          },
+          "draw": {
+            "prob": 28.3,
+            "fair_american": "+253"
+          },
+          "away": {
+            "prob": 47.6,
+            "fair_american": "+110"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 33.6,
+            "fair_american": "+198"
+          },
+          "away": {
+            "prob": 66.4,
+            "fair_american": "-198"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-313"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+313"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.2,
+            "fair_american": "+267"
+          },
+          "under_3_5": {
+            "prob": 72.8,
+            "fair_american": "-267"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 9.6,
+            "fair_american": "+941"
+          },
+          "away_plus_1_5": {
+            "prob": 90.4,
+            "fair_american": "-941"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Rac)",
+            "team": "Racing Louisville FC",
+            "anytime_goalscorer": {
+              "prob": 27.5,
+              "fair_american": "+264"
+            },
+            "anytime_assist": {
+              "prob": 19.3,
+              "fair_american": "+419"
+            },
+            "shots_over_25": {
+              "prob": 36.1,
+              "fair_american": "+177"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Kan)",
+            "team": "Kansas City Current",
+            "anytime_goalscorer": {
+              "prob": 37.9,
+              "fair_american": "+164"
+            },
+            "anytime_assist": {
+              "prob": 27.2,
+              "fair_american": "+267"
+            },
+            "shots_over_25": {
+              "prob": 61.6,
+              "fair_american": "-160"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401854037",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Seattle Reign FC",
+      "away_team": "Orlando Pride",
+      "model_markets": {
+        "home_xg": 1.13,
+        "away_xg": 1.53,
+        "moneyline": {
+          "home": {
+            "prob": 26.5,
+            "fair_american": "+277"
+          },
+          "draw": {
+            "prob": 28.8,
+            "fair_american": "+248"
+          },
+          "away": {
+            "prob": 44.7,
+            "fair_american": "+124"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 37.3,
+            "fair_american": "+168"
+          },
+          "away": {
+            "prob": 62.7,
+            "fair_american": "-168"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-314"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+314"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+267"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-267"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 11.0,
+            "fair_american": "+808"
+          },
+          "away_plus_1_5": {
+            "prob": 89.0,
+            "fair_american": "-808"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Sea)",
+            "team": "Seattle Reign FC",
+            "anytime_goalscorer": {
+              "prob": 28.8,
+              "fair_american": "+248"
+            },
+            "anytime_assist": {
+              "prob": 20.2,
+              "fair_american": "+394"
+            },
+            "shots_over_25": {
+              "prob": 39.3,
+              "fair_american": "+154"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Orl)",
+            "team": "Orlando Pride",
+            "anytime_goalscorer": {
+              "prob": 36.8,
+              "fair_american": "+172"
+            },
+            "anytime_assist": {
+              "prob": 26.4,
+              "fair_american": "+279"
+            },
+            "shots_over_25": {
+              "prob": 59.0,
+              "fair_american": "-144"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401854035",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Washington Spirit",
+      "away_team": "Chicago Stars FC",
+      "model_markets": {
+        "home_xg": 2.35,
+        "away_xg": 0.31,
+        "moneyline": {
+          "home": {
+            "prob": 82.1,
+            "fair_american": "-459"
+          },
+          "draw": {
+            "prob": 14.9,
+            "fair_american": "+571"
+          },
+          "away": {
+            "prob": 3.0,
+            "fair_american": "+3273"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 96.5,
+            "fair_american": "-2770"
+          },
+          "away": {
+            "prob": 3.5,
+            "fair_american": "+2770"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 74.2,
+            "fair_american": "-288"
+          },
+          "under_1_5": {
+            "prob": 25.8,
+            "fair_american": "+288"
+          },
+          "over_2_5": {
+            "prob": 47.9,
+            "fair_american": "+109"
+          },
+          "under_2_5": {
+            "prob": 52.1,
+            "fair_american": "-109"
+          },
+          "over_3_5": {
+            "prob": 25.3,
+            "fair_american": "+296"
+          },
+          "under_3_5": {
+            "prob": 74.7,
+            "fair_american": "-296"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 58.8,
+            "fair_american": "-143"
+          },
+          "away_plus_1_5": {
+            "prob": 41.2,
+            "fair_american": "+143"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Trinity Rodman",
+            "team": "Washington Spirit",
+            "anytime_goalscorer": {
+              "prob": 55.0,
+              "fair_american": "-122"
+            },
+            "anytime_assist": {
+              "prob": 49.4,
+              "fair_american": "+102"
+            },
+            "shots_over_25": {
+              "prob": 94.0,
+              "fair_american": "-1564"
+            }
+          },
+          {
+            "player_name": "Mallory Swanson",
+            "team": "Chicago Stars FC",
+            "anytime_goalscorer": {
+              "prob": 11.1,
+              "fair_american": "+800"
+            },
+            "anytime_assist": {
+              "prob": 7.5,
+              "fair_american": "+1241"
+            },
+            "shots_over_25": {
+              "prob": 4.1,
+              "fair_american": "+2346"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401878615",
       "league": "USL Super League",
-      "kickoff_iso": "2026-11-01T21:30:00-05:00",
-      "home_team": "Fort Lauderdale United FC",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Dallas Trinity FC",
+      "away_team": "Fort Lauderdale United FC",
+      "model_markets": {
+        "home_xg": 1.27,
+        "away_xg": 1.39,
+        "moneyline": {
+          "home": {
+            "prob": 32.6,
+            "fair_american": "+207"
+          },
+          "draw": {
+            "prob": 29.3,
+            "fair_american": "+241"
+          },
+          "away": {
+            "prob": 38.1,
+            "fair_american": "+163"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 46.1,
+            "fair_american": "+117"
+          },
+          "away": {
+            "prob": 53.9,
+            "fair_american": "-117"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.9,
+            "fair_american": "-315"
+          },
+          "under_1_5": {
+            "prob": 24.1,
+            "fair_american": "+315"
+          },
+          "over_2_5": {
+            "prob": 49.4,
+            "fair_american": "+102"
+          },
+          "under_2_5": {
+            "prob": 50.6,
+            "fair_american": "-102"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+266"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-266"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 14.7,
+            "fair_american": "+580"
+          },
+          "away_plus_1_5": {
+            "prob": 85.3,
+            "fair_american": "-580"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Dal)",
+            "team": "Dallas Trinity FC",
+            "anytime_goalscorer": {
+              "prob": 31.7,
+              "fair_american": "+216"
+            },
+            "anytime_assist": {
+              "prob": 22.4,
+              "fair_american": "+346"
+            },
+            "shots_over_25": {
+              "prob": 46.6,
+              "fair_american": "+114"
+            }
+          },
+          {
+            "player_name": "Key Attacker (For)",
+            "team": "Fort Lauderdale United FC",
+            "anytime_goalscorer": {
+              "prob": 34.1,
+              "fair_american": "+193"
+            },
+            "anytime_assist": {
+              "prob": 24.3,
+              "fair_american": "+312"
+            },
+            "shots_over_25": {
+              "prob": 52.6,
+              "fair_american": "-111"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401878614",
+      "league": "USL Super League",
+      "kickoff_iso": "2026-11-01T22:00Z",
+      "home_team": "Tampa Bay Sun FC",
       "away_team": "DC Power FC",
       "model_markets": {
-        "home_xg": 1.88,
-        "away_xg": 0.78,
+        "home_xg": 1.29,
+        "away_xg": 1.37,
         "moneyline": {
           "home": {
-            "prob": 61.6,
-            "fair_american": "-160"
+            "prob": 33.5,
+            "fair_american": "+199"
           },
           "draw": {
-            "prob": 24.7,
-            "fair_american": "+305"
+            "prob": 29.4,
+            "fair_american": "+240"
           },
           "away": {
-            "prob": 13.7,
-            "fair_american": "+629"
+            "prob": 37.1,
+            "fair_american": "+169"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 81.8,
-            "fair_american": "-449"
+            "prob": 47.4,
+            "fair_american": "+111"
           },
           "away": {
-            "prob": 18.2,
-            "fair_american": "+449"
+            "prob": 52.6,
+            "fair_american": "-111"
           }
         },
         "totals": {
           "over_1_5": {
-            "prob": 75.4,
-            "fair_american": "-307"
+            "prob": 75.9,
+            "fair_american": "-315"
           },
           "under_1_5": {
-            "prob": 24.6,
-            "fair_american": "+307"
+            "prob": 24.1,
+            "fair_american": "+315"
           },
           "over_2_5": {
-            "prob": 49.0,
-            "fair_american": "+104"
+            "prob": 49.4,
+            "fair_american": "+102"
           },
           "under_2_5": {
-            "prob": 51.0,
-            "fair_american": "-104"
+            "prob": 50.6,
+            "fair_american": "-102"
           },
           "over_3_5": {
-            "prob": 26.8,
-            "fair_american": "+273"
+            "prob": 27.3,
+            "fair_american": "+266"
           },
           "under_3_5": {
-            "prob": 73.2,
-            "fair_american": "-273"
+            "prob": 72.7,
+            "fair_american": "-266"
           }
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 37.2,
-            "fair_american": "+169"
+            "prob": 15.3,
+            "fair_american": "+555"
           },
           "away_plus_1_5": {
-            "prob": 62.8,
-            "fair_american": "-169"
+            "prob": 84.7,
+            "fair_american": "-555"
           }
         },
         "player_props": [
           {
-            "player_name": "Addie McCain",
-            "team": "Fort Lauderdale United FC",
+            "player_name": "Key Attacker (Tam)",
+            "team": "Tampa Bay Sun FC",
+            "anytime_goalscorer": {
+              "prob": 32.1,
+              "fair_american": "+212"
+            },
+            "anytime_assist": {
+              "prob": 22.7,
+              "fair_american": "+340"
+            },
+            "shots_over_25": {
+              "prob": 47.7,
+              "fair_american": "+110"
+            }
+          },
+          {
+            "player_name": "Key Attacker (DC )",
+            "team": "DC Power FC",
+            "anytime_goalscorer": {
+              "prob": 33.7,
+              "fair_american": "+197"
+            },
+            "anytime_assist": {
+              "prob": 24.0,
+              "fair_american": "+317"
+            },
+            "shots_over_25": {
+              "prob": 51.6,
+              "fair_american": "-107"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401931657",
+      "league": "USL Championship",
+      "kickoff_iso": "2026-11-01T23:00Z",
+      "home_team": "New Mexico United",
+      "away_team": "Phoenix Rising FC",
+      "model_markets": {
+        "home_xg": 1.35,
+        "away_xg": 1.31,
+        "moneyline": {
+          "home": {
+            "prob": 36.2,
+            "fair_american": "+176"
+          },
+          "draw": {
+            "prob": 29.4,
+            "fair_american": "+240"
+          },
+          "away": {
+            "prob": 34.4,
+            "fair_american": "+191"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 51.3,
+            "fair_american": "-105"
+          },
+          "away": {
+            "prob": 48.7,
+            "fair_american": "+105"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.9,
+            "fair_american": "-315"
+          },
+          "under_1_5": {
+            "prob": 24.1,
+            "fair_american": "+315"
+          },
+          "over_2_5": {
+            "prob": 49.4,
+            "fair_american": "+102"
+          },
+          "under_2_5": {
+            "prob": 50.6,
+            "fair_american": "-102"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+266"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-266"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 17.1,
+            "fair_american": "+486"
+          },
+          "away_plus_1_5": {
+            "prob": 82.9,
+            "fair_american": "-486"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (New)",
+            "team": "New Mexico United",
+            "anytime_goalscorer": {
+              "prob": 33.3,
+              "fair_american": "+200"
+            },
+            "anytime_assist": {
+              "prob": 23.7,
+              "fair_american": "+323"
+            },
+            "shots_over_25": {
+              "prob": 50.6,
+              "fair_american": "-103"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Pho)",
+            "team": "Phoenix Rising FC",
+            "anytime_goalscorer": {
+              "prob": 32.5,
+              "fair_american": "+208"
+            },
+            "anytime_assist": {
+              "prob": 23.0,
+              "fair_american": "+334"
+            },
+            "shots_over_25": {
+              "prob": 48.7,
+              "fair_american": "+106"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_761932",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-02T00:00Z",
+      "home_team": "New England Revolution",
+      "away_team": "Inter Miami CF",
+      "model_markets": {
+        "home_xg": 0.98,
+        "away_xg": 1.68,
+        "moneyline": {
+          "home": {
+            "prob": 20.6,
+            "fair_american": "+385"
+          },
+          "draw": {
+            "prob": 27.4,
+            "fair_american": "+265"
+          },
+          "away": {
+            "prob": 52.0,
+            "fair_american": "-108"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 28.4,
+            "fair_american": "+252"
+          },
+          "away": {
+            "prob": 71.6,
+            "fair_american": "-252"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.7,
+            "fair_american": "-312"
+          },
+          "under_1_5": {
+            "prob": 24.3,
+            "fair_american": "+312"
+          },
+          "over_2_5": {
+            "prob": 49.2,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.8,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.1,
+            "fair_american": "+269"
+          },
+          "under_3_5": {
+            "prob": 72.9,
+            "fair_american": "-269"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 7.7,
+            "fair_american": "+1195"
+          },
+          "away_plus_1_5": {
+            "prob": 92.3,
+            "fair_american": "-1195"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (New)",
+            "team": "New England Revolution",
+            "anytime_goalscorer": {
+              "prob": 25.5,
+              "fair_american": "+293"
+            },
+            "anytime_assist": {
+              "prob": 17.8,
+              "fair_american": "+462"
+            },
+            "shots_over_25": {
+              "prob": 31.2,
+              "fair_american": "+220"
+            }
+          },
+          {
+            "player_name": "Lionel Messi",
+            "team": "Inter Miami CF",
             "anytime_goalscorer": {
               "prob": 47.2,
               "fair_american": "+112"
             },
             "anytime_assist": {
-              "prob": 31.3,
-              "fair_american": "+219"
+              "prob": 50.6,
+              "fair_american": "-103"
             },
             "shots_over_25": {
-              "prob": 70.2,
-              "fair_american": "-235"
+              "prob": 87.9,
+              "fair_american": "-724"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401931677",
+      "league": "USL League One",
+      "kickoff_iso": "2026-11-02T00:00Z",
+      "home_team": "Charlotte Independence",
+      "away_team": "FC Naples",
+      "model_markets": {
+        "home_xg": 2.05,
+        "away_xg": 0.61,
+        "moneyline": {
+          "home": {
+            "prob": 69.5,
+            "fair_american": "-228"
+          },
+          "draw": {
+            "prob": 21.6,
+            "fair_american": "+364"
+          },
+          "away": {
+            "prob": 8.9,
+            "fair_american": "+1020"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 88.6,
+            "fair_american": "-778"
+          },
+          "away": {
+            "prob": 11.4,
+            "fair_american": "+778"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.1,
+            "fair_american": "-301"
+          },
+          "under_1_5": {
+            "prob": 24.9,
+            "fair_american": "+301"
+          },
+          "over_2_5": {
+            "prob": 48.7,
+            "fair_american": "+105"
+          },
+          "under_2_5": {
+            "prob": 51.3,
+            "fair_american": "-105"
+          },
+          "over_3_5": {
+            "prob": 26.4,
+            "fair_american": "+280"
+          },
+          "under_3_5": {
+            "prob": 73.6,
+            "fair_american": "-280"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 44.8,
+            "fair_american": "+123"
+          },
+          "away_plus_1_5": {
+            "prob": 55.2,
+            "fair_american": "-123"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Cha)",
+            "team": "Charlotte Independence",
+            "anytime_goalscorer": {
+              "prob": 45.9,
+              "fair_american": "+118"
+            },
+            "anytime_assist": {
+              "prob": 33.6,
+              "fair_american": "+197"
+            },
+            "shots_over_25": {
+              "prob": 77.6,
+              "fair_american": "-347"
             }
           },
           {
-            "player_name": "Janni Goss",
-            "team": "DC Power FC",
+            "player_name": "Key Attacker (FC )",
+            "team": "FC Naples",
             "anytime_goalscorer": {
-              "prob": 19.6,
-              "fair_american": "+410"
+              "prob": 16.7,
+              "fair_american": "+498"
             },
             "anytime_assist": {
-              "prob": 12.4,
-              "fair_american": "+705"
+              "prob": 11.5,
+              "fair_american": "+771"
             },
             "shots_over_25": {
-              "prob": 12.6,
-              "fair_american": "+693"
+              "prob": 12.5,
+              "fair_american": "+701"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401931663",
+      "league": "USL League One",
+      "kickoff_iso": "2026-11-02T01:00Z",
+      "home_team": "Athletic Club Boise",
+      "away_team": "One Knoxville",
+      "model_markets": {
+        "home_xg": 1.38,
+        "away_xg": 1.28,
+        "moneyline": {
+          "home": {
+            "prob": 37.6,
+            "fair_american": "+166"
+          },
+          "draw": {
+            "prob": 29.4,
+            "fair_american": "+241"
+          },
+          "away": {
+            "prob": 33.0,
+            "fair_american": "+203"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 53.2,
+            "fair_american": "-114"
+          },
+          "away": {
+            "prob": 46.8,
+            "fair_american": "+114"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.9,
+            "fair_american": "-315"
+          },
+          "under_1_5": {
+            "prob": 24.1,
+            "fair_american": "+315"
+          },
+          "over_2_5": {
+            "prob": 49.4,
+            "fair_american": "+102"
+          },
+          "under_2_5": {
+            "prob": 50.6,
+            "fair_american": "-102"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+266"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-266"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 18.0,
+            "fair_american": "+455"
+          },
+          "away_plus_1_5": {
+            "prob": 82.0,
+            "fair_american": "-455"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Ath)",
+            "team": "Athletic Club Boise",
+            "anytime_goalscorer": {
+              "prob": 33.9,
+              "fair_american": "+195"
+            },
+            "anytime_assist": {
+              "prob": 24.1,
+              "fair_american": "+315"
+            },
+            "shots_over_25": {
+              "prob": 52.1,
+              "fair_american": "-109"
+            }
+          },
+          {
+            "player_name": "Key Attacker (One)",
+            "team": "One Knoxville",
+            "anytime_goalscorer": {
+              "prob": 31.9,
+              "fair_american": "+214"
+            },
+            "anytime_assist": {
+              "prob": 22.6,
+              "fair_american": "+343"
+            },
+            "shots_over_25": {
+              "prob": 47.1,
+              "fair_american": "+112"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_761921",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-02T01:30Z",
+      "home_team": "LAFC",
+      "away_team": "Minnesota United FC",
+      "model_markets": {
+        "home_xg": 1.53,
+        "away_xg": 1.13,
+        "moneyline": {
+          "home": {
+            "prob": 44.7,
+            "fair_american": "+124"
+          },
+          "draw": {
+            "prob": 28.8,
+            "fair_american": "+248"
+          },
+          "away": {
+            "prob": 26.5,
+            "fair_american": "+277"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 62.7,
+            "fair_american": "-168"
+          },
+          "away": {
+            "prob": 37.3,
+            "fair_american": "+168"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-314"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+314"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+267"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-267"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 23.1,
+            "fair_american": "+333"
+          },
+          "away_plus_1_5": {
+            "prob": 76.9,
+            "fair_american": "-333"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (LAF)",
+            "team": "LAFC",
+            "anytime_goalscorer": {
+              "prob": 36.8,
+              "fair_american": "+172"
+            },
+            "anytime_assist": {
+              "prob": 26.4,
+              "fair_american": "+279"
+            },
+            "shots_over_25": {
+              "prob": 59.0,
+              "fair_american": "-144"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Min)",
+            "team": "Minnesota United FC",
+            "anytime_goalscorer": {
+              "prob": 28.8,
+              "fair_american": "+248"
+            },
+            "anytime_assist": {
+              "prob": 20.2,
+              "fair_american": "+394"
+            },
+            "shots_over_25": {
+              "prob": 39.3,
+              "fair_american": "+154"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401931675",
+      "league": "USL Championship",
+      "kickoff_iso": "2026-11-02T02:00Z",
+      "home_team": "Sacramento Republic FC",
+      "away_team": "FC Tulsa",
+      "model_markets": {
+        "home_xg": 1.36,
+        "away_xg": 1.3,
+        "moneyline": {
+          "home": {
+            "prob": 36.7,
+            "fair_american": "+173"
+          },
+          "draw": {
+            "prob": 29.4,
+            "fair_american": "+240"
+          },
+          "away": {
+            "prob": 33.9,
+            "fair_american": "+195"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 51.9,
+            "fair_american": "-108"
+          },
+          "away": {
+            "prob": 48.1,
+            "fair_american": "+108"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.9,
+            "fair_american": "-315"
+          },
+          "under_1_5": {
+            "prob": 24.1,
+            "fair_american": "+315"
+          },
+          "over_2_5": {
+            "prob": 49.4,
+            "fair_american": "+102"
+          },
+          "under_2_5": {
+            "prob": 50.6,
+            "fair_american": "-102"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+266"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-266"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 17.4,
+            "fair_american": "+475"
+          },
+          "away_plus_1_5": {
+            "prob": 82.6,
+            "fair_american": "-475"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Sac)",
+            "team": "Sacramento Republic FC",
+            "anytime_goalscorer": {
+              "prob": 33.5,
+              "fair_american": "+198"
+            },
+            "anytime_assist": {
+              "prob": 23.8,
+              "fair_american": "+320"
+            },
+            "shots_over_25": {
+              "prob": 51.1,
+              "fair_american": "-105"
+            }
+          },
+          {
+            "player_name": "Key Attacker (FC )",
+            "team": "FC Tulsa",
+            "anytime_goalscorer": {
+              "prob": 32.3,
+              "fair_american": "+210"
+            },
+            "anytime_assist": {
+              "prob": 22.9,
+              "fair_american": "+337"
+            },
+            "shots_over_25": {
+              "prob": 48.2,
+              "fair_american": "+108"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_761933",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-02T02:45Z",
+      "home_team": "Portland Timbers",
+      "away_team": "Houston Dynamo FC",
+      "model_markets": {
+        "home_xg": 2.01,
+        "away_xg": 0.65,
+        "moneyline": {
+          "home": {
+            "prob": 67.7,
+            "fair_american": "-209"
+          },
+          "draw": {
+            "prob": 22.3,
+            "fair_american": "+348"
+          },
+          "away": {
+            "prob": 10.0,
+            "fair_american": "+903"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 87.2,
+            "fair_american": "-679"
+          },
+          "away": {
+            "prob": 12.8,
+            "fair_american": "+679"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.2,
+            "fair_american": "-303"
+          },
+          "under_1_5": {
+            "prob": 24.8,
+            "fair_american": "+303"
+          },
+          "over_2_5": {
+            "prob": 48.8,
+            "fair_american": "+105"
+          },
+          "under_2_5": {
+            "prob": 51.2,
+            "fair_american": "-105"
+          },
+          "over_3_5": {
+            "prob": 26.5,
+            "fair_american": "+278"
+          },
+          "under_3_5": {
+            "prob": 73.5,
+            "fair_american": "-278"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 43.0,
+            "fair_american": "+133"
+          },
+          "away_plus_1_5": {
+            "prob": 57.0,
+            "fair_american": "-133"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Por)",
+            "team": "Portland Timbers",
+            "anytime_goalscorer": {
+              "prob": 45.3,
+              "fair_american": "+121"
+            },
+            "anytime_assist": {
+              "prob": 33.1,
+              "fair_american": "+202"
+            },
+            "shots_over_25": {
+              "prob": 76.5,
+              "fair_american": "-325"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Hou)",
+            "team": "Houston Dynamo FC",
+            "anytime_goalscorer": {
+              "prob": 17.7,
+              "fair_american": "+464"
+            },
+            "anytime_assist": {
+              "prob": 12.2,
+              "fair_american": "+720"
+            },
+            "shots_over_25": {
+              "prob": 14.3,
+              "fair_american": "+600"
             }
           }
         ]

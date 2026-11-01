@@ -3,83 +3,55 @@ import json
 import logging
 import math
 import os
+import urllib.request
 import numpy as np
 from datetime import datetime, timezone
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-HISTORY_FILE = "public/data/prediction_history.json"
 ODDS_FILE = "public/data/upcoming_odds.json"
 RHO = -0.13
 
-# Full League Teams Database with Unique Elo, Value, Form & Player Ratings
+LEAGUES_TO_SCRAPE = [
+    {"slug": "usa.1", "name": "MLS"},
+    {"slug": "usa.nwsl", "name": "NWSL"},
+    {"slug": "usa.usl.1", "name": "USL Championship"},
+    {"slug": "usa.usl.2", "name": "USL League One"},
+    {"slug": "usa.usl.l1", "name": "USL League One"},
+    {"slug": "usa.mls_next", "name": "MLS NEXT Pro"},
+    {"slug": "usa.w.usl.1", "name": "USL Super League"}
+]
+
 TEAM_RATINGS = {
+    # NWSL
+    "North Carolina Courage": {"elo": 1540, "val": 4300000, "form": 7.0, "player_rating": 7.6, "key_players": [{"name": "Ashley Sanchez", "goal_share": 0.29, "xa_per90": 0.31, "shots_per90": 2.8}]},
+    "Denver Summit FC": {"elo": 1510, "val": 4000000, "form": 7.2, "player_rating": 7.3, "key_players": [{"name": "Summit Forward", "goal_share": 0.33, "xa_per90": 0.22, "shots_per90": 3.0}]},
+    "Washington Spirit": {"elo": 1570, "val": 4900000, "form": 7.5, "player_rating": 8.0, "key_players": [{"name": "Trinity Rodman", "goal_share": 0.34, "xa_per90": 0.29, "shots_per90": 3.6}]},
+    "Chicago Stars FC": {"elo": 1420, "val": 3500000, "form": 5.8, "player_rating": 6.8, "key_players": [{"name": "Mallory Swanson", "goal_share": 0.38, "xa_per90": 0.25, "shots_per90": 3.4}]},
+    "Gotham FC": {"elo": 1580, "val": 5200000, "form": 7.7, "player_rating": 8.2, "key_players": [{"name": "Esther Gonzalez", "goal_share": 0.36, "xa_per90": 0.24, "shots_per90": 3.2}]},
+    "Portland Thorns FC": {"elo": 1550, "val": 4600000, "form": 7.1, "player_rating": 7.8, "key_players": [{"name": "Sophia Smith", "goal_share": 0.42, "xa_per90": 0.26, "shots_per90": 4.1}]},
+
     # MLS
     "Inter Miami CF": {"elo": 1650, "val": 45000000, "form": 8.4, "player_rating": 8.9, "key_players": [{"name": "Lionel Messi", "goal_share": 0.38, "xa_per90": 0.42, "shots_per90": 4.2}]},
     "Atlanta United": {"elo": 1470, "val": 14000000, "form": 5.9, "player_rating": 7.0, "key_players": [{"name": "Saba Lobjanidze", "goal_share": 0.28, "xa_per90": 0.22, "shots_per90": 2.6}]},
     "FC Cincinnati": {"elo": 1610, "val": 26000000, "form": 7.8, "player_rating": 8.2, "key_players": [{"name": "Lucho Acosta", "goal_share": 0.34, "xa_per90": 0.38, "shots_per90": 3.5}]},
-    "Columbus Crew": {"elo": 1630, "val": 31000000, "form": 8.1, "player_rating": 8.5, "key_players": [{"name": "Cucho Hernandez", "goal_share": 0.40, "xa_per90": 0.30, "shots_per90": 4.1}]},
-    "Seattle Sounders FC": {"elo": 1560, "val": 21000000, "form": 7.2, "player_rating": 7.7, "key_players": [{"name": "Jordan Morris", "goal_share": 0.35, "xa_per90": 0.20, "shots_per90": 3.1}]},
-    "LA Galaxy": {"elo": 1590, "val": 29000000, "form": 7.6, "player_rating": 8.1, "key_players": [{"name": "Riqui Puig", "goal_share": 0.28, "xa_per90": 0.36, "shots_per90": 3.8}]},
-    "Los Angeles FC": {"elo": 1620, "val": 32000000, "form": 7.9, "player_rating": 8.4, "key_players": [{"name": "Denis Bouanga", "goal_share": 0.41, "xa_per90": 0.28, "shots_per90": 4.5}]},
-    "Vancouver Whitecaps": {"elo": 1510, "val": 12000000, "form": 6.8, "player_rating": 7.2, "key_players": [{"name": "Brian White", "goal_share": 0.35, "xa_per90": 0.18, "shots_per90": 3.1}]},
-
-    # NWSL
-    "Gotham FC": {"elo": 1580, "val": 5200000, "form": 7.7, "player_rating": 8.2, "key_players": [{"name": "Esther Gonzalez", "goal_share": 0.36, "xa_per90": 0.24, "shots_per90": 3.2}]},
-    "Portland Thorns FC": {"elo": 1550, "val": 4600000, "form": 7.1, "player_rating": 7.8, "key_players": [{"name": "Sophia Smith", "goal_share": 0.42, "xa_per90": 0.26, "shots_per90": 4.1}]},
-    "North Carolina Courage": {"elo": 1540, "val": 4300000, "form": 7.0, "player_rating": 7.6, "key_players": [{"name": "Ashley Sanchez", "goal_share": 0.29, "xa_per90": 0.31, "shots_per90": 2.8}]},
-    "Washington Spirit": {"elo": 1570, "val": 4900000, "form": 7.5, "player_rating": 8.0, "key_players": [{"name": "Trinity Rodman", "goal_share": 0.34, "xa_per90": 0.29, "shots_per90": 3.6}]},
-    "Orlando Pride": {"elo": 1600, "val": 5500000, "form": 8.2, "player_rating": 8.3, "key_players": [{"name": "Banda", "goal_share": 0.39, "xa_per90": 0.25, "shots_per90": 3.9}]},
-    "San Diego Wave FC": {"elo": 1500, "val": 4100000, "form": 6.3, "player_rating": 7.3, "key_players": [{"name": "Jaedyn Shaw", "goal_share": 0.32, "xa_per90": 0.28, "shots_per90": 3.0}]},
-    "Kansas City Current": {"elo": 1590, "val": 5300000, "form": 7.9, "player_rating": 8.2, "key_players": [{"name": "Temwa Chawinga", "goal_share": 0.44, "xa_per90": 0.22, "shots_per90": 4.3}]},
-    "Angel City FC": {"elo": 1480, "val": 3900000, "form": 6.1, "player_rating": 7.1, "key_players": [{"name": "Alyssa Thompson", "goal_share": 0.31, "xa_per90": 0.27, "shots_per90": 2.9}]},
-
-    # USL Championship
-    "Lexington SC": {"elo": 1330, "val": 2100000, "form": 6.2, "player_rating": 6.1, "key_players": [{"name": "Cameron Lancaster", "goal_share": 0.33, "xa_per90": 0.18, "shots_per90": 2.9}]},
-    "Colorado Springs Switchbacks": {"elo": 1420, "val": 3400000, "form": 7.3, "player_rating": 7.0, "key_players": [{"name": "Ronaldo Damus", "goal_share": 0.37, "xa_per90": 0.19, "shots_per90": 3.1}]},
-    "Louisville City FC": {"elo": 1480, "val": 4500000, "form": 8.0, "player_rating": 7.5, "key_players": [{"name": "Wilson Harris", "goal_share": 0.38, "xa_per90": 0.20, "shots_per90": 3.4}]},
-    "Indy Eleven": {"elo": 1390, "val": 3100000, "form": 6.8, "player_rating": 6.8, "key_players": [{"name": "Augi Williams", "goal_share": 0.34, "xa_per90": 0.17, "shots_per90": 2.8}]},
-    "Charleston Battery": {"elo": 1460, "val": 4200000, "form": 7.7, "player_rating": 7.3, "key_players": [{"name": "Nick Markanich", "goal_share": 0.42, "xa_per90": 0.21, "shots_per90": 3.8}]},
-    "Tampa Bay Rowdies": {"elo": 1410, "val": 3300000, "form": 6.9, "player_rating": 6.9, "key_players": [{"name": "Cal Jennings", "goal_share": 0.36, "xa_per90": 0.18, "shots_per90": 3.0}]},
-    "Phoenix Rising FC": {"elo": 1380, "val": 3000000, "form": 6.5, "player_rating": 6.7, "key_players": [{"name": "Remi Cabral", "goal_share": 0.33, "xa_per90": 0.19, "shots_per90": 2.7}]},
-    "Sacramento Republic FC": {"elo": 1440, "val": 3800000, "form": 7.4, "player_rating": 7.2, "key_players": [{"name": "Kizza", "goal_share": 0.35, "xa_per90": 0.18, "shots_per90": 3.1}]},
-
-    # USL League One
-    "Greenville Triumph SC": {"elo": 1330, "val": 1900000, "form": 6.8, "player_rating": 6.2, "key_players": [{"name": "Lycio Castro", "goal_share": 0.31, "xa_per90": 0.17, "shots_per90": 2.5}]},
-    "Charlotte Independence": {"elo": 1310, "val": 1700000, "form": 6.3, "player_rating": 6.0, "key_players": [{"name": "Juan Carlos Obregon", "goal_share": 0.36, "xa_per90": 0.15, "shots_per90": 2.9}]},
-    "Forward Madison FC": {"elo": 1340, "val": 2000000, "form": 7.1, "player_rating": 6.3, "key_players": [{"name": "Christian Chaney", "goal_share": 0.35, "xa_per90": 0.16, "shots_per90": 2.7}]},
-    "Union Omaha": {"elo": 1370, "val": 2300000, "form": 7.5, "player_rating": 6.6, "key_players": [{"name": "Steevan Dos Santos", "goal_share": 0.34, "xa_per90": 0.20, "shots_per90": 2.8}]},
-    "Spokane Velocity FC": {"elo": 1290, "val": 1600000, "form": 6.4, "player_rating": 5.9, "key_players": [{"name": "Josh Dolling", "goal_share": 0.32, "xa_per90": 0.18, "shots_per90": 2.6}]},
-    "One Knoxville SC": {"elo": 1300, "val": 1650000, "form": 6.5, "player_rating": 6.0, "key_players": [{"name": "Kempes Tekiela", "goal_share": 0.30, "xa_per90": 0.17, "shots_per90": 2.4}]},
-
-    # MLS NEXT Pro
-    "Carolina Core FC": {"elo": 1280, "val": 1500000, "form": 6.2, "player_rating": 5.8, "key_players": [{"name": "Papa Ndoye", "goal_share": 0.38, "xa_per90": 0.14, "shots_per90": 2.8}]},
-    "Crown Legacy FC": {"elo": 1320, "val": 1800000, "form": 6.8, "player_rating": 6.2, "key_players": [{"name": "Iuri Tavares", "goal_share": 0.33, "xa_per90": 0.21, "shots_per90": 2.6}]},
-    "Chattanooga FC": {"elo": 1290, "val": 1550000, "form": 6.5, "player_rating": 6.0, "key_players": [{"name": "Mehdi Ouamri", "goal_share": 0.32, "xa_per90": 0.18, "shots_per90": 2.5}]},
-    "Columbus Crew 2": {"elo": 1350, "val": 2000000, "form": 7.1, "player_rating": 6.7, "key_players": [{"name": "Gerson Minsi", "goal_share": 0.35, "xa_per90": 0.22, "shots_per90": 3.0}]},
-    "Tacoma Defiance": {"elo": 1330, "val": 1900000, "form": 6.9, "player_rating": 6.4, "key_players": [{"name": "Minoungou", "goal_share": 0.31, "xa_per90": 0.20, "shots_per90": 2.7}]},
-    "North Texas SC": {"elo": 1360, "val": 2100000, "form": 7.3, "player_rating": 6.8, "key_players": [{"name": "Pedrinho", "goal_share": 0.36, "xa_per90": 0.23, "shots_per90": 2.9}]},
-
-    # USL Super League
-    "Carolina Ascent FC": {"elo": 1430, "val": 2600000, "form": 7.4, "player_rating": 7.1, "key_players": [{"name": "Maddison Corbin", "goal_share": 0.35, "xa_per90": 0.22, "shots_per90": 3.0}]},
-    "Tampa Bay Sun FC": {"elo": 1400, "val": 2300000, "form": 6.8, "player_rating": 6.7, "key_players": [{"name": "Erika Tymrak", "goal_share": 0.30, "xa_per90": 0.25, "shots_per90": 2.7}]},
-    "Brooklyn FC": {"elo": 1390, "val": 2200000, "form": 6.6, "player_rating": 6.5, "key_players": [{"name": "Jessica Garziano", "goal_share": 0.32, "xa_per90": 0.21, "shots_per90": 2.6}]},
-    "Dallas Trinity FC": {"elo": 1410, "val": 2400000, "form": 7.0, "player_rating": 6.8, "key_players": [{"name": "Amber Brooks", "goal_share": 0.28, "xa_per90": 0.24, "shots_per90": 2.5}]},
-    "Spokane Zephyr FC": {"elo": 1370, "val": 2000000, "form": 6.4, "player_rating": 6.3, "key_players": [{"name": "Emina Ekic", "goal_share": 0.33, "xa_per90": 0.22, "shots_per90": 2.8}]},
-    "Lexington SC Women": {"elo": 1350, "val": 1800000, "form": 6.2, "player_rating": 6.1, "key_players": [{"name": "Sydney Shepherd", "goal_share": 0.29, "xa_per90": 0.18, "shots_per90": 2.3}]},
-    "Fort Lauderdale United FC": {"elo": 1380, "val": 2100000, "form": 6.7, "player_rating": 6.4, "key_players": [{"name": "Addie McCain", "goal_share": 0.34, "xa_per90": 0.20, "shots_per90": 2.7}]},
-    "DC Power FC": {"elo": 1340, "val": 1750000, "form": 6.1, "player_rating": 6.0, "key_players": [{"name": "Janni Goss", "goal_share": 0.28, "xa_per90": 0.17, "shots_per90": 2.2}]}
+    "Columbus Crew": {"elo": 1630, "val": 31000000, "form": 8.1, "player_rating": 8.5, "key_players": [{"name": "Cucho Hernandez", "goal_share": 0.40, "xa_per90": 0.30, "shots_per90": 4.1}]}
 }
 
 def get_team_rating(team_name):
     if team_name in TEAM_RATINGS:
         return TEAM_RATINGS[team_name]
-    name_hash = sum(ord(c) for c in team_name)
+    # Unique deterministic positional ratings per team name string
+    name_sum = sum(ord(c) * (i + 1) for i, c in enumerate(team_name))
+    elo = 1250 + (name_sum % 350)
+    val = 1500000 + (name_sum % 40) * 200000
+    form = round(4.5 + ((name_sum % 45) / 10.0), 1)
+    player_rating = round(5.0 + ((name_sum % 38) / 10.0), 1)
     return {
-        "elo": 1300 + (name_hash % 250),
-        "val": 1600000 + (name_hash % 30) * 100000,
-        "form": round(5.5 + ((name_hash % 30) / 10.0), 1),
-        "player_rating": round(5.2 + ((name_hash % 35) / 10.0), 1),
+        "elo": elo,
+        "val": val,
+        "form": form,
+        "player_rating": player_rating,
         "key_players": [
             {"name": f"Key Attacker ({team_name[:3]})", "goal_share": 0.30, "xa_per90": 0.20, "shots_per90": 2.8}
         ]
@@ -101,13 +73,11 @@ def to_american(prob):
         return f"+{int(round(((1 - prob) / prob) * 100))}"
 
 def calculate_model_markets(home_team, away_team, home_r, away_r):
-    # Dynamic Rating Score with Home Field Advantage
     home_comp = (0.45 * home_r["elo"]) + (0.25 * home_r["player_rating"] * 180) + (0.15 * math.log10(max(home_r["val"], 100000)) * 180) + (0.15 * (home_r["form"] - 5.0) * 100) + 40.0
     away_comp = (0.45 * away_r["elo"]) + (0.25 * away_r["player_rating"] * 180) + (0.15 * math.log10(max(away_r["val"], 100000)) * 180) + (0.15 * (away_r["form"] - 5.0) * 100)
     
     diff = home_comp - away_comp
     
-    # Calculate distinct dynamic xG per matchup
     home_xg = max(0.40, round(1.48 + (diff / 220.0), 2))
     away_xg = max(0.30, round(1.18 - (diff / 220.0), 2))
 
@@ -176,51 +146,63 @@ def calculate_model_markets(home_team, away_team, home_r, away_r):
         "player_props": player_props
     }
 
+def fetch_live_espn_events():
+    events_found = []
+    seen_ids = set()
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+
+    for lg in LEAGUES_TO_SCRAPE:
+        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg['slug']}/scoreboard"
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=6) as resp:
+                if resp.status == 200:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    for event in data.get("events", []):
+                        eid = event.get("id")
+                        if eid in seen_ids:
+                            continue
+                        seen_ids.add(eid)
+
+                        event_date = event.get("date")
+                        competitions = event.get("competitions", [])
+                        if not competitions:
+                            continue
+
+                        competitors = competitions[0].get("competitors", [])
+                        home_team, away_team = None, None
+
+                        for comp in competitors:
+                            t_name = comp.get("team", {}).get("displayName") or comp.get("team", {}).get("name")
+                            if comp.get("homeAway") == "home":
+                                home_team = t_name
+                            else:
+                                away_team = t_name
+
+                        if home_team and away_team:
+                            events_found.append({
+                                "id": f"espn_{eid}",
+                                "slug": lg["slug"],
+                                "league": lg["name"],
+                                "home": home_team,
+                                "away": away_team,
+                                "time": event_date
+                            })
+        except Exception as e:
+            logging.warning(f"Live fetch warning for {lg['name']} ({lg['slug']}): {e}")
+
+    return events_found
+
 def run_pipeline():
-    logging.info("Generating Full 22-Match Today US Soccer Slate...")
+    logging.info("Executing Dynamic Live ESPN Scoreboard Scraper Pipeline...")
+    
+    live_slate = fetch_live_espn_events()
+    logging.info(f"Live API scraper retrieved {len(live_slate)} match events from ESPN endpoints.")
 
-    # Comprehensive 22-Match Matchday Slate for Today (11/01/2026)
-    full_today_slate = [
-        # USL Championship
-        {"id": "fix_uslc_1", "slug": "usa.usl.1", "league": "USL Championship", "home": "Lexington SC", "away": "Colorado Springs Switchbacks", "time": "2026-11-01T14:00:00-05:00"},
-        {"id": "fix_uslc_2", "slug": "usa.usl.1", "league": "USL Championship", "home": "Louisville City FC", "away": "Indy Eleven", "time": "2026-11-01T15:00:00-05:00"},
-        {"id": "fix_uslc_3", "slug": "usa.usl.1", "league": "USL Championship", "home": "Charleston Battery", "away": "Tampa Bay Rowdies", "time": "2026-11-01T15:30:00-05:00"},
-        {"id": "fix_uslc_4", "slug": "usa.usl.1", "league": "USL Championship", "home": "Phoenix Rising FC", "away": "Sacramento Republic FC", "time": "2026-11-01T16:00:00-05:00"},
-        
-        # USL League One
-        {"id": "fix_usl1_1", "slug": "usa.usl.2", "league": "USL League One", "home": "Greenville Triumph SC", "away": "Charlotte Independence", "time": "2026-11-01T16:30:00-05:00"},
-        {"id": "fix_usl1_2", "slug": "usa.usl.2", "league": "USL League One", "home": "Forward Madison FC", "away": "Union Omaha", "time": "2026-11-01T17:00:00-05:00"},
-        {"id": "fix_usl1_3", "slug": "usa.usl.2", "league": "USL League One", "home": "Spokane Velocity FC", "away": "One Knoxville SC", "time": "2026-11-01T17:30:00-05:00"},
-
-        # NWSL
-        {"id": "fix_nwsl_1", "slug": "usa.nwsl", "league": "NWSL", "home": "Gotham FC", "away": "Portland Thorns FC", "time": "2026-11-01T17:00:00-05:00"},
-        {"id": "fix_nwsl_2", "slug": "usa.nwsl", "league": "NWSL", "home": "North Carolina Courage", "away": "Washington Spirit", "time": "2026-11-01T18:00:00-05:00"},
-        {"id": "fix_nwsl_3", "slug": "usa.nwsl", "league": "NWSL", "home": "Orlando Pride", "away": "San Diego Wave FC", "time": "2026-11-01T18:30:00-05:00"},
-        {"id": "fix_nwsl_4", "slug": "usa.nwsl", "league": "NWSL", "home": "Kansas City Current", "away": "Angel City FC", "time": "2026-11-01T19:00:00-05:00"},
-
-        # MLS
-        {"id": "fix_mls_1", "slug": "usa.1", "league": "MLS", "home": "Inter Miami CF", "away": "Atlanta United", "time": "2026-11-01T19:00:00-05:00"},
-        {"id": "fix_mls_2", "slug": "usa.1", "league": "MLS", "home": "FC Cincinnati", "away": "Columbus Crew", "time": "2026-11-01T19:30:00-05:00"},
-        {"id": "fix_mls_3", "slug": "usa.1", "league": "MLS", "home": "Seattle Sounders FC", "away": "LA Galaxy", "time": "2026-11-01T20:00:00-05:00"},
-        {"id": "fix_mls_4", "slug": "usa.1", "league": "MLS", "home": "Los Angeles FC", "away": "Vancouver Whitecaps", "time": "2026-11-01T21:30:00-05:00"},
-
-        # MLS NEXT Pro
-        {"id": "fix_mnp_1", "slug": "usa.mls_next", "league": "MLS NEXT Pro", "home": "Carolina Core FC", "away": "Crown Legacy FC", "time": "2026-11-01T18:00:00-05:00"},
-        {"id": "fix_mnp_2", "slug": "usa.mls_next", "league": "MLS NEXT Pro", "home": "Chattanooga FC", "away": "Columbus Crew 2", "time": "2026-11-01T19:00:00-05:00"},
-        {"id": "fix_mnp_3", "slug": "usa.mls_next", "league": "MLS NEXT Pro", "home": "Tacoma Defiance", "away": "North Texas SC", "time": "2026-11-01T20:00:00-05:00"},
-
-        # USL Super League
-        {"id": "fix_usls_1", "slug": "usa.usl.super", "league": "USL Super League", "home": "Carolina Ascent FC", "away": "Tampa Bay Sun FC", "time": "2026-11-01T19:00:00-05:00"},
-        {"id": "fix_usls_2", "slug": "usa.usl.super", "league": "USL Super League", "home": "Brooklyn FC", "away": "Dallas Trinity FC", "time": "2026-11-01T20:30:00-05:00"},
-        {"id": "fix_usls_3", "slug": "usa.usl.super", "league": "USL Super League", "home": "Spokane Zephyr FC", "away": "Lexington SC Women", "time": "2026-11-01T21:00:00-05:00"},
-        {"id": "fix_usls_4", "slug": "usa.usl.super", "league": "USL Super League", "home": "Fort Lauderdale United FC", "away": "DC Power FC", "time": "2026-11-01T21:30:00-05:00"}
-    ]
-
-    # Enforce strict chronological ordering (earliest kickoffs first)
-    full_today_slate.sort(key=lambda x: x["time"])
+    live_slate.sort(key=lambda x: x["time"])
 
     output_fixtures = []
-    for item in full_today_slate:
+    for item in live_slate:
         home_r = get_team_rating(item["home"])
         away_r = get_team_rating(item["away"])
         model_markets = calculate_model_markets(item["home"], item["away"], home_r, away_r)
@@ -237,7 +219,7 @@ def run_pipeline():
     payload = {
         "metadata": {
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "engine_status": "full_22_slate_ready",
+            "engine_status": "live_espn_scraper_active",
             "fixture_count": len(output_fixtures)
         },
         "fixtures": output_fixtures
@@ -247,7 +229,7 @@ def run_pipeline():
     with open(ODDS_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
 
-    logging.info(f"Full 22-match today dataset generated successfully. Total matches: {len(output_fixtures)}")
+    logging.info(f"Updated {ODDS_FILE} with {len(output_fixtures)} dynamic live fixtures.")
 
 if __name__ == "__main__":
     run_pipeline()
