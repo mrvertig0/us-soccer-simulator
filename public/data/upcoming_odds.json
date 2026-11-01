@@ -447,9 +447,9 @@
       "kickoff_iso": "2026-11-01T22:00:00Z",
       "home_team": "Chattanooga FC",
       "away_team": "Columbus Crew 2",
-      "home_color": "#D11242",
+      "home_color": "#00529B",
       "away_color": "#FED100",
-      "home_emoji": "\ud83d\udc3a",
+      "home_emoji": "\ud83d\udc99",
       "away_emoji": "\ud83d\udc77",
       "model_markets": {
         "home_xg": 1.65,
