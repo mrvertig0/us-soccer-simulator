@@ -1,8 +1,13 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T12:40:43.130501+00:00",
+    "generated_at": "2026-11-01T12:54:52.361477+00:00",
     "scraper_status": "live_scraped",
-    "fixture_count": 17
+    "fixture_count": 21,
+    "stats": {
+      "correct_predictions": 0,
+      "total_predictions": 0,
+      "accuracy_pct": 0.0
+    }
   },
   "fixtures": [
     {
@@ -15,18 +20,18 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 44.4,
-          "draw": 25.0,
-          "away": 30.5,
+          "home": 44.2,
+          "draw": 24.7,
+          "away": 31.1,
           "over_25": 53.4,
-          "btts": 56.6
+          "btts": 56.8
         },
         "odds": {
-          "home": "+125",
-          "draw": "+300",
-          "away": "+227",
-          "over_25": "-115",
-          "under_25": "+115",
+          "home": "+126",
+          "draw": "+305",
+          "away": "+222",
+          "over_25": "-114",
+          "under_25": "+114",
           "btts_yes": "-131",
           "btts_no": "+131"
         }
@@ -42,20 +47,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.4,
-          "draw": 25.6,
-          "away": 31.0,
-          "over_25": 53.0,
-          "btts": 56.0
+          "home": 43.6,
+          "draw": 24.9,
+          "away": 31.5,
+          "over_25": 53.4,
+          "btts": 56.8
         },
         "odds": {
-          "home": "+130",
-          "draw": "+291",
-          "away": "+223",
-          "over_25": "-113",
-          "under_25": "+113",
-          "btts_yes": "-127",
-          "btts_no": "+127"
+          "home": "+129",
+          "draw": "+301",
+          "away": "+218",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-132",
+          "btts_no": "+132"
         }
       }
     },
@@ -69,20 +74,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.6,
-          "draw": 25.6,
-          "away": 30.8,
-          "over_25": 52.7,
-          "btts": 56.5
+          "home": 43.9,
+          "draw": 24.6,
+          "away": 31.5,
+          "over_25": 53.5,
+          "btts": 56.7
         },
         "odds": {
-          "home": "+129",
-          "draw": "+290",
-          "away": "+225",
-          "over_25": "-111",
-          "under_25": "+111",
-          "btts_yes": "-130",
-          "btts_no": "+130"
+          "home": "+128",
+          "draw": "+306",
+          "away": "+217",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-131",
+          "btts_no": "+131"
         }
       }
     },
@@ -97,19 +102,19 @@
         "away_xg": 1.26,
         "probabilities": {
           "home": 44.4,
-          "draw": 24.5,
+          "draw": 24.4,
           "away": 31.2,
-          "over_25": 53.2,
-          "btts": 56.1
+          "over_25": 53.3,
+          "btts": 56.7
         },
         "odds": {
           "home": "+125",
-          "draw": "+309",
-          "away": "+221",
+          "draw": "+310",
+          "away": "+220",
           "over_25": "-114",
           "under_25": "+114",
-          "btts_yes": "-128",
-          "btts_no": "+128"
+          "btts_yes": "-131",
+          "btts_no": "+131"
         }
       }
     },
@@ -123,16 +128,16 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 44.0,
-          "draw": 24.7,
-          "away": 31.3,
-          "over_25": 53.3,
+          "home": 43.3,
+          "draw": 25.1,
+          "away": 31.5,
+          "over_25": 53.2,
           "btts": 56.3
         },
         "odds": {
-          "home": "+127",
-          "draw": "+305",
-          "away": "+219",
+          "home": "+131",
+          "draw": "+298",
+          "away": "+217",
           "over_25": "-114",
           "under_25": "+114",
           "btts_yes": "-129",
@@ -150,20 +155,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.8,
-          "draw": 25.5,
-          "away": 30.7,
-          "over_25": 52.8,
-          "btts": 56.7
+          "home": 44.6,
+          "draw": 24.9,
+          "away": 30.5,
+          "over_25": 53.2,
+          "btts": 56.0
         },
         "odds": {
-          "home": "+128",
-          "draw": "+292",
-          "away": "+226",
-          "over_25": "-112",
-          "under_25": "+112",
-          "btts_yes": "-131",
-          "btts_no": "+131"
+          "home": "+124",
+          "draw": "+302",
+          "away": "+228",
+          "over_25": "-114",
+          "under_25": "+114",
+          "btts_yes": "-127",
+          "btts_no": "+127"
         }
       }
     },
@@ -177,20 +182,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 44.1,
-          "draw": 25.4,
-          "away": 30.5,
-          "over_25": 53.5,
-          "btts": 56.9
+          "home": 44.0,
+          "draw": 24.4,
+          "away": 31.6,
+          "over_25": 53.3,
+          "btts": 56.7
         },
         "odds": {
           "home": "+127",
-          "draw": "+294",
-          "away": "+228",
-          "over_25": "-115",
-          "under_25": "+115",
-          "btts_yes": "-132",
-          "btts_no": "+132"
+          "draw": "+310",
+          "away": "+216",
+          "over_25": "-114",
+          "under_25": "+114",
+          "btts_yes": "-131",
+          "btts_no": "+131"
         }
       }
     },
@@ -204,20 +209,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.5,
-          "draw": 25.5,
-          "away": 31.0,
-          "over_25": 52.8,
-          "btts": 56.2
+          "home": 44.3,
+          "draw": 25.0,
+          "away": 30.8,
+          "over_25": 53.6,
+          "btts": 57.2
         },
         "odds": {
-          "home": "+130",
-          "draw": "+292",
-          "away": "+223",
-          "over_25": "-112",
-          "under_25": "+112",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+126",
+          "draw": "+300",
+          "away": "+225",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-134",
+          "btts_no": "+134"
         }
       }
     },
@@ -231,20 +236,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.3,
-          "draw": 25.1,
-          "away": 31.6,
-          "over_25": 53.2,
-          "btts": 56.3
+          "home": 43.6,
+          "draw": 25.4,
+          "away": 31.0,
+          "over_25": 52.4,
+          "btts": 57.0
         },
         "odds": {
-          "home": "+131",
-          "draw": "+298",
-          "away": "+216",
-          "over_25": "-114",
-          "under_25": "+114",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+129",
+          "draw": "+293",
+          "away": "+223",
+          "over_25": "-110",
+          "under_25": "+110",
+          "btts_yes": "-133",
+          "btts_no": "+133"
         }
       }
     },
@@ -258,20 +263,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.5,
-          "draw": 25.6,
-          "away": 30.9,
-          "over_25": 52.9,
-          "btts": 56.3
+          "home": 43.2,
+          "draw": 25.5,
+          "away": 31.3,
+          "over_25": 53.1,
+          "btts": 56.0
         },
         "odds": {
-          "home": "+130",
-          "draw": "+290",
-          "away": "+224",
-          "over_25": "-112",
-          "under_25": "+112",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+132",
+          "draw": "+292",
+          "away": "+220",
+          "over_25": "-113",
+          "under_25": "+113",
+          "btts_yes": "-127",
+          "btts_no": "+127"
         }
       }
     },
@@ -285,20 +290,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 44.2,
-          "draw": 24.8,
-          "away": 31.0,
-          "over_25": 54.0,
-          "btts": 56.9
+          "home": 44.6,
+          "draw": 24.9,
+          "away": 30.6,
+          "over_25": 53.5,
+          "btts": 56.4
         },
         "odds": {
-          "home": "+126",
-          "draw": "+303",
-          "away": "+223",
-          "over_25": "-118",
-          "under_25": "+118",
-          "btts_yes": "-132",
-          "btts_no": "+132"
+          "home": "+124",
+          "draw": "+302",
+          "away": "+227",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-129",
+          "btts_no": "+129"
         }
       }
     },
@@ -312,20 +317,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.7,
-          "draw": 24.5,
-          "away": 31.7,
-          "over_25": 53.3,
-          "btts": 56.0
+          "home": 44.0,
+          "draw": 25.8,
+          "away": 30.2,
+          "over_25": 53.7,
+          "btts": 57.1
         },
         "odds": {
-          "home": "+129",
-          "draw": "+308",
-          "away": "+215",
-          "over_25": "-114",
-          "under_25": "+114",
-          "btts_yes": "-127",
-          "btts_no": "+127"
+          "home": "+127",
+          "draw": "+288",
+          "away": "+231",
+          "over_25": "-116",
+          "under_25": "+116",
+          "btts_yes": "-133",
+          "btts_no": "+133"
         }
       }
     },
@@ -339,20 +344,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.8,
-          "draw": 25.3,
-          "away": 30.9,
-          "over_25": 53.3,
-          "btts": 56.8
+          "home": 45.1,
+          "draw": 24.2,
+          "away": 30.8,
+          "over_25": 52.8,
+          "btts": 55.8
         },
         "odds": {
-          "home": "+128",
-          "draw": "+295",
-          "away": "+224",
-          "over_25": "-114",
-          "under_25": "+114",
-          "btts_yes": "-132",
-          "btts_no": "+132"
+          "home": "+122",
+          "draw": "+314",
+          "away": "+225",
+          "over_25": "-112",
+          "under_25": "+112",
+          "btts_yes": "-126",
+          "btts_no": "+126"
         }
       }
     },
@@ -366,18 +371,18 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.5,
-          "draw": 25.4,
-          "away": 31.2,
-          "over_25": 52.6,
+          "home": 44.7,
+          "draw": 24.8,
+          "away": 30.5,
+          "over_25": 53.0,
           "btts": 56.0
         },
         "odds": {
-          "home": "+130",
-          "draw": "+294",
-          "away": "+221",
-          "over_25": "-111",
-          "under_25": "+111",
+          "home": "+124",
+          "draw": "+303",
+          "away": "+228",
+          "over_25": "-113",
+          "under_25": "+113",
           "btts_yes": "-127",
           "btts_no": "+127"
         }
@@ -394,19 +399,19 @@
         "away_xg": 1.26,
         "probabilities": {
           "home": 44.6,
-          "draw": 24.9,
-          "away": 30.5,
-          "over_25": 53.1,
-          "btts": 55.9
+          "draw": 25.0,
+          "away": 30.4,
+          "over_25": 53.3,
+          "btts": 56.7
         },
         "odds": {
           "home": "+124",
-          "draw": "+302",
-          "away": "+227",
-          "over_25": "-113",
-          "under_25": "+113",
-          "btts_yes": "-127",
-          "btts_no": "+127"
+          "draw": "+300",
+          "away": "+228",
+          "over_25": "-114",
+          "under_25": "+114",
+          "btts_yes": "-131",
+          "btts_no": "+131"
         }
       }
     },
@@ -420,20 +425,20 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 43.7,
-          "draw": 25.1,
+          "home": 43.6,
+          "draw": 25.2,
           "away": 31.2,
-          "over_25": 52.2,
-          "btts": 55.6
+          "over_25": 53.8,
+          "btts": 56.3
         },
         "odds": {
           "home": "+129",
-          "draw": "+299",
-          "away": "+220",
-          "over_25": "-109",
-          "under_25": "+109",
-          "btts_yes": "-125",
-          "btts_no": "+125"
+          "draw": "+297",
+          "away": "+221",
+          "over_25": "-116",
+          "under_25": "+116",
+          "btts_yes": "-129",
+          "btts_no": "+129"
         }
       }
     },
@@ -447,18 +452,126 @@
         "home_xg": 1.54,
         "away_xg": 1.26,
         "probabilities": {
-          "home": 42.8,
-          "draw": 25.8,
-          "away": 31.4,
-          "over_25": 52.6,
+          "home": 43.8,
+          "draw": 24.9,
+          "away": 31.3,
+          "over_25": 53.5,
+          "btts": 56.5
+        },
+        "odds": {
+          "home": "+128",
+          "draw": "+301",
+          "away": "+220",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-130",
+          "btts_no": "+130"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_usl1_1",
+      "league": "USL League One",
+      "kickoff_iso": "2026-11-02T19:00:00-05:00",
+      "home_team": "Forward Madison FC",
+      "away_team": "Union Omaha",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 43.3,
+          "draw": 25.1,
+          "away": 31.5,
+          "over_25": 53.6,
           "btts": 56.8
         },
         "odds": {
-          "home": "+134",
-          "draw": "+287",
-          "away": "+218",
-          "over_25": "-111",
-          "under_25": "+111",
+          "home": "+131",
+          "draw": "+298",
+          "away": "+217",
+          "over_25": "-116",
+          "under_25": "+116",
+          "btts_yes": "-132",
+          "btts_no": "+132"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_usl1_2",
+      "league": "USL League One",
+      "kickoff_iso": "2026-11-02T16:00:00-05:00",
+      "home_team": "Greenville Triumph SC",
+      "away_team": "Charlotte Independence",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 44.1,
+          "draw": 24.6,
+          "away": 31.4,
+          "over_25": 53.1,
+          "btts": 55.7
+        },
+        "odds": {
+          "home": "+127",
+          "draw": "+307",
+          "away": "+219",
+          "over_25": "-113",
+          "under_25": "+113",
+          "btts_yes": "-126",
+          "btts_no": "+126"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_mnp_1",
+      "league": "MLS NEXT Pro",
+      "kickoff_iso": "2026-11-02T18:00:00-05:00",
+      "home_team": "Carolina Core FC",
+      "away_team": "Crown Legacy FC",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 44.0,
+          "draw": 25.1,
+          "away": 30.9,
+          "over_25": 52.9,
+          "btts": 55.5
+        },
+        "odds": {
+          "home": "+128",
+          "draw": "+298",
+          "away": "+224",
+          "over_25": "-112",
+          "under_25": "+112",
+          "btts_yes": "-125",
+          "btts_no": "+125"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_mnp_2",
+      "league": "MLS NEXT Pro",
+      "kickoff_iso": "2026-11-02T20:00:00-05:00",
+      "home_team": "Chattanooga FC",
+      "away_team": "Columbus Crew 2",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 43.6,
+          "draw": 24.9,
+          "away": 31.5,
+          "over_25": 53.1,
+          "btts": 56.8
+        },
+        "odds": {
+          "home": "+129",
+          "draw": "+302",
+          "away": "+217",
+          "over_25": "-113",
+          "under_25": "+113",
           "btts_yes": "-131",
           "btts_no": "+131"
         }
