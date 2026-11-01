@@ -5,8 +5,8 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [selectedLeague, setSelectedLeague] = useState('ALL');
   const [activeMarketTabs, setActiveMarketTabs] = useState({});
-  const [showDkCompare, setShowDkCompare] = useState({}); // { [fixture_id]: boolean }
-  const [customDkLines, setCustomDkLines] = useState({}); // { [selection_key]: string }
+  const [showDkCompare, setShowDkCompare] = useState({});
+  const [customDkLines, setCustomDkLines] = useState({});
   const [parlayPicks, setParlayPicks] = useState([]);
 
   useEffect(() => {
@@ -109,16 +109,16 @@ export default function App() {
     <div className="min-h-screen bg-[#0E131F] text-slate-100 flex items-center justify-center font-sans">
       <div className="text-center space-y-2">
         <div className="text-xl font-bold tracking-tight text-white">U.S. SOCCER SIMULATOR</div>
-        <div className="text-xs text-slate-400 font-mono">Running Monte Carlo Poisson Engine...</div>
+        <div className="text-xs text-slate-400 font-mono">Loading 22 Matchday Fixtures...</div>
       </div>
     </div>
   );
 
   const fixtures = data?.fixtures || [];
   const metadata = data?.metadata || {};
-  const stats = metadata.stats || { correct_predictions: 38, total_predictions: 48, accuracy_pct: 79.2 };
   const allLeagues = ['ALL', 'MLS', 'USL Championship', 'USL League One', 'NWSL', 'MLS NEXT Pro', 'USL Super League'];
   
+  // Chronological sort: earliest kickoffs first
   const sortedFixtures = [...fixtures]
     .filter(f => selectedLeague === 'ALL' || f.league === selectedLeague)
     .sort((a, b) => new Date(a.kickoff_iso) - new Date(b.kickoff_iso));
@@ -129,7 +129,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0E131F] text-slate-100 font-sans p-4 md:p-8 pb-32">
       <div className="max-w-7xl mx-auto space-y-8">
         
-        {/* Header Banner */}
+        {/* Header Banner without Accuracy Pill */}
         <header className="bg-[#182032] border border-slate-700/60 rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-lg">
           <div>
             <div className="flex items-center gap-3">
@@ -141,21 +141,13 @@ export default function App() {
               </h1>
             </div>
             <p className="text-xs md:text-sm text-slate-400 mt-1">
-              Independent Monte Carlo Poisson & Dixon-Coles Probability Model
+              Monte Carlo Poisson & Dixon-Coles Goal Probability Model
             </p>
           </div>
 
-          <div className="flex items-center gap-3 flex-wrap">
-            {/* Model Accuracy Pill */}
-            <div className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold px-3 py-2 rounded-lg flex items-center gap-2 font-mono">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>{stats.accuracy_pct.toFixed(1)}% Accuracy ({stats.correct_predictions}/{stats.total_predictions})</span>
-            </div>
-
-            <div className="bg-[#0E131F] border border-slate-700/80 rounded-lg px-3 py-2 text-right">
-              <div className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Active Slate</div>
-              <div className="text-sm font-bold text-slate-100 font-mono">{metadata.fixture_count || 0} Matches</div>
-            </div>
+          <div className="bg-[#0E131F] border border-slate-700/80 rounded-lg px-4 py-2 text-right">
+            <div className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Today's Slate</div>
+            <div className="text-base font-bold text-slate-100 font-mono">{metadata.fixture_count || 0} Matches</div>
           </div>
         </header>
 
@@ -177,10 +169,10 @@ export default function App() {
           ))}
         </div>
 
-        {/* Matchday Odds Slate: One Match Per Line */}
+        {/* Matchday Odds Slate */}
         <section className="space-y-4">
           <div className="flex justify-between items-center">
-            <h2 className="text-lg font-bold text-white tracking-tight">Upcoming Fixtures (Earliest Kickoff First)</h2>
+            <h2 className="text-lg font-bold text-white tracking-tight">Today's Schedule (Earliest First)</h2>
             <span className="text-xs text-slate-400 font-mono">
               Model Updated: {metadata.generated_at ? new Date(metadata.generated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'N/A'}
             </span>
@@ -204,25 +196,25 @@ export default function App() {
                 return (
                   <div key={fix.fixture_id} className="bg-[#182032] border border-slate-700/60 rounded-xl p-5 shadow-lg space-y-4">
                     
-                    {/* Top Row: Match info & DK Compare toggle */}
+                    {/* Main Row Block */}
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                       
-                      {/* Left: Match Details & xG */}
+                      {/* Left Block: Match & Kickoff Details */}
                       <div className="lg:w-1/3 space-y-3 border-b lg:border-b-0 lg:border-r border-slate-800 pb-4 lg:pb-0 lg:pr-6">
                         <div className="flex justify-between items-center text-xs">
                           <span className="font-bold text-red-400 uppercase tracking-wide">{fix.league}</span>
-                          <span className="text-amber-400 font-mono font-bold">{new Date(fix.kickoff_iso).toLocaleDateString([], { month: 'short', day: 'numeric' })} at {new Date(fix.kickoff_iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                          <span className="text-amber-400 font-mono font-bold">{new Date(fix.kickoff_iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} EST</span>
                         </div>
 
                         <div className="space-y-2">
                           <div className="flex justify-between items-center font-bold text-base text-white">
                             <span>{fix.home_team}</span>
-                            <span className="text-xs text-emerald-400 font-mono font-semibold">xG {m.home_xg || '1.40'}</span>
+                            <span className="text-xs text-emerald-400 font-mono font-semibold">xG {m.home_xg}</span>
                           </div>
                           <div className="text-xs text-slate-500 font-bold tracking-widest uppercase">VS</div>
                           <div className="flex justify-between items-center font-bold text-base text-white">
                             <span>{fix.away_team}</span>
-                            <span className="text-xs text-sky-400 font-mono font-semibold">xG {m.away_xg || '1.40'}</span>
+                            <span className="text-xs text-sky-400 font-mono font-semibold">xG {m.away_xg}</span>
                           </div>
                         </div>
 
@@ -235,11 +227,11 @@ export default function App() {
                               : "bg-[#0E131F] text-slate-400 hover:text-slate-200 border-slate-800")
                           }
                         >
-                          <span>{isComparingDk ? '▼ Hiding DK Line Compare' : '▶ Compare DraftKings Line (+EV)'}</span>
+                          <span>{isComparingDk ? '▼ Hide DK Line Input' : '▶ Compare Sportsbook Line (+EV)'}</span>
                         </button>
                       </div>
 
-                      {/* Right: Model Market Selector & Odds */}
+                      {/* Right Block: Model Market Tabs & Odds */}
                       <div className="lg:w-2/3 space-y-3">
                         <div className="flex items-center gap-2 border-b border-slate-800 pb-2 overflow-x-auto">
                           {[
@@ -268,9 +260,9 @@ export default function App() {
                         {activeTab === 'ML' && (
                           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
                             {[
-                              { key: fix.fixture_id + '_ml_home', label: fix.home_team, type: 'HOME', item: ml.home },
-                              { key: fix.fixture_id + '_ml_draw', label: 'Draw', type: 'DRAW', item: ml.draw },
-                              { key: fix.fixture_id + '_ml_away', label: fix.away_team, type: 'AWAY', item: ml.away }
+                              { key: fix.fixture_id + '_ml_home', label: fix.home_team, item: ml.home },
+                              { key: fix.fixture_id + '_ml_draw', label: 'Draw', item: ml.draw },
+                              { key: fix.fixture_id + '_ml_away', label: fix.away_team, item: ml.away }
                             ].map((sel) => {
                               const dkLine = customDkLines[sel.key] || '';
                               const ev = calculateEV(sel.item.prob, dkLine);
@@ -294,10 +286,9 @@ export default function App() {
                                     <div className="text-base font-black text-white">{sel.item.fair_american}</div>
                                   </button>
 
-                                  {/* Optional DraftKings Comparison Input */}
                                   {isComparingDk && (
                                     <div className="pt-2 border-t border-slate-800 space-y-1">
-                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">DK Line Input</label>
+                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">Sportsbook Line</label>
                                       <input
                                         type="text"
                                         placeholder="e.g. +140"
@@ -308,7 +299,7 @@ export default function App() {
                                       {ev !== null && (
                                         <div className="text-[9px] font-bold font-mono text-right pt-0.5">
                                           {parseFloat(ev) > 0 ? (
-                                            <span className="text-emerald-400">+{ev}% EV (VALUE)</span>
+                                            <span className="text-emerald-400">+{ev}% EV</span>
                                           ) : (
                                             <span className="text-slate-500">{ev}% EV</span>
                                           )}
@@ -350,7 +341,7 @@ export default function App() {
 
                                   {isComparingDk && (
                                     <div className="pt-2 border-t border-slate-800 space-y-1">
-                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">DK Line Input</label>
+                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">Sportsbook Line</label>
                                       <input
                                         type="text"
                                         placeholder="e.g. -150"
@@ -361,7 +352,7 @@ export default function App() {
                                       {ev !== null && (
                                         <div className="text-[9px] font-bold font-mono text-right pt-0.5">
                                           {parseFloat(ev) > 0 ? (
-                                            <span className="text-emerald-400">+{ev}% EV (VALUE)</span>
+                                            <span className="text-emerald-400">+{ev}% EV</span>
                                           ) : (
                                             <span className="text-slate-500">{ev}% EV</span>
                                           )}
@@ -402,7 +393,7 @@ export default function App() {
 
                                   {isComparingDk && (
                                     <div className="pt-2 border-t border-slate-800 space-y-1">
-                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">DK Line Input</label>
+                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">Sportsbook Line</label>
                                       <input
                                         type="text"
                                         placeholder="e.g. -115"
@@ -413,7 +404,7 @@ export default function App() {
                                       {ev !== null && (
                                         <div className="text-[9px] font-bold font-mono text-right pt-0.5">
                                           {parseFloat(ev) > 0 ? (
-                                            <span className="text-emerald-400">+{ev}% EV (VALUE)</span>
+                                            <span className="text-emerald-400">+{ev}% EV</span>
                                           ) : (
                                             <span className="text-slate-500">{ev}% EV</span>
                                           )}
@@ -454,7 +445,7 @@ export default function App() {
 
                                   {isComparingDk && (
                                     <div className="pt-2 border-t border-slate-800 space-y-1">
-                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">DK Line Input</label>
+                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">Sportsbook Line</label>
                                       <input
                                         type="text"
                                         placeholder="e.g. +160"
@@ -465,7 +456,7 @@ export default function App() {
                                       {ev !== null && (
                                         <div className="text-[9px] font-bold font-mono text-right pt-0.5">
                                           {parseFloat(ev) > 0 ? (
-                                            <span className="text-emerald-400">+{ev}% EV (VALUE)</span>
+                                            <span className="text-emerald-400">+{ev}% EV</span>
                                           ) : (
                                             <span className="text-slate-500">{ev}% EV</span>
                                           )}
@@ -509,7 +500,7 @@ export default function App() {
                                       <div className="w-20">
                                         <input
                                           type="text"
-                                          placeholder="DK Line"
+                                          placeholder="Line"
                                           value={dkGoalLine}
                                           onChange={(e) => updateDkLine(pKey + '_goal', e.target.value)}
                                           className="w-full bg-[#182032] border border-slate-700 rounded px-1.5 py-0.5 text-xs font-mono text-amber-300"
