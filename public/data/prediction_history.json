@@ -1,0 +1,355 @@
+{
+  "stats": {
+    "correct_predictions": 0,
+    "total_predictions": 0,
+    "accuracy_pct": 0.0
+  },
+  "evaluated": [],
+  "pending": [
+    {
+      "fixture_id": "espn_761927",
+      "league_slug": "usa.1",
+      "league": "MLS",
+      "home_team": "Vancouver Whitecaps",
+      "away_team": "Seattle Sounders FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.9,
+        "draw": 24.8,
+        "away": 31.3,
+        "over_25": 52.0,
+        "btts": 54.8
+      }
+    },
+    {
+      "fixture_id": "espn_761931",
+      "league_slug": "usa.1",
+      "league": "MLS",
+      "home_team": "Atlanta United FC",
+      "away_team": "Toronto FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.0,
+        "draw": 25.4,
+        "away": 30.6,
+        "over_25": 53.0,
+        "btts": 56.5
+      }
+    },
+    {
+      "fixture_id": "espn_761920",
+      "league_slug": "usa.1",
+      "league": "MLS",
+      "home_team": "Nashville SC",
+      "away_team": "Red Bull New York",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.2,
+        "draw": 24.8,
+        "away": 31.0,
+        "over_25": 53.3,
+        "btts": 56.4
+      }
+    },
+    {
+      "fixture_id": "espn_761932",
+      "league_slug": "usa.1",
+      "league": "MLS",
+      "home_team": "New England Revolution",
+      "away_team": "Inter Miami CF",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.5,
+        "draw": 25.0,
+        "away": 31.5,
+        "over_25": 52.8,
+        "btts": 56.6
+      }
+    },
+    {
+      "fixture_id": "espn_761921",
+      "league_slug": "usa.1",
+      "league": "MLS",
+      "home_team": "LAFC",
+      "away_team": "Minnesota United FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.0,
+        "draw": 24.7,
+        "away": 31.3,
+        "over_25": 53.5,
+        "btts": 56.4
+      }
+    },
+    {
+      "fixture_id": "espn_761933",
+      "league_slug": "usa.1",
+      "league": "MLS",
+      "home_team": "Portland Timbers",
+      "away_team": "Houston Dynamo FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.6,
+        "draw": 25.2,
+        "away": 31.2,
+        "over_25": 52.8,
+        "btts": 55.8
+      }
+    },
+    {
+      "fixture_id": "espn_401854095",
+      "league_slug": "usa.nwsl",
+      "league": "NWSL",
+      "home_team": "Angel City FC",
+      "away_team": "Boston Legacy FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.5,
+        "draw": 24.9,
+        "away": 30.6,
+        "over_25": 53.0,
+        "btts": 55.9
+      }
+    },
+    {
+      "fixture_id": "espn_401854033",
+      "league_slug": "usa.nwsl",
+      "league": "NWSL",
+      "home_team": "Bay FC",
+      "away_team": "San Diego Wave FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.4,
+        "draw": 24.4,
+        "away": 31.2,
+        "over_25": 53.8,
+        "btts": 56.6
+      }
+    },
+    {
+      "fixture_id": "espn_401854034",
+      "league_slug": "usa.nwsl",
+      "league": "NWSL",
+      "home_team": "Gotham FC",
+      "away_team": "Utah Royals",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.4,
+        "draw": 24.6,
+        "away": 31.0,
+        "over_25": 53.6,
+        "btts": 56.3
+      }
+    },
+    {
+      "fixture_id": "espn_401854038",
+      "league_slug": "usa.nwsl",
+      "league": "NWSL",
+      "home_team": "Houston Dash",
+      "away_team": "Portland Thorns FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.3,
+        "draw": 24.9,
+        "away": 30.8,
+        "over_25": 53.7,
+        "btts": 57.1
+      }
+    },
+    {
+      "fixture_id": "espn_401854096",
+      "league_slug": "usa.nwsl",
+      "league": "NWSL",
+      "home_team": "North Carolina Courage",
+      "away_team": "Denver Summit FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.6,
+        "draw": 24.7,
+        "away": 30.6,
+        "over_25": 52.9,
+        "btts": 55.5
+      }
+    },
+    {
+      "fixture_id": "espn_401854036",
+      "league_slug": "usa.nwsl",
+      "league": "NWSL",
+      "home_team": "Racing Louisville FC",
+      "away_team": "Kansas City Current",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.9,
+        "draw": 24.7,
+        "away": 31.4,
+        "over_25": 53.1,
+        "btts": 55.7
+      }
+    },
+    {
+      "fixture_id": "espn_401854037",
+      "league_slug": "usa.nwsl",
+      "league": "NWSL",
+      "home_team": "Seattle Reign FC",
+      "away_team": "Orlando Pride",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.3,
+        "draw": 24.4,
+        "away": 31.3,
+        "over_25": 52.4,
+        "btts": 55.8
+      }
+    },
+    {
+      "fixture_id": "espn_401854035",
+      "league_slug": "usa.nwsl",
+      "league": "NWSL",
+      "home_team": "Washington Spirit",
+      "away_team": "Chicago Stars FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.8,
+        "draw": 25.3,
+        "away": 30.9,
+        "over_25": 53.0,
+        "btts": 55.9
+      }
+    },
+    {
+      "fixture_id": "espn_401931658",
+      "league_slug": "usa.usl.1",
+      "league": "USL Championship",
+      "home_team": "Lexington",
+      "away_team": "Colorado Springs Switchbacks FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.6,
+        "draw": 24.0,
+        "away": 31.3,
+        "over_25": 53.2,
+        "btts": 56.0
+      }
+    },
+    {
+      "fixture_id": "espn_401931657",
+      "league_slug": "usa.usl.1",
+      "league": "USL Championship",
+      "home_team": "New Mexico United",
+      "away_team": "Phoenix Rising FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.4,
+        "draw": 25.1,
+        "away": 31.5,
+        "over_25": 53.3,
+        "btts": 55.9
+      }
+    },
+    {
+      "fixture_id": "espn_401931675",
+      "league_slug": "usa.usl.1",
+      "league": "USL Championship",
+      "home_team": "Sacramento Republic FC",
+      "away_team": "FC Tulsa",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.6,
+        "draw": 25.4,
+        "away": 31.0,
+        "over_25": 53.1,
+        "btts": 56.8
+      }
+    },
+    {
+      "fixture_id": "fix_usl1_1",
+      "league_slug": "usa.usl.2",
+      "league": "USL League One",
+      "home_team": "Forward Madison FC",
+      "away_team": "Union Omaha",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.6,
+        "draw": 25.6,
+        "away": 30.8,
+        "over_25": 52.0,
+        "btts": 56.0
+      }
+    },
+    {
+      "fixture_id": "fix_usl1_2",
+      "league_slug": "usa.usl.2",
+      "league": "USL League One",
+      "home_team": "Greenville Triumph SC",
+      "away_team": "Charlotte Independence",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.2,
+        "draw": 24.6,
+        "away": 31.2,
+        "over_25": 53.3,
+        "btts": 56.4
+      }
+    },
+    {
+      "fixture_id": "fix_mnp_1",
+      "league_slug": "usa.mls_next",
+      "league": "MLS NEXT Pro",
+      "home_team": "Carolina Core FC",
+      "away_team": "Crown Legacy FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.3,
+        "draw": 24.3,
+        "away": 31.3,
+        "over_25": 54.0,
+        "btts": 56.7
+      }
+    },
+    {
+      "fixture_id": "fix_mnp_2",
+      "league_slug": "usa.mls_next",
+      "league": "MLS NEXT Pro",
+      "home_team": "Chattanooga FC",
+      "away_team": "Columbus Crew 2",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.2,
+        "draw": 25.4,
+        "away": 30.4,
+        "over_25": 53.1,
+        "btts": 56.3
+      }
+    },
+    {
+      "fixture_id": "fix_usls_1",
+      "league_slug": "usa.usl.super",
+      "league": "USL Super League",
+      "home_team": "Carolina Ascent FC",
+      "away_team": "Tampa Bay Sun FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 43.6,
+        "draw": 25.3,
+        "away": 31.1,
+        "over_25": 53.4,
+        "btts": 56.4
+      }
+    },
+    {
+      "fixture_id": "fix_usls_2",
+      "league_slug": "usa.usl.super",
+      "league": "USL Super League",
+      "home_team": "Brooklyn FC",
+      "away_team": "Dallas Trinity FC",
+      "predicted_pick": "HOME",
+      "probabilities": {
+        "home": 44.2,
+        "draw": 24.6,
+        "away": 31.1,
+        "over_25": 52.9,
+        "btts": 56.3
+      }
+    }
+  ]
+}
