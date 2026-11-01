@@ -6,23 +6,13 @@ import random
 import time
 import requests
 import numpy as np
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Referer": "https://www.fotmob.com/",
-}
-
-TARGET_LEAGUES = {
-    130: "MLS",
-    8972: "USL Championship",
-    9244: "USL League One",
-    9134: "NWSL",
-    10216: "MLS NEXT Pro"
 }
 
 def calculate_match_odds(home_elo=1500, away_elo=1480, home_val=3000000, away_val=2800000, home_form=7.0, away_form=6.8, iterations=10000):
@@ -77,67 +67,47 @@ def calculate_match_odds(home_elo=1500, away_elo=1480, home_val=3000000, away_va
         }
     }
 
-def run_pipeline():
-    logging.info("Initiating Direct League & Date Hybrid Scrape...")
-    output_fixtures = []
-    seen_ids = set()
-
-    # Direct league schedule queries
-    for league_id, league_name in TARGET_LEAGUES.items():
-        url = f"https://www.fotmob.com/api/leagues?id={league_id}"
-        time.sleep(random.uniform(0.5, 1.2))
-        try:
-            resp = requests.get(url, headers=HEADERS, timeout=10)
-            if resp.status_code == 200:
-                data = resp.json()
-                matches = data.get("fixtures", {}).get("allMatches", []) or data.get("matches", {}).get("allMatches", [])
-                for m in matches:
-                    match_id = str(m.get("id"))
-                    if match_id in seen_ids:
-                        continue
-                    
-                    home_name = m.get("home", {}).get("name")
-                    away_name = m.get("away", {}).get("name")
-                    if not home_name or not away_name:
-                        continue
-
-                    status = m.get("status", {})
-                    utc_time = status.get("utcTime") or datetime.now(timezone.utc).isoformat()
-                    
-                    odds_data = calculate_match_odds()
-                    seen_ids.add(match_id)
-                    
-                    output_fixtures.append({
-                        "fixture_id": f"fotmob_{match_id}",
-                        "league": league_name,
-                        "kickoff_iso": utc_time,
-                        "home_team": home_name,
-                        "away_team": away_name,
-                        "simulated_odds": odds_data
+def fetch_espn_fixtures(league_slug, league_label):
+    """Fetch live schedule feeds via public ESPN API endpoint."""
+    fixtures = []
+    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_slug}/scoreboard"
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=8)
+        if resp.status_code == 200:
+            events = resp.json().get("events", [])
+            for ev in events:
+                competitions = ev.get("competitions", [{}])[0]
+                competitors = competitions.get("competitors", [])
+                home_team, away_team = None, None
+                for c in competitors:
+                    if c.get("homeAway") == "home":
+                        home_team = c.get("team", {}).get("displayName")
+                    else:
+                        away_team = c.get("team", {}).get("displayName")
+                
+                if home_team and away_team:
+                    kickoff = ev.get("date") or datetime.now(timezone.utc).isoformat()
+                    odds = calculate_match_odds()
+                    fixtures.append({
+                        "fixture_id": f"espn_{ev.get('id')}",
+                        "league": league_label,
+                        "kickoff_iso": kickoff,
+                        "home_team": home_team,
+                        "away_team": away_team,
+                        "simulated_odds": odds
                     })
-        except Exception as e:
-            logging.error(f"Error fetching league {league_name}: {e}")
+    except Exception as e:
+        logging.error(f"Error fetching ESPN feed for {league_label}: {e}")
+    return fixtures
 
-    # Fallback/Supplemental Schedule Baseline if dynamic endpoints are throttled
-    if len(output_fixtures) == 0:
-        logging.warning("League endpoints throttled. Injecting active matchday slate...")
-        fallback_fixtures = [
-            {"id": "fix_101", "league": "MLS", "home": "Inter Miami CF", "away": "Atlanta United", "time": "2026-11-01T19:00:00-05:00"},
-            {"id": "fix_102", "league": "MLS", "home": "Los Angeles FC", "away": "Vancouver Whitecaps", "time": "2026-11-01T21:30:00-05:00"},
-            {"id": "fix_103", "league": "USL Championship", "home": "Lexington SC", "away": "Colorado Springs Switchbacks", "time": "2026-11-01T16:00:00-05:00"},
-            {"id": "fix_104", "league": "NWSL", "home": "Gotham FC", "away": "Portland Thorns FC", "time": "2026-11-01T17:00:00-05:00"},
-            {"id": "fix_105", "league": "NWSL", "home": "North Carolina Courage", "away": "Washington Spirit", "time": "2026-11-01T18:00:00-05:00"},
-            {"id": "fix_106", "league": "USL League One", "home": "Forward Madison FC", "away": "Union Omaha", "time": "2026-11-02T19:00:00-05:00"}
-        ]
-        for fix in fallback_fixtures:
-            output_fixtures.append({
-                "fixture_id": fix["id"],
-                "league": fix["league"],
-                "kickoff_iso": fix["time"],
-                "home_team": fix["home"],
-                "away_team": fix["away"],
-                "simulated_odds": calculate_match_odds()
-            })
+def run_pipeline():
+    logging.info("Initiating Live Match Pipeline...")
+    output_fixtures = []
+
+    # Pull live scores/schedules from public soccer API feeds
+    output_fixtures.extend(fetch_espn_fixtures("usa.1", "MLS"))
+    output_fixtures.extend(fetch_espn_fixtures("usa.nwsl", "NWSL"))
+    output_fixtures.extend(fetch_espn_fixtures("usa.usl.1", "USL Championship"))
 
     payload = {
         "metadata": {
@@ -152,7 +122,7 @@ def run_pipeline():
     with open("public/data/upcoming_odds.json", "w") as f:
         json.dump(payload, f, indent=2)
 
-    logging.info(f"Scrape completed! Total active fixtures loaded: {len(output_fixtures)}")
+    logging.info(f"Pipeline execution finished. Live match count: {len(output_fixtures)}")
 
 if __name__ == "__main__":
     run_pipeline()
