@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T13:00:53.801813+00:00",
+    "generated_at": "2026-11-01T13:28:24.075958+00:00",
     "scraper_status": "live_scraped",
     "fixture_count": 23,
     "stats": {
@@ -18,24 +18,24 @@
       "home_team": "Vancouver Whitecaps",
       "away_team": "Seattle Sounders FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
-        "predicted_pick": "HOME",
+        "home_xg": 1.4,
+        "away_xg": 1.4,
+        "predicted_pick": "AWAY",
         "probabilities": {
-          "home": 43.9,
-          "draw": 24.8,
-          "away": 31.3,
-          "over_25": 52.0,
-          "btts": 54.8
+          "home": 36.8,
+          "draw": 26.2,
+          "away": 36.9,
+          "over_25": 52.3,
+          "btts": 57.8
         },
         "odds": {
-          "home": "+128",
-          "draw": "+303",
-          "away": "+219",
-          "over_25": "-108",
-          "under_25": "+108",
-          "btts_yes": "-121",
-          "btts_no": "+121"
+          "home": "+171",
+          "draw": "+281",
+          "away": "+171",
+          "over_25": "-110",
+          "under_25": "+110",
+          "btts_yes": "-137",
+          "btts_no": "+137"
         }
       }
     },
@@ -47,24 +47,24 @@
       "home_team": "Atlanta United FC",
       "away_team": "Toronto FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.77,
+        "away_xg": 1.03,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.0,
-          "draw": 25.4,
-          "away": 30.6,
-          "over_25": 53.0,
-          "btts": 56.5
+          "home": 55.1,
+          "draw": 22.5,
+          "away": 22.3,
+          "over_25": 54.2,
+          "btts": 53.2
         },
         "odds": {
-          "home": "+127",
-          "draw": "+294",
-          "away": "+226",
-          "over_25": "-113",
-          "under_25": "+113",
-          "btts_yes": "-130",
-          "btts_no": "+130"
+          "home": "-123",
+          "draw": "+344",
+          "away": "+348",
+          "over_25": "-118",
+          "under_25": "+118",
+          "btts_yes": "-114",
+          "btts_no": "+114"
         }
       }
     },
@@ -76,24 +76,24 @@
       "home_team": "Nashville SC",
       "away_team": "Red Bull New York",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
-        "predicted_pick": "HOME",
+        "home_xg": 1.36,
+        "away_xg": 1.44,
+        "predicted_pick": "AWAY",
         "probabilities": {
-          "home": 44.2,
-          "draw": 24.8,
-          "away": 31.0,
+          "home": 35.7,
+          "draw": 25.1,
+          "away": 39.2,
           "over_25": 53.3,
-          "btts": 56.4
+          "btts": 56.7
         },
         "odds": {
-          "home": "+126",
-          "draw": "+303",
-          "away": "+223",
+          "home": "+180",
+          "draw": "+299",
+          "away": "+155",
           "over_25": "-114",
           "under_25": "+114",
-          "btts_yes": "-130",
-          "btts_no": "+130"
+          "btts_yes": "-131",
+          "btts_no": "+131"
         }
       }
     },
@@ -105,24 +105,24 @@
       "home_team": "New England Revolution",
       "away_team": "Inter Miami CF",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
-        "predicted_pick": "HOME",
+        "home_xg": 0.97,
+        "away_xg": 1.83,
+        "predicted_pick": "AWAY",
         "probabilities": {
-          "home": 43.5,
-          "draw": 25.0,
-          "away": 31.5,
+          "home": 20.6,
+          "draw": 22.4,
+          "away": 56.9,
           "over_25": 52.8,
-          "btts": 56.6
+          "btts": 51.8
         },
         "odds": {
-          "home": "+130",
-          "draw": "+300",
-          "away": "+218",
+          "home": "+385",
+          "draw": "+345",
+          "away": "-132",
           "over_25": "-112",
           "under_25": "+112",
-          "btts_yes": "-131",
-          "btts_no": "+131"
+          "btts_yes": "-108",
+          "btts_no": "+108"
         }
       }
     },
@@ -134,24 +134,24 @@
       "home_team": "LAFC",
       "away_team": "Minnesota United FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.65,
+        "away_xg": 1.15,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.0,
-          "draw": 24.7,
-          "away": 31.3,
-          "over_25": 53.5,
-          "btts": 56.4
+          "home": 49.6,
+          "draw": 24.1,
+          "away": 26.3,
+          "over_25": 53.2,
+          "btts": 55.3
         },
         "odds": {
-          "home": "+127",
-          "draw": "+305",
-          "away": "+219",
-          "over_25": "-115",
-          "under_25": "+115",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+102",
+          "draw": "+315",
+          "away": "+280",
+          "over_25": "-114",
+          "under_25": "+114",
+          "btts_yes": "-124",
+          "btts_no": "+124"
         }
       }
     },
@@ -163,24 +163,24 @@
       "home_team": "Portland Timbers",
       "away_team": "Houston Dynamo FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.55,
+        "away_xg": 1.25,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 43.6,
-          "draw": 25.2,
-          "away": 31.2,
-          "over_25": 52.8,
-          "btts": 55.8
+          "home": 45.3,
+          "draw": 24.3,
+          "away": 30.4,
+          "over_25": 52.6,
+          "btts": 55.4
         },
         "odds": {
-          "home": "+129",
-          "draw": "+296",
-          "away": "+221",
-          "over_25": "-112",
-          "under_25": "+112",
-          "btts_yes": "-126",
-          "btts_no": "+126"
+          "home": "+121",
+          "draw": "+311",
+          "away": "+229",
+          "over_25": "-111",
+          "under_25": "+111",
+          "btts_yes": "-124",
+          "btts_no": "+124"
         }
       }
     },
@@ -192,24 +192,24 @@
       "home_team": "Angel City FC",
       "away_team": "Boston Legacy FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.7,
+        "away_xg": 1.1,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.5,
-          "draw": 24.9,
-          "away": 30.6,
+          "home": 50.9,
+          "draw": 24.3,
+          "away": 24.8,
           "over_25": 53.0,
-          "btts": 55.9
+          "btts": 54.9
         },
         "odds": {
-          "home": "+125",
-          "draw": "+302",
-          "away": "+227",
+          "home": "-104",
+          "draw": "+312",
+          "away": "+304",
           "over_25": "-113",
           "under_25": "+113",
-          "btts_yes": "-127",
-          "btts_no": "+127"
+          "btts_yes": "-122",
+          "btts_no": "+122"
         }
       }
     },
@@ -221,24 +221,24 @@
       "home_team": "Bay FC",
       "away_team": "San Diego Wave FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.4,
+        "away_xg": 1.4,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.4,
-          "draw": 24.4,
-          "away": 31.2,
-          "over_25": 53.8,
-          "btts": 56.6
+          "home": 37.9,
+          "draw": 25.6,
+          "away": 36.5,
+          "over_25": 53.1,
+          "btts": 57.0
         },
         "odds": {
-          "home": "+125",
-          "draw": "+310",
-          "away": "+220",
-          "over_25": "-117",
-          "under_25": "+117",
-          "btts_yes": "-131",
-          "btts_no": "+131"
+          "home": "+164",
+          "draw": "+291",
+          "away": "+174",
+          "over_25": "-113",
+          "under_25": "+113",
+          "btts_yes": "-132",
+          "btts_no": "+132"
         }
       }
     },
@@ -250,24 +250,24 @@
       "home_team": "Gotham FC",
       "away_team": "Utah Royals",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.66,
+        "away_xg": 1.14,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.4,
-          "draw": 24.6,
-          "away": 31.0,
+          "home": 49.6,
+          "draw": 24.2,
+          "away": 26.1,
           "over_25": 53.6,
-          "btts": 56.3
+          "btts": 55.6
         },
         "odds": {
-          "home": "+125",
-          "draw": "+307",
-          "away": "+222",
-          "over_25": "-115",
-          "under_25": "+115",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+102",
+          "draw": "+312",
+          "away": "+283",
+          "over_25": "-116",
+          "under_25": "+116",
+          "btts_yes": "-125",
+          "btts_no": "+125"
         }
       }
     },
@@ -279,24 +279,24 @@
       "home_team": "Houston Dash",
       "away_team": "Portland Thorns FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
-        "predicted_pick": "HOME",
+        "home_xg": 1.18,
+        "away_xg": 1.62,
+        "predicted_pick": "AWAY",
         "probabilities": {
-          "home": 44.3,
-          "draw": 24.9,
-          "away": 30.8,
-          "over_25": 53.7,
-          "btts": 57.1
+          "home": 28.3,
+          "draw": 24.0,
+          "away": 47.7,
+          "over_25": 53.8,
+          "btts": 56.1
         },
         "odds": {
-          "home": "+126",
-          "draw": "+301",
-          "away": "+225",
+          "home": "+254",
+          "draw": "+316",
+          "away": "+110",
           "over_25": "-116",
           "under_25": "+116",
-          "btts_yes": "-133",
-          "btts_no": "+133"
+          "btts_yes": "-128",
+          "btts_no": "+128"
         }
       }
     },
@@ -308,24 +308,24 @@
       "home_team": "North Carolina Courage",
       "away_team": "Denver Summit FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.75,
+        "away_xg": 1.05,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.6,
-          "draw": 24.7,
-          "away": 30.6,
-          "over_25": 52.9,
-          "btts": 55.5
+          "home": 53.9,
+          "draw": 23.7,
+          "away": 22.5,
+          "over_25": 53.2,
+          "btts": 54.2
         },
         "odds": {
-          "home": "+124",
-          "draw": "+304",
-          "away": "+226",
-          "over_25": "-112",
-          "under_25": "+112",
-          "btts_yes": "-125",
-          "btts_no": "+125"
+          "home": "-117",
+          "draw": "+322",
+          "away": "+345",
+          "over_25": "-114",
+          "under_25": "+114",
+          "btts_yes": "-118",
+          "btts_no": "+118"
         }
       }
     },
@@ -337,24 +337,24 @@
       "home_team": "Racing Louisville FC",
       "away_team": "Kansas City Current",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
-        "predicted_pick": "HOME",
+        "home_xg": 1.27,
+        "away_xg": 1.53,
+        "predicted_pick": "AWAY",
         "probabilities": {
-          "home": 43.9,
-          "draw": 24.7,
-          "away": 31.4,
-          "over_25": 53.1,
-          "btts": 55.7
+          "home": 31.6,
+          "draw": 25.2,
+          "away": 43.2,
+          "over_25": 52.8,
+          "btts": 56.4
         },
         "odds": {
-          "home": "+128",
-          "draw": "+304",
-          "away": "+219",
-          "over_25": "-113",
-          "under_25": "+113",
-          "btts_yes": "-126",
-          "btts_no": "+126"
+          "home": "+216",
+          "draw": "+297",
+          "away": "+132",
+          "over_25": "-112",
+          "under_25": "+112",
+          "btts_yes": "-129",
+          "btts_no": "+129"
         }
       }
     },
@@ -366,24 +366,24 @@
       "home_team": "Seattle Reign FC",
       "away_team": "Orlando Pride",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
-        "predicted_pick": "HOME",
+        "home_xg": 1.2,
+        "away_xg": 1.6,
+        "predicted_pick": "AWAY",
         "probabilities": {
-          "home": 44.3,
-          "draw": 24.4,
-          "away": 31.3,
-          "over_25": 52.4,
-          "btts": 55.8
+          "home": 29.4,
+          "draw": 24.2,
+          "away": 46.5,
+          "over_25": 53.1,
+          "btts": 55.4
         },
         "odds": {
-          "home": "+126",
-          "draw": "+310",
-          "away": "+219",
-          "over_25": "-110",
-          "under_25": "+110",
-          "btts_yes": "-126",
-          "btts_no": "+126"
+          "home": "+241",
+          "draw": "+313",
+          "away": "+115",
+          "over_25": "-113",
+          "under_25": "+113",
+          "btts_yes": "-124",
+          "btts_no": "+124"
         }
       }
     },
@@ -395,24 +395,24 @@
       "home_team": "Washington Spirit",
       "away_team": "Chicago Stars FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.83,
+        "away_xg": 0.97,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 43.8,
-          "draw": 25.3,
-          "away": 30.9,
-          "over_25": 53.0,
-          "btts": 55.9
+          "home": 57.3,
+          "draw": 23.2,
+          "away": 19.6,
+          "over_25": 53.6,
+          "btts": 53.0
         },
         "odds": {
-          "home": "+128",
-          "draw": "+296",
-          "away": "+224",
-          "over_25": "-113",
-          "under_25": "+113",
-          "btts_yes": "-127",
-          "btts_no": "+127"
+          "home": "-134",
+          "draw": "+332",
+          "away": "+411",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-113",
+          "btts_no": "+113"
         }
       }
     },
@@ -424,24 +424,24 @@
       "home_team": "Lexington",
       "away_team": "Colorado Springs Switchbacks FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.44,
+        "away_xg": 1.36,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.6,
-          "draw": 24.0,
-          "away": 31.3,
-          "over_25": 53.2,
-          "btts": 56.0
+          "home": 38.8,
+          "draw": 25.4,
+          "away": 35.8,
+          "over_25": 53.5,
+          "btts": 56.7
         },
         "odds": {
-          "home": "+124",
-          "draw": "+316",
-          "away": "+219",
-          "over_25": "-114",
-          "under_25": "+114",
-          "btts_yes": "-127",
-          "btts_no": "+127"
+          "home": "+158",
+          "draw": "+293",
+          "away": "+180",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-131",
+          "btts_no": "+131"
         }
       }
     },
@@ -453,24 +453,24 @@
       "home_team": "New Mexico United",
       "away_team": "Phoenix Rising FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.45,
+        "away_xg": 1.35,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 43.4,
-          "draw": 25.1,
-          "away": 31.5,
-          "over_25": 53.3,
-          "btts": 55.9
+          "home": 38.9,
+          "draw": 25.7,
+          "away": 35.4,
+          "over_25": 52.0,
+          "btts": 56.8
         },
         "odds": {
-          "home": "+131",
-          "draw": "+298",
-          "away": "+218",
-          "over_25": "-114",
-          "under_25": "+114",
-          "btts_yes": "-127",
-          "btts_no": "+127"
+          "home": "+157",
+          "draw": "+290",
+          "away": "+183",
+          "over_25": "-108",
+          "under_25": "+108",
+          "btts_yes": "-131",
+          "btts_no": "+131"
         }
       }
     },
@@ -482,24 +482,24 @@
       "home_team": "Sacramento Republic FC",
       "away_team": "FC Tulsa",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.6,
+        "away_xg": 1.2,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 43.6,
-          "draw": 25.4,
-          "away": 31.0,
+          "home": 46.3,
+          "draw": 24.7,
+          "away": 29.0,
           "over_25": 53.1,
-          "btts": 56.8
+          "btts": 55.8
         },
         "odds": {
-          "home": "+129",
-          "draw": "+294",
-          "away": "+223",
+          "home": "+116",
+          "draw": "+304",
+          "away": "+245",
           "over_25": "-113",
           "under_25": "+113",
-          "btts_yes": "-132",
-          "btts_no": "+132"
+          "btts_yes": "-126",
+          "btts_no": "+126"
         }
       }
     },
@@ -511,24 +511,24 @@
       "home_team": "Forward Madison FC",
       "away_team": "Union Omaha",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
-        "predicted_pick": "HOME",
+        "home_xg": 1.38,
+        "away_xg": 1.42,
+        "predicted_pick": "AWAY",
         "probabilities": {
-          "home": 43.6,
-          "draw": 25.6,
-          "away": 30.8,
-          "over_25": 52.0,
-          "btts": 56.0
+          "home": 37.1,
+          "draw": 24.9,
+          "away": 37.9,
+          "over_25": 53.4,
+          "btts": 57.0
         },
         "odds": {
-          "home": "+130",
-          "draw": "+290",
-          "away": "+225",
-          "over_25": "-108",
-          "under_25": "+108",
-          "btts_yes": "-127",
-          "btts_no": "+127"
+          "home": "+169",
+          "draw": "+301",
+          "away": "+164",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-132",
+          "btts_no": "+132"
         }
       }
     },
@@ -540,24 +540,24 @@
       "home_team": "Greenville Triumph SC",
       "away_team": "Charlotte Independence",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.57,
+        "away_xg": 1.23,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.2,
-          "draw": 24.6,
-          "away": 31.2,
-          "over_25": 53.3,
-          "btts": 56.4
+          "home": 44.5,
+          "draw": 25.3,
+          "away": 30.2,
+          "over_25": 52.2,
+          "btts": 55.2
         },
         "odds": {
-          "home": "+126",
-          "draw": "+307",
-          "away": "+220",
-          "over_25": "-114",
-          "under_25": "+114",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+125",
+          "draw": "+295",
+          "away": "+231",
+          "over_25": "-109",
+          "under_25": "+109",
+          "btts_yes": "-123",
+          "btts_no": "+123"
         }
       }
     },
@@ -569,22 +569,22 @@
       "home_team": "Carolina Core FC",
       "away_team": "Crown Legacy FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.41,
+        "away_xg": 1.39,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.3,
-          "draw": 24.3,
-          "away": 31.3,
-          "over_25": 54.0,
+          "home": 38.0,
+          "draw": 25.8,
+          "away": 36.2,
+          "over_25": 53.0,
           "btts": 56.7
         },
         "odds": {
-          "home": "+126",
-          "draw": "+311",
-          "away": "+219",
-          "over_25": "-118",
-          "under_25": "+118",
+          "home": "+163",
+          "draw": "+288",
+          "away": "+176",
+          "over_25": "-113",
+          "under_25": "+113",
           "btts_yes": "-131",
           "btts_no": "+131"
         }
@@ -598,24 +598,24 @@
       "home_team": "Chattanooga FC",
       "away_team": "Columbus Crew 2",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.43,
+        "away_xg": 1.37,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.2,
-          "draw": 25.4,
-          "away": 30.4,
-          "over_25": 53.1,
-          "btts": 56.3
+          "home": 38.7,
+          "draw": 24.8,
+          "away": 36.5,
+          "over_25": 54.0,
+          "btts": 57.3
         },
         "odds": {
-          "home": "+127",
-          "draw": "+294",
-          "away": "+229",
-          "over_25": "-113",
-          "under_25": "+113",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+158",
+          "draw": "+304",
+          "away": "+174",
+          "over_25": "-117",
+          "under_25": "+117",
+          "btts_yes": "-134",
+          "btts_no": "+134"
         }
       }
     },
@@ -627,24 +627,24 @@
       "home_team": "Carolina Ascent FC",
       "away_team": "Tampa Bay Sun FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.58,
+        "away_xg": 1.22,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 43.6,
-          "draw": 25.3,
-          "away": 31.1,
-          "over_25": 53.4,
-          "btts": 56.4
+          "home": 45.9,
+          "draw": 24.6,
+          "away": 29.5,
+          "over_25": 53.1,
+          "btts": 55.9
         },
         "odds": {
-          "home": "+129",
-          "draw": "+296",
-          "away": "+221",
-          "over_25": "-115",
-          "under_25": "+115",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+118",
+          "draw": "+307",
+          "away": "+239",
+          "over_25": "-113",
+          "under_25": "+113",
+          "btts_yes": "-127",
+          "btts_no": "+127"
         }
       }
     },
@@ -656,24 +656,24 @@
       "home_team": "Brooklyn FC",
       "away_team": "Dallas Trinity FC",
       "simulated_odds": {
-        "home_xg": 1.54,
-        "away_xg": 1.26,
+        "home_xg": 1.44,
+        "away_xg": 1.36,
         "predicted_pick": "HOME",
         "probabilities": {
-          "home": 44.2,
-          "draw": 24.6,
-          "away": 31.1,
-          "over_25": 52.9,
-          "btts": 56.3
+          "home": 38.7,
+          "draw": 25.3,
+          "away": 36.0,
+          "over_25": 53.4,
+          "btts": 56.5
         },
         "odds": {
-          "home": "+126",
-          "draw": "+306",
-          "away": "+221",
-          "over_25": "-112",
-          "under_25": "+112",
-          "btts_yes": "-129",
-          "btts_no": "+129"
+          "home": "+158",
+          "draw": "+295",
+          "away": "+178",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-130",
+          "btts_no": "+130"
         }
       }
     }
