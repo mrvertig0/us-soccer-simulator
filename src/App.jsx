@@ -4,7 +4,7 @@ export default function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedLeague, setSelectedLeague] = useState('ALL');
-  const [activeMarketTabs, setActiveMarketTabs] = useState({}); // { [fixture_id]: 'ML' | 'TNB' | 'TOTALS' | 'SPREAD' | 'PROPS' }
+  const [activeMarketTabs, setActiveMarketTabs] = useState({});
   const [parlayPicks, setParlayPicks] = useState([]);
 
   useEffect(() => {
@@ -152,7 +152,7 @@ export default function App() {
           ))}
         </div>
 
-        {/* Matchday Odds Slate */}
+        {/* Matchday Odds Slate: One Match Per Line (Full Width Rows) */}
         <section className="space-y-4">
           <div className="flex justify-between items-center">
             <h2 className="text-lg font-bold text-white tracking-tight">Upcoming Fixtures</h2>
@@ -166,7 +166,7 @@ export default function App() {
               No active fixtures currently listed for {selectedLeague}.
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="space-y-4">
               {filteredFixtures.map((fix) => {
                 const activeTab = activeMarketTabs[fix.fixture_id] || 'ML';
                 const dk = fix.dk_markets || {};
@@ -177,35 +177,35 @@ export default function App() {
                 const playerProps = dk.player_props || [];
 
                 return (
-                  <div key={fix.fixture_id} className="bg-[#182032] border border-slate-700/60 rounded-xl p-5 shadow-lg flex flex-col justify-between space-y-4">
+                  <div key={fix.fixture_id} className="bg-[#182032] border border-slate-700/60 rounded-xl p-5 shadow-lg flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                     
-                    {/* Card Header */}
-                    <div>
-                      <div className="flex justify-between items-center mb-3 text-xs">
+                    {/* Left Block: Match & Team Info */}
+                    <div className="lg:w-1/3 space-y-3 border-b lg:border-b-0 lg:border-r border-slate-800 pb-4 lg:pb-0 lg:pr-6">
+                      <div className="flex justify-between items-center text-xs">
                         <span className="font-bold text-red-400 uppercase tracking-wide">{fix.league}</span>
                         <span className="text-slate-400 font-mono">{new Date(fix.kickoff_iso).toLocaleDateString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
                       </div>
 
-                      <div className="space-y-2 mb-4">
+                      <div className="space-y-2">
                         <div className="flex justify-between items-center font-bold text-base text-white">
                           <span>{fix.home_team}</span>
-                          <span className="text-xs text-slate-400 font-mono font-normal">xG {dk.home_xg || '1.40'}</span>
+                          <span className="text-xs text-emerald-400 font-mono font-semibold">xG {dk.home_xg || '1.40'}</span>
                         </div>
-                        <div className="text-center text-[10px] text-slate-500 font-semibold tracking-widest">VS</div>
+                        <div className="text-xs text-slate-500 font-bold tracking-widest uppercase">VS</div>
                         <div className="flex justify-between items-center font-bold text-base text-white">
                           <span>{fix.away_team}</span>
-                          <span className="text-xs text-slate-400 font-mono font-normal">xG {dk.away_xg || '1.40'}</span>
+                          <span className="text-xs text-sky-400 font-mono font-semibold">xG {dk.away_xg || '1.40'}</span>
                         </div>
                       </div>
                     </div>
 
-                    {/* DraftKings Card Market Selector Tabs */}
-                    <div className="bg-[#0E131F] p-3 rounded-lg border border-slate-800 space-y-3">
-                      <div className="flex items-center gap-1 overflow-x-auto border-b border-slate-800 pb-2">
+                    {/* Right Block: DraftKings Market Tabs & Odds (Full Line Width) */}
+                    <div className="lg:w-2/3 space-y-3">
+                      <div className="flex items-center gap-2 border-b border-slate-800 pb-2">
                         {[
                           { key: 'ML', label: 'Moneyline' },
                           { key: 'TNB', label: 'Tie No Bet' },
-                          { key: 'TOTALS', label: 'Totals' },
+                          { key: 'TOTALS', label: 'Total Goals' },
                           { key: 'SPREAD', label: 'Spread' },
                           { key: 'PROPS', label: 'Player Props' }
                         ].map((tab) => (
@@ -213,10 +213,10 @@ export default function App() {
                             key={tab.key}
                             onClick={() => setCardTab(fix.fixture_id, tab.key)}
                             className={
-                              "px-2.5 py-1 rounded text-[10px] font-bold uppercase transition-all whitespace-nowrap " +
+                              "px-3 py-1.5 rounded text-xs font-bold uppercase transition-all whitespace-nowrap " +
                               (activeTab === tab.key
                                 ? "bg-red-700 text-white"
-                                : "text-slate-400 hover:text-slate-200 hover:bg-slate-800")
+                                : "bg-[#0E131F] text-slate-400 hover:text-slate-200 border border-slate-800")
                             }
                           >
                             {tab.label}
@@ -226,24 +226,24 @@ export default function App() {
 
                       {/* TAB 1: MONEYLINE */}
                       {activeTab === 'ML' && (
-                        <div className="grid grid-cols-3 gap-1.5 font-mono text-xs">
+                        <div className="grid grid-cols-3 gap-3 font-mono text-xs">
                           {[
-                            { label: 'HOME', data: ml.home },
-                            { label: 'DRAW', data: ml.draw },
-                            { label: 'AWAY', data: ml.away }
+                            { label: 'HOME', name: fix.home_team, data: ml.home },
+                            { label: 'DRAW', name: 'Draw', data: ml.draw },
+                            { label: 'AWAY', name: fix.away_team, data: ml.away }
                           ].map((item) => (
                             <button
                               key={item.label}
                               onClick={() => toggleParlayPick(fix, 'Moneyline', item.label, item.data.american, item.data.prob)}
-                              className={"p-2 rounded border transition-all text-center " + (
+                              className={"p-2.5 rounded border transition-all text-center flex flex-col justify-between h-16 " + (
                                 parlayPicks.some(p => p.fixture_id === fix.fixture_id && p.selectionLabel === item.label)
                                   ? "bg-red-700 text-white border-red-500"
-                                  : "bg-[#182032] border-slate-700 hover:border-slate-500 text-slate-200"
+                                  : "bg-[#0E131F] border-slate-800 hover:border-slate-600 text-slate-200"
                               )}
                             >
-                              <div className="text-[9px] text-slate-400 font-sans font-semibold">{item.label}</div>
-                              <div className="font-bold text-sm">{item.data.american}</div>
-                              <div className="text-[9px] text-slate-400">{item.data.prob}%</div>
+                              <div className="text-[10px] text-slate-400 font-sans font-semibold truncate">{item.name}</div>
+                              <div className="font-bold text-base text-white">{item.data.american}</div>
+                              <div className="text-[10px] text-slate-400">{item.data.prob}%</div>
                             </button>
                           ))}
                         </div>
@@ -251,7 +251,7 @@ export default function App() {
 
                       {/* TAB 2: TIE NO BET */}
                       {activeTab === 'TNB' && (
-                        <div className="grid grid-cols-2 gap-2 font-mono text-xs">
+                        <div className="grid grid-cols-2 gap-3 font-mono text-xs">
                           {[
                             { label: fix.home_team + ' (TNB)', data: tnb.home },
                             { label: fix.away_team + ' (TNB)', data: tnb.away }
@@ -259,11 +259,11 @@ export default function App() {
                             <button
                               key={item.label}
                               onClick={() => toggleParlayPick(fix, 'Tie No Bet', item.label, item.data.american, item.data.prob)}
-                              className="p-2 rounded border border-slate-700 bg-[#182032] hover:border-slate-500 text-slate-200 text-center"
+                              className="p-2.5 rounded border border-slate-800 bg-[#0E131F] hover:border-slate-600 text-slate-200 text-center flex flex-col justify-between h-16"
                             >
-                              <div className="text-[9px] text-slate-400 font-sans truncate">{item.label}</div>
-                              <div className="font-bold text-sm">{item.data.american}</div>
-                              <div className="text-[9px] text-slate-400">{item.data.prob}%</div>
+                              <div className="text-[10px] text-slate-400 font-sans truncate">{item.label}</div>
+                              <div className="font-bold text-base text-white">{item.data.american}</div>
+                              <div className="text-[10px] text-slate-400">{item.data.prob}%</div>
                             </button>
                           ))}
                         </div>
@@ -271,44 +271,44 @@ export default function App() {
 
                       {/* TAB 3: TOTAL GOALS */}
                       {activeTab === 'TOTALS' && (
-                        <div className="grid grid-cols-2 gap-2 font-mono text-xs">
+                        <div className="grid grid-cols-2 gap-3 font-mono text-xs">
                           <button
                             onClick={() => toggleParlayPick(fix, 'Total Goals', 'Over 2.5', totals.over_2_5.american, totals.over_2_5.prob)}
-                            className="p-2 rounded border border-slate-700 bg-[#182032] hover:border-slate-500 text-slate-200 text-center"
+                            className="p-2.5 rounded border border-slate-800 bg-[#0E131F] hover:border-slate-600 text-slate-200 text-center flex flex-col justify-between h-16"
                           >
-                            <div className="text-[9px] text-slate-400 font-sans">OVER 2.5 GOALS</div>
-                            <div className="font-bold text-sm">{totals.over_2_5.american}</div>
-                            <div className="text-[9px] text-slate-400">{totals.over_2_5.prob}%</div>
+                            <div className="text-[10px] text-slate-400 font-sans">OVER 2.5 GOALS</div>
+                            <div className="font-bold text-base text-white">{totals.over_2_5.american}</div>
+                            <div className="text-[10px] text-slate-400">{totals.over_2_5.prob}%</div>
                           </button>
                           <button
                             onClick={() => toggleParlayPick(fix, 'Total Goals', 'Under 2.5', totals.under_2_5.american, totals.under_2_5.prob)}
-                            className="p-2 rounded border border-slate-700 bg-[#182032] hover:border-slate-500 text-slate-200 text-center"
+                            className="p-2.5 rounded border border-slate-800 bg-[#0E131F] hover:border-slate-600 text-slate-200 text-center flex flex-col justify-between h-16"
                           >
-                            <div className="text-[9px] text-slate-400 font-sans">UNDER 2.5 GOALS</div>
-                            <div className="font-bold text-sm">{totals.under_2_5.american}</div>
-                            <div className="text-[9px] text-slate-400">{totals.under_2_5.prob}%</div>
+                            <div className="text-[10px] text-slate-400 font-sans">UNDER 2.5 GOALS</div>
+                            <div className="font-bold text-base text-white">{totals.under_2_5.american}</div>
+                            <div className="text-[10px] text-slate-400">{totals.under_2_5.prob}%</div>
                           </button>
                         </div>
                       )}
 
                       {/* TAB 4: SPREAD */}
                       {activeTab === 'SPREAD' && (
-                        <div className="grid grid-cols-2 gap-2 font-mono text-xs">
+                        <div className="grid grid-cols-2 gap-3 font-mono text-xs">
                           <button
                             onClick={() => toggleParlayPick(fix, 'Spread', fix.home_team + ' -1.5', spread.home_minus_1_5.american, spread.home_minus_1_5.prob)}
-                            className="p-2 rounded border border-slate-700 bg-[#182032] hover:border-slate-500 text-slate-200 text-center"
+                            className="p-2.5 rounded border border-slate-800 bg-[#0E131F] hover:border-slate-600 text-slate-200 text-center flex flex-col justify-between h-16"
                           >
-                            <div className="text-[9px] text-slate-400 font-sans truncate">{fix.home_team} -1.5</div>
-                            <div className="font-bold text-sm">{spread.home_minus_1_5.american}</div>
-                            <div className="text-[9px] text-slate-400">{spread.home_minus_1_5.prob}%</div>
+                            <div className="text-[10px] text-slate-400 font-sans truncate">{fix.home_team} -1.5</div>
+                            <div className="font-bold text-base text-white">{spread.home_minus_1_5.american}</div>
+                            <div className="text-[10px] text-slate-400">{spread.home_minus_1_5.prob}%</div>
                           </button>
                           <button
                             onClick={() => toggleParlayPick(fix, 'Spread', fix.away_team + ' +1.5', spread.away_plus_1_5.american, spread.away_plus_1_5.prob)}
-                            className="p-2 rounded border border-slate-700 bg-[#182032] hover:border-slate-500 text-slate-200 text-center"
+                            className="p-2.5 rounded border border-slate-800 bg-[#0E131F] hover:border-slate-600 text-slate-200 text-center flex flex-col justify-between h-16"
                           >
-                            <div className="text-[9px] text-slate-400 font-sans truncate">{fix.away_team} +1.5</div>
-                            <div className="font-bold text-sm">{spread.away_plus_1_5.american}</div>
-                            <div className="text-[9px] text-slate-400">{spread.away_plus_1_5.prob}%</div>
+                            <div className="text-[10px] text-slate-400 font-sans truncate">{fix.away_team} +1.5</div>
+                            <div className="font-bold text-base text-white">{spread.away_plus_1_5.american}</div>
+                            <div className="text-[10px] text-slate-400">{spread.away_plus_1_5.prob}%</div>
                           </button>
                         </div>
                       )}
@@ -317,32 +317,32 @@ export default function App() {
                       {activeTab === 'PROPS' && (
                         <div className="space-y-2 text-xs font-mono">
                           {playerProps.length === 0 ? (
-                            <div className="text-center text-slate-500 py-2 font-sans text-[11px]">No player prop data listed for this fixture.</div>
+                            <div className="text-center text-slate-500 py-2 font-sans text-xs">No player prop data listed for this fixture.</div>
                           ) : (
                             playerProps.map((pl, idx) => (
-                              <div key={idx} className="bg-[#182032] p-2 rounded border border-slate-700 space-y-1.5">
-                                <div className="flex justify-between items-center text-[10px] font-sans font-bold text-slate-200">
-                                  <span>{pl.player_name}</span>
-                                  <span className="text-slate-400 font-normal">{pl.team}</span>
+                              <div key={idx} className="bg-[#0E131F] p-3 rounded border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <div>
+                                  <div className="font-sans font-bold text-slate-100 text-xs">{pl.player_name}</div>
+                                  <div className="text-[10px] text-slate-400 font-sans">{pl.team}</div>
                                 </div>
-                                <div className="grid grid-cols-3 gap-1 text-[10px] text-center">
+                                <div className="grid grid-cols-3 gap-2 text-center text-xs">
                                   <button
                                     onClick={() => toggleParlayPick(fix, 'Anytime Goal', pl.player_name, pl.anytime_goalscorer.american, pl.anytime_goalscorer.prob)}
-                                    className="p-1 rounded bg-[#0E131F] border border-slate-800 hover:border-slate-600"
+                                    className="p-1.5 rounded bg-[#182032] border border-slate-700 hover:border-slate-500"
                                   >
                                     <div className="text-[8px] text-slate-400 font-sans">GOAL</div>
                                     <div className="font-bold text-emerald-400">{pl.anytime_goalscorer.american}</div>
                                   </button>
                                   <button
                                     onClick={() => toggleParlayPick(fix, 'Anytime Assist', pl.player_name, pl.anytime_assist.american, pl.anytime_assist.prob)}
-                                    className="p-1 rounded bg-[#0E131F] border border-slate-800 hover:border-slate-600"
+                                    className="p-1.5 rounded bg-[#182032] border border-slate-700 hover:border-slate-500"
                                   >
                                     <div className="text-[8px] text-slate-400 font-sans">ASSIST</div>
                                     <div className="font-bold text-sky-400">{pl.anytime_assist.american}</div>
                                   </button>
                                   <button
                                     onClick={() => toggleParlayPick(fix, 'Shots > 2.5', pl.player_name, pl.shots_over_25.american, pl.shots_over_25.prob)}
-                                    className="p-1 rounded bg-[#0E131F] border border-slate-800 hover:border-slate-600"
+                                    className="p-1.5 rounded bg-[#182032] border border-slate-700 hover:border-slate-500"
                                   >
                                     <div className="text-[8px] text-slate-400 font-sans">SHOTS &gt; 2.5</div>
                                     <div className="font-bold text-amber-400">{pl.shots_over_25.american}</div>
