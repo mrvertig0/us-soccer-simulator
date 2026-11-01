@@ -133,7 +133,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0E131F] text-slate-100 flex items-center justify-center font-sans">
       <div className="text-center space-y-2">
         <div className="text-xl font-bold tracking-tight text-white">U.S. SOCCER SIMULATOR</div>
-        <div className="text-xs text-slate-400 font-mono">Loading Team Logos &amp; Match Engine...</div>
+        <div className="text-xs text-slate-400 font-mono">Loading Matchday Odds &amp; Schedule...</div>
       </div>
     </div>
   );
@@ -254,7 +254,7 @@ export default function App() {
                     
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                       
-                      {/* Left Block: Team Logos & Kickoff Details */}
+                      {/* Left Block: Team Emojis & Kickoff Details */}
                       <div className="lg:w-1/3 space-y-3 border-b lg:border-b-0 lg:border-r border-slate-800 pb-4 lg:pb-0 lg:pr-6">
                         <div className="flex justify-between items-center text-xs">
                           <span className="font-bold text-red-400 uppercase tracking-wide">{fix.league}</span>
@@ -263,26 +263,15 @@ export default function App() {
                           </span>
                         </div>
 
-                        {/* Team Rows with Round White Crest Badges & Primary Color Borders */}
+                        {/* Team Rows with Custom Emojis & Authentic Club Colors */}
                         <div className="space-y-2.5">
                           {/* Home Team */}
-                          <div className="flex items-center justify-between pl-2.5 py-1 border-l-4 rounded-r bg-slate-900/40" style={{ borderColor: fix.home_color || '#2563EB' }}>
-                            <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-full bg-slate-100 p-1 flex items-center justify-center shrink-0 border border-slate-200/20 shadow-sm">
-                                {fix.home_logo ? (
-                                  <img
-                                    src={fix.home_logo}
-                                    alt={fix.home_team}
-                                    referrerPolicy="no-referrer"
-                                    className="w-full h-full object-contain"
-                                    onError={(e) => { e.target.style.display = 'none'; }}
-                                  />
-                                ) : (
-                                  <span className="font-black text-[9px] text-slate-800">
-                                    {fix.home_team.substring(0, 3).toUpperCase()}
-                                  </span>
-                                )}
-                              </div>
+                          <div
+                            className="flex items-center justify-between pl-3 py-1.5 rounded-r bg-[#0E131F]"
+                            style={{ borderLeft: `6px solid ${fix.home_color || '#3B82F6'}` }}
+                          >
+                            <div className="flex items-center gap-2.5">
+                              <span className="text-lg">{fix.home_emoji || '⚽'}</span>
                               <span className="font-bold text-base text-white">{fix.home_team}</span>
                             </div>
                             <span className="text-xs text-emerald-400 font-mono font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 mr-2">
@@ -293,23 +282,12 @@ export default function App() {
                           <div className="text-[10px] text-slate-500 font-bold tracking-widest uppercase pl-4">VS</div>
 
                           {/* Away Team */}
-                          <div className="flex items-center justify-between pl-2.5 py-1 border-l-4 rounded-r bg-slate-900/40" style={{ borderColor: fix.away_color || '#2563EB' }}>
-                            <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-full bg-slate-100 p-1 flex items-center justify-center shrink-0 border border-slate-200/20 shadow-sm">
-                                {fix.away_logo ? (
-                                  <img
-                                    src={fix.away_logo}
-                                    alt={fix.away_team}
-                                    referrerPolicy="no-referrer"
-                                    className="w-full h-full object-contain"
-                                    onError={(e) => { e.target.style.display = 'none'; }}
-                                  />
-                                ) : (
-                                  <span className="font-black text-[9px] text-slate-800">
-                                    {fix.away_team.substring(0, 3).toUpperCase()}
-                                  </span>
-                                )}
-                              </div>
+                          <div
+                            className="flex items-center justify-between pl-3 py-1.5 rounded-r bg-[#0E131F]"
+                            style={{ borderLeft: `6px solid ${fix.away_color || '#3B82F6'}` }}
+                          >
+                            <div className="flex items-center gap-2.5">
+                              <span className="text-lg">{fix.away_emoji || '⚽'}</span>
                               <span className="font-bold text-base text-white">{fix.away_team}</span>
                             </div>
                             <span className="text-xs text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20 mr-2">
