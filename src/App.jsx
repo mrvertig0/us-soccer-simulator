@@ -263,40 +263,56 @@ export default function App() {
                           </span>
                         </div>
 
-                        {/* Team Rows with Logos & Primary Brand Color Accents */}
+                        {/* Team Rows with Round White Crest Badges & Primary Color Borders */}
                         <div className="space-y-2.5">
                           {/* Home Team */}
-                          <div className="flex items-center justify-between pl-2 border-l-4 rounded-r" style={{ borderColor: fix.home_color || '#1E293B' }}>
+                          <div className="flex items-center justify-between pl-2.5 py-1 border-l-4 rounded-r bg-slate-900/40" style={{ borderColor: fix.home_color || '#2563EB' }}>
                             <div className="flex items-center gap-3">
-                              {fix.home_logo ? (
-                                <img src={fix.home_logo} alt={fix.home_team} className="w-7 h-7 object-contain drop-shadow" />
-                              ) : (
-                                <div className="w-7 h-7 bg-slate-800 text-slate-300 font-bold text-[10px] flex items-center justify-center rounded-full border border-slate-700">
-                                  {fix.home_team.substring(0, 3).toUpperCase()}
-                                </div>
-                              )}
+                              <div className="w-8 h-8 rounded-full bg-slate-100 p-1 flex items-center justify-center shrink-0 border border-slate-200/20 shadow-sm">
+                                {fix.home_logo ? (
+                                  <img
+                                    src={fix.home_logo}
+                                    alt={fix.home_team}
+                                    referrerPolicy="no-referrer"
+                                    className="w-full h-full object-contain"
+                                    onError={(e) => { e.target.style.display = 'none'; }}
+                                  />
+                                ) : (
+                                  <span className="font-black text-[9px] text-slate-800">
+                                    {fix.home_team.substring(0, 3).toUpperCase()}
+                                  </span>
+                                )}
+                              </div>
                               <span className="font-bold text-base text-white">{fix.home_team}</span>
                             </div>
-                            <span className="text-xs text-emerald-400 font-mono font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                            <span className="text-xs text-emerald-400 font-mono font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 mr-2">
                               xG {m.home_xg}
                             </span>
                           </div>
 
-                          <div className="text-[10px] text-slate-500 font-bold tracking-widest uppercase pl-3">VS</div>
+                          <div className="text-[10px] text-slate-500 font-bold tracking-widest uppercase pl-4">VS</div>
 
                           {/* Away Team */}
-                          <div className="flex items-center justify-between pl-2 border-l-4 rounded-r" style={{ borderColor: fix.away_color || '#1E293B' }}>
+                          <div className="flex items-center justify-between pl-2.5 py-1 border-l-4 rounded-r bg-slate-900/40" style={{ borderColor: fix.away_color || '#2563EB' }}>
                             <div className="flex items-center gap-3">
-                              {fix.away_logo ? (
-                                <img src={fix.away_logo} alt={fix.away_team} className="w-7 h-7 object-contain drop-shadow" />
-                              ) : (
-                                <div className="w-7 h-7 bg-slate-800 text-slate-300 font-bold text-[10px] flex items-center justify-center rounded-full border border-slate-700">
-                                  {fix.away_team.substring(0, 3).toUpperCase()}
-                                </div>
-                              )}
+                              <div className="w-8 h-8 rounded-full bg-slate-100 p-1 flex items-center justify-center shrink-0 border border-slate-200/20 shadow-sm">
+                                {fix.away_logo ? (
+                                  <img
+                                    src={fix.away_logo}
+                                    alt={fix.away_team}
+                                    referrerPolicy="no-referrer"
+                                    className="w-full h-full object-contain"
+                                    onError={(e) => { e.target.style.display = 'none'; }}
+                                  />
+                                ) : (
+                                  <span className="font-black text-[9px] text-slate-800">
+                                    {fix.away_team.substring(0, 3).toUpperCase()}
+                                  </span>
+                                )}
+                              </div>
                               <span className="font-bold text-base text-white">{fix.away_team}</span>
                             </div>
-                            <span className="text-xs text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20">
+                            <span className="text-xs text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20 mr-2">
                               xG {m.away_xg}
                             </span>
                           </div>
