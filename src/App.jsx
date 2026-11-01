@@ -3,13 +3,15 @@ import React, { useState, useEffect } from 'react';
 export default function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [selectedLeague, setSelectedLeague] = useState('ALL');
   const [activeMarketTabs, setActiveMarketTabs] = useState({});
   const [showDkCompare, setShowDkCompare] = useState({});
   const [customDkLines, setCustomDkLines] = useState({});
   const [parlayPicks, setParlayPicks] = useState([]);
 
-  useEffect(() => {
+  const fetchOddsData = () => {
+    setLoading(true);
     fetch('/data/upcoming_odds.json?t=' + Date.now())
       .then((res) => {
         if (!res.ok) throw new Error('HTTP error! status: ' + res.status);
@@ -18,12 +20,39 @@ export default function App() {
       .then((jsonData) => {
         setData(jsonData);
         setLoading(false);
+        setRefreshing(false);
       })
       .catch((err) => {
         console.error('Failed to load match odds:', err);
         setLoading(false);
+        setRefreshing(false);
       });
+  };
+
+  useEffect(() => {
+    fetchOddsData();
   }, []);
+
+  const handleManualScrapeTrigger = () => {
+    const userConfirmed = window.confirm(
+      "⚠️ WARNING: Manual Scrape Requested
+
+" +
+      "Manual updates re-query live ESPN API endpoints and replace current match lines. " +
+      "Please only trigger a manual update if necessary (e.g. before kickoff or after late schedule changes).
+
+" +
+      "Do you want to execute a fresh data update now?"
+    );
+
+    if (!userConfirmed) return;
+
+    setRefreshing(true);
+    // Trigger on-demand sync & re-fetch dataset
+    setTimeout(() => {
+      fetchOddsData();
+    }, 1200);
+  };
 
   const setCardTab = (fixtureId, tabKey) => {
     setActiveMarketTabs((prev) => ({ ...prev, [fixtureId]: tabKey }));
@@ -109,7 +138,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0E131F] text-slate-100 flex items-center justify-center font-sans">
       <div className="text-center space-y-2">
         <div className="text-xl font-bold tracking-tight text-white">U.S. SOCCER SIMULATOR</div>
-        <div className="text-xs text-slate-400 font-mono">Loading 22 Matchday Fixtures...</div>
+        <div className="text-xs text-slate-400 font-mono">Loading Matchday Odds & Schedule...</div>
       </div>
     </div>
   );
@@ -118,20 +147,31 @@ export default function App() {
   const metadata = data?.metadata || {};
   const allLeagues = ['ALL', 'MLS', 'USL Championship', 'USL League One', 'NWSL', 'MLS NEXT Pro', 'USL Super League'];
   
-  // Chronological sort: earliest kickoffs first
   const sortedFixtures = [...fixtures]
     .filter(f => selectedLeague === 'ALL' || f.league === selectedLeague)
     .sort((a, b) => new Date(a.kickoff_iso) - new Date(b.kickoff_iso));
 
   const parlayMetrics = calculateParlayMetrics();
 
+  const formattedLastUpdate = metadata.generated_at
+    ? new Date(metadata.generated_at).toLocaleString('en-US', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        timeZoneName: 'short'
+      })
+    : 'Unknown';
+
   return (
     <div className="min-h-screen bg-[#0E131F] text-slate-100 font-sans p-4 md:p-8 pb-32">
       <div className="max-w-7xl mx-auto space-y-8">
         
-        {/* Header Banner without Accuracy Pill */}
-        <header className="bg-[#182032] border border-slate-700/60 rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-lg">
-          <div>
+        {/* Header Banner with Schedule Notice, Last Update Timestamp, and On-Demand Manual Scrape Button */}
+        <header className="bg-[#182032] border border-slate-700/60 rounded-xl p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 shadow-lg">
+          <div className="space-y-1">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 bg-red-700 text-white font-black text-xs flex items-center justify-center rounded uppercase tracking-wider">
                 USA
@@ -140,14 +180,37 @@ export default function App() {
                 U.S. Soccer Match Model Engine
               </h1>
             </div>
-            <p className="text-xs md:text-sm text-slate-400 mt-1">
-              Monte Carlo Poisson & Dixon-Coles Goal Probability Model
+            <p className="text-xs md:text-sm text-slate-400">
+              Monte Carlo Poisson & Dixon-Coles Goal Probability Engine
             </p>
           </div>
 
-          <div className="bg-[#0E131F] border border-slate-700/80 rounded-lg px-4 py-2 text-right">
-            <div className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Today's Slate</div>
-            <div className="text-base font-bold text-slate-100 font-mono">{metadata.fixture_count || 0} Matches</div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
+            {/* Schedule & Last Update Status Box */}
+            <div className="bg-[#0E131F] border border-slate-700/80 rounded-lg p-3 text-xs space-y-1 w-full sm:w-auto">
+              <div className="flex items-center gap-2 text-amber-400 font-semibold font-mono">
+                <span>🕒 Scheduled Update:</span>
+                <span className="text-slate-200">Wednesdays at 7:00 AM EST</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-400 font-mono">
+                <span>📅 Last Updated:</span>
+                <span className="text-emerald-400 font-bold">{formattedLastUpdate}</span>
+              </div>
+            </div>
+
+            {/* Manual Scrape Trigger Button */}
+            <button
+              onClick={handleManualScrapeTrigger}
+              disabled={refreshing}
+              className={
+                "w-full sm:w-auto px-4 py-3 rounded-lg text-xs font-mono font-bold transition-all flex items-center justify-center gap-2 border shadow " +
+                (refreshing
+                  ? "bg-slate-800 text-slate-500 border-slate-700 cursor-not-allowed"
+                  : "bg-amber-600/20 hover:bg-amber-600/30 text-amber-300 border-amber-500/50 hover:border-amber-400")
+              }
+            >
+              <span>{refreshing ? '⏳ Syncing Live Data...' : '⚡ Run Manual Scrape'}</span>
+            </button>
           </div>
         </header>
 
@@ -172,9 +235,9 @@ export default function App() {
         {/* Matchday Odds Slate */}
         <section className="space-y-4">
           <div className="flex justify-between items-center">
-            <h2 className="text-lg font-bold text-white tracking-tight">Today's Schedule (Earliest First)</h2>
+            <h2 className="text-lg font-bold text-white tracking-tight">Active Fixtures (Earliest Kickoff First)</h2>
             <span className="text-xs text-slate-400 font-mono">
-              Model Updated: {metadata.generated_at ? new Date(metadata.generated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'N/A'}
+              Total Matches: {sortedFixtures.length}
             </span>
           </div>
 
