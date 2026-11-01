@@ -20,7 +20,8 @@ ESPN_LEAGUES = [
     ("usa.nwsl", "NWSL"),
     ("usa.usl.1", "USL Championship"),
     ("usa.usl.2", "USL League One"),
-    ("usa.mls_next", "MLS NEXT Pro")
+    ("usa.mls_next", "MLS NEXT Pro"),
+    ("usa.usl.super", "USL Super League")
 ]
 
 def calculate_match_odds(home_elo=1500, away_elo=1480, home_val=3000000, away_val=2800000, home_form=7.0, away_form=6.8, iterations=10000):
@@ -107,7 +108,7 @@ def fetch_espn_fixtures(league_slug, league_label):
     return fixtures
 
 def run_pipeline():
-    logging.info("Initiating 5-League Match Scrape Pipeline...")
+    logging.info("Initiating 6-League Match Scrape Pipeline...")
     output_fixtures = []
 
     for slug, label in ESPN_LEAGUES:
@@ -125,7 +126,9 @@ def run_pipeline():
         {"id": "fix_usl1_1", "league": "USL League One", "home": "Forward Madison FC", "away": "Union Omaha", "time": "2026-11-02T19:00:00-05:00"},
         {"id": "fix_usl1_2", "league": "USL League One", "home": "Greenville Triumph SC", "away": "Charlotte Independence", "time": "2026-11-02T16:00:00-05:00"},
         {"id": "fix_mnp_1", "league": "MLS NEXT Pro", "home": "Carolina Core FC", "away": "Crown Legacy FC", "time": "2026-11-02T18:00:00-05:00"},
-        {"id": "fix_mnp_2", "league": "MLS NEXT Pro", "home": "Chattanooga FC", "away": "Columbus Crew 2", "time": "2026-11-02T20:00:00-05:00"}
+        {"id": "fix_mnp_2", "league": "MLS NEXT Pro", "home": "Chattanooga FC", "away": "Columbus Crew 2", "time": "2026-11-02T20:00:00-05:00"},
+        {"id": "fix_usls_1", "league": "USL Super League", "home": "Carolina Ascent FC", "away": "Tampa Bay Sun FC", "time": "2026-11-02T19:00:00-05:00"},
+        {"id": "fix_usls_2", "league": "USL Super League", "home": "Brooklyn FC", "away": "Dallas Trinity FC", "time": "2026-11-02T17:00:00-05:00"}
     ]
 
     for item in baseline_slate:

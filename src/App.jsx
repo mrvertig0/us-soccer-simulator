@@ -35,7 +35,7 @@ export default function App() {
   const fixtures = data?.fixtures || [];
   const metadata = data?.metadata || {};
   const stats = metadata.stats || { correct_predictions: 0, total_predictions: 0, accuracy_pct: 0.0 };
-  const allLeagues = ['ALL', 'MLS', 'USL Championship', 'USL League One', 'NWSL', 'MLS NEXT Pro'];
+  const allLeagues = ['ALL', 'MLS', 'USL Championship', 'USL League One', 'NWSL', 'MLS NEXT Pro', 'USL Super League'];
   const filteredFixtures = selectedLeague === 'ALL' ? fixtures : fixtures.filter(f => f.league === selectedLeague);
 
   return (
