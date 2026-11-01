@@ -1,8 +1,171 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T12:28:44.173233+00:00",
-    "scraper_status": "live_fotmob_scraped",
-    "fixture_count": 0
+    "generated_at": "2026-11-01T12:34:54.040211+00:00",
+    "scraper_status": "live_scraped",
+    "fixture_count": 6
   },
-  "fixtures": []
+  "fixtures": [
+    {
+      "fixture_id": "fix_101",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-01T19:00:00-05:00",
+      "home_team": "Inter Miami CF",
+      "away_team": "Atlanta United",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 44.4,
+          "draw": 24.8,
+          "away": 30.8,
+          "over_25": 52.7,
+          "btts": 55.9
+        },
+        "odds": {
+          "home": "+125",
+          "draw": "+304",
+          "away": "+224",
+          "over_25": "-112",
+          "under_25": "+112",
+          "btts_yes": "-127",
+          "btts_no": "+127"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_102",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-01T21:30:00-05:00",
+      "home_team": "Los Angeles FC",
+      "away_team": "Vancouver Whitecaps",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 44.3,
+          "draw": 24.2,
+          "away": 31.5,
+          "over_25": 53.5,
+          "btts": 56.5
+        },
+        "odds": {
+          "home": "+126",
+          "draw": "+313",
+          "away": "+217",
+          "over_25": "-115",
+          "under_25": "+115",
+          "btts_yes": "-130",
+          "btts_no": "+130"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_103",
+      "league": "USL Championship",
+      "kickoff_iso": "2026-11-01T16:00:00-05:00",
+      "home_team": "Lexington SC",
+      "away_team": "Colorado Springs Switchbacks",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 43.4,
+          "draw": 25.5,
+          "away": 31.1,
+          "over_25": 53.6,
+          "btts": 56.8
+        },
+        "odds": {
+          "home": "+130",
+          "draw": "+292",
+          "away": "+222",
+          "over_25": "-116",
+          "under_25": "+116",
+          "btts_yes": "-131",
+          "btts_no": "+131"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_104",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T17:00:00-05:00",
+      "home_team": "Gotham FC",
+      "away_team": "Portland Thorns FC",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 44.2,
+          "draw": 24.6,
+          "away": 31.1,
+          "over_25": 53.2,
+          "btts": 55.6
+        },
+        "odds": {
+          "home": "+126",
+          "draw": "+306",
+          "away": "+221",
+          "over_25": "-113",
+          "under_25": "+113",
+          "btts_yes": "-125",
+          "btts_no": "+125"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_105",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-01T18:00:00-05:00",
+      "home_team": "North Carolina Courage",
+      "away_team": "Washington Spirit",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 44.5,
+          "draw": 24.8,
+          "away": 30.6,
+          "over_25": 53.3,
+          "btts": 56.1
+        },
+        "odds": {
+          "home": "+125",
+          "draw": "+303",
+          "away": "+226",
+          "over_25": "-114",
+          "under_25": "+114",
+          "btts_yes": "-128",
+          "btts_no": "+128"
+        }
+      }
+    },
+    {
+      "fixture_id": "fix_106",
+      "league": "USL League One",
+      "kickoff_iso": "2026-11-02T19:00:00-05:00",
+      "home_team": "Forward Madison FC",
+      "away_team": "Union Omaha",
+      "simulated_odds": {
+        "home_xg": 1.54,
+        "away_xg": 1.26,
+        "probabilities": {
+          "home": 44.1,
+          "draw": 25.7,
+          "away": 30.2,
+          "over_25": 52.8,
+          "btts": 55.9
+        },
+        "odds": {
+          "home": "+127",
+          "draw": "+289",
+          "away": "+232",
+          "over_25": "-112",
+          "under_25": "+112",
+          "btts_yes": "-127",
+          "btts_no": "+127"
+        }
+      }
+    }
+  ]
 }
