@@ -133,7 +133,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0E131F] text-slate-100 flex items-center justify-center font-sans">
       <div className="text-center space-y-2">
         <div className="text-xl font-bold tracking-tight text-white">U.S. SOCCER SIMULATOR</div>
-        <div className="text-xs text-slate-400 font-mono">Loading Matchday Odds &amp; Schedule...</div>
+        <div className="text-xs text-slate-400 font-mono">Loading Team Logos &amp; Match Engine...</div>
       </div>
     </div>
   );
@@ -164,11 +164,11 @@ export default function App() {
     <div className="min-h-screen bg-[#0E131F] text-slate-100 font-sans p-4 md:p-8 pb-32">
       <div className="max-w-7xl mx-auto space-y-8">
         
-        {/* Header Banner with Schedule Notice, Last Update Timestamp, and On-Demand Manual Scrape Button */}
+        {/* Header Banner */}
         <header className="bg-[#182032] border border-slate-700/60 rounded-xl p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 shadow-lg">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-red-700 text-white font-black text-xs flex items-center justify-center rounded uppercase tracking-wider">
+              <div className="w-9 h-9 bg-red-700 text-white font-black text-xs flex items-center justify-center rounded uppercase tracking-wider shadow">
                 USA
               </div>
               <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
@@ -181,7 +181,6 @@ export default function App() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
-            {/* Schedule & Last Update Status Box */}
             <div className="bg-[#0E131F] border border-slate-700/80 rounded-lg p-3 text-xs space-y-1 w-full sm:w-auto">
               <div className="flex items-center gap-2 text-amber-400 font-semibold font-mono">
                 <span>🕒 Scheduled Update:</span>
@@ -193,7 +192,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Manual Scrape Trigger Button */}
             <button
               onClick={handleManualScrapeTrigger}
               disabled={refreshing}
@@ -252,27 +250,55 @@ export default function App() {
                 const spread = m.spread || { home_minus_1_5: { prob: 32, fair_american: '+175' }, away_plus_1_5: { prob: 68, fair_american: '-210' } };
 
                 return (
-                  <div key={fix.fixture_id} className="bg-[#182032] border border-slate-700/60 rounded-xl p-5 shadow-lg space-y-4">
+                  <div key={fix.fixture_id} className="bg-[#182032] border border-slate-700/60 rounded-xl p-5 shadow-lg space-y-4 overflow-hidden relative">
                     
-                    {/* Main Row Block */}
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                       
-                      {/* Left Block: Match & Kickoff Details */}
+                      {/* Left Block: Team Logos & Kickoff Details */}
                       <div className="lg:w-1/3 space-y-3 border-b lg:border-b-0 lg:border-r border-slate-800 pb-4 lg:pb-0 lg:pr-6">
                         <div className="flex justify-between items-center text-xs">
                           <span className="font-bold text-red-400 uppercase tracking-wide">{fix.league}</span>
-                          <span className="text-amber-400 font-mono font-bold">{new Date(fix.kickoff_iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} EST</span>
+                          <span className="text-amber-400 font-mono font-bold">
+                            {new Date(fix.kickoff_iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} EST
+                          </span>
                         </div>
 
-                        <div className="space-y-2">
-                          <div className="flex justify-between items-center font-bold text-base text-white">
-                            <span>{fix.home_team}</span>
-                            <span className="text-xs text-emerald-400 font-mono font-semibold">xG {m.home_xg}</span>
+                        {/* Team Rows with Logos & Primary Brand Color Accents */}
+                        <div className="space-y-2.5">
+                          {/* Home Team */}
+                          <div className="flex items-center justify-between pl-2 border-l-4 rounded-r" style={{ borderColor: fix.home_color || '#1E293B' }}>
+                            <div className="flex items-center gap-3">
+                              {fix.home_logo ? (
+                                <img src={fix.home_logo} alt={fix.home_team} className="w-7 h-7 object-contain drop-shadow" />
+                              ) : (
+                                <div className="w-7 h-7 bg-slate-800 text-slate-300 font-bold text-[10px] flex items-center justify-center rounded-full border border-slate-700">
+                                  {fix.home_team.substring(0, 3).toUpperCase()}
+                                </div>
+                              )}
+                              <span className="font-bold text-base text-white">{fix.home_team}</span>
+                            </div>
+                            <span className="text-xs text-emerald-400 font-mono font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                              xG {m.home_xg}
+                            </span>
                           </div>
-                          <div className="text-xs text-slate-500 font-bold tracking-widest uppercase">VS</div>
-                          <div className="flex justify-between items-center font-bold text-base text-white">
-                            <span>{fix.away_team}</span>
-                            <span className="text-xs text-sky-400 font-mono font-semibold">xG {m.away_xg}</span>
+
+                          <div className="text-[10px] text-slate-500 font-bold tracking-widest uppercase pl-3">VS</div>
+
+                          {/* Away Team */}
+                          <div className="flex items-center justify-between pl-2 border-l-4 rounded-r" style={{ borderColor: fix.away_color || '#1E293B' }}>
+                            <div className="flex items-center gap-3">
+                              {fix.away_logo ? (
+                                <img src={fix.away_logo} alt={fix.away_team} className="w-7 h-7 object-contain drop-shadow" />
+                              ) : (
+                                <div className="w-7 h-7 bg-slate-800 text-slate-300 font-bold text-[10px] flex items-center justify-center rounded-full border border-slate-700">
+                                  {fix.away_team.substring(0, 3).toUpperCase()}
+                                </div>
+                              )}
+                              <span className="font-bold text-base text-white">{fix.away_team}</span>
+                            </div>
+                            <span className="text-xs text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20">
+                              xG {m.away_xg}
+                            </span>
                           </div>
                         </div>
 
@@ -289,7 +315,7 @@ export default function App() {
                         </button>
                       </div>
 
-                      {/* Right Block: Model Market Tabs & Odds */}
+                      {/* Right Block: Markets & Odds */}
                       <div className="lg:w-2/3 space-y-3">
                         <div className="flex items-center gap-2 border-b border-slate-800 pb-2 overflow-x-auto">
                           {[
@@ -305,7 +331,7 @@ export default function App() {
                               className={
                                 "px-3 py-1.5 rounded text-xs font-bold uppercase transition-all whitespace-nowrap " +
                                 (activeTab === tab.key
-                                  ? "bg-red-700 text-white"
+                                  ? "bg-red-700 text-white shadow"
                                   : "bg-[#0E131F] text-slate-400 hover:text-slate-200 border border-slate-800")
                               }
                             >
@@ -336,7 +362,7 @@ export default function App() {
                                     onClick={() => toggleParlayPick(fix, 'Moneyline', sel.label, dkLine || sel.item.fair_american, sel.item.prob)}
                                     className={"p-2 rounded border text-center transition-all " + (
                                       parlayPicks.some(p => p.pickId === fix.fixture_id + '_Moneyline_' + sel.label)
-                                        ? "bg-red-700 text-white border-red-500"
+                                        ? "bg-red-700 text-white border-red-500 shadow"
                                         : "bg-[#182032] border-slate-700 hover:border-slate-500 text-slate-200"
                                     )}
                                   >
