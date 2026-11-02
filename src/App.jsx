@@ -1,7 +1,8 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function App() {
   const [data, setData] = useState(null);
+  const [modelStats, setModelStats] = useState(null);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [selectedLeague, setSelectedLeague] = useState('ALL');
@@ -10,34 +11,39 @@ export default function App() {
   const [customDkLines, setCustomDkLines] = useState({});
   const [parlayPicks, setParlayPicks] = useState([]);
 
-  const fetchOddsData = () => {
+  const fetchAppData = () => {
     setLoading(true);
-    fetch('/data/upcoming_odds.json?t=' + Date.now())
-      .then((res) => {
+    Promise.all([
+      fetch('/data/upcoming_odds.json?t=' + Date.now()).then((res) => {
         if (!res.ok) throw new Error('HTTP error! status: ' + res.status);
         return res.json();
-      })
-      .then((jsonData) => {
-        setData(jsonData);
+      }),
+      fetch('/data/model_stats.json?t=' + Date.now())
+        .then((res) => (res.ok ? res.json() : null))
+        .catch(() => null)
+    ])
+      .then(([oddsData, statsData]) => {
+        setData(oddsData);
+        if (statsData) setModelStats(statsData);
         setLoading(false);
         setRefreshing(false);
       })
       .catch((err) => {
-        console.error('Failed to load match odds:', err);
+        console.error('Failed to load match data:', err);
         setLoading(false);
         setRefreshing(false);
       });
   };
 
   useEffect(() => {
-    fetchOddsData();
+    fetchAppData();
   }, []);
 
   const handleManualScrapeTrigger = () => {
     const userConfirmed = window.confirm(
       "WARNING: Manual Scrape Requested\n\n" +
       "Manual updates re-query live ESPN API endpoints and replace current match lines. " +
-      "Please only trigger a manual update if necessary (e.g. before kickoff or after late schedule changes).\n\n" +
+      "Please only trigger a manual update if necessary.\n\n" +
       "Do you want to execute a fresh data update now?"
     );
 
@@ -45,7 +51,7 @@ export default function App() {
 
     setRefreshing(true);
     setTimeout(() => {
-      fetchOddsData();
+      fetchAppData();
     }, 1200);
   };
 
@@ -133,7 +139,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0E131F] text-slate-100 flex items-center justify-center font-sans">
       <div className="text-center space-y-2">
         <div className="text-xl font-bold tracking-tight text-white">U.S. SOCCER SIMULATOR</div>
-        <div className="text-xs text-slate-400 font-mono">Loading Matchday Odds &amp; Schedule...</div>
+        <div className="text-xs text-slate-400 font-mono">Loading Matchday Odds &amp; Model Performance...</div>
       </div>
     </div>
   );
@@ -207,6 +213,33 @@ export default function App() {
           </div>
         </header>
 
+        {/* Model Performance Tracker Banner */}
+        {modelStats && (
+          <div className="bg-[#182032] border border-emerald-500/30 rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-lg">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <h3 className="text-sm font-bold tracking-wider text-emerald-400 uppercase">Model Accuracy Tracker</h3>
+              </div>
+              <p className="text-xs text-slate-400">Automated SQLite logging &amp; grading pipeline results over time</p>
+            </div>
+            <div className="grid grid-cols-3 gap-6 text-center w-full md:w-auto">
+              <div className="bg-[#0E131F] border border-slate-800 rounded-lg p-3">
+                <div className="text-xl md:text-2xl font-black text-emerald-400 font-mono">{modelStats.win_rate_pct}%</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold mt-0.5">Win Rate</div>
+              </div>
+              <div className="bg-[#0E131F] border border-slate-800 rounded-lg p-3">
+                <div className="text-xl md:text-2xl font-black text-white font-mono">{modelStats.correct_predictions} / {modelStats.finished_matches}</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold mt-0.5">Correct / Graded</div>
+              </div>
+              <div className="bg-[#0E131F] border border-slate-800 rounded-lg p-3">
+                <div className="text-xl md:text-2xl font-black text-slate-200 font-mono">{modelStats.total_tracked}</div>
+                <div className="text-[10px] text-slate-400 uppercase font-bold mt-0.5">Total Tracked</div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* League Navigation Toolbar */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-slate-800">
           {allLeagues.map((lg) => (
@@ -248,6 +281,15 @@ export default function App() {
                 const tnb = m.tie_no_bet || { home: { prob: 66, fair_american: '-180' }, away: { prob: 34, fair_american: '+140' } };
                 const totals = m.totals || { over_2_5: { prob: 55, fair_american: '-120' }, under_2_5: { prob: 45, fair_american: '+100' } };
                 const spread = m.spread || { home_minus_1_5: { prob: 32, fair_american: '+175' }, away_plus_1_5: { prob: 68, fair_american: '-210' } };
+
+                // Compute Model Pick
+                const homeProb = ml.home.prob;
+                const awayProb = ml.away.prob;
+                const drawProb = ml.draw.prob;
+                const topProb = Math.max(homeProb, awayProb, drawProb);
+                let modelPickLabel = 'Draw';
+                if (topProb === homeProb) modelPickLabel = fix.home_team;
+                else if (topProb === awayProb) modelPickLabel = fix.away_team;
 
                 return (
                   <div key={fix.fixture_id} className="bg-[#182032] border border-slate-700/60 rounded-xl p-5 shadow-lg space-y-4 overflow-hidden relative">
@@ -296,10 +338,18 @@ export default function App() {
                           </div>
                         </div>
 
+                        {/* Model Pick Badge */}
+                        <div className="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
+                          <span className="text-slate-400 font-mono">🤖 Model Pick:</span>
+                          <span className="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-bold font-mono border border-emerald-500/30">
+                            {modelPickLabel} ({topProb}%)
+                          </span>
+                        </div>
+
                         <button
                           onClick={() => toggleDkCompare(fix.fixture_id)}
                           className={
-                            "text-[10px] font-mono font-bold px-2.5 py-1 rounded transition-all flex items-center gap-1 border " +
+                            "w-full text-[10px] font-mono font-bold px-2.5 py-1.5 rounded transition-all flex items-center justify-center gap-1 border " +
                             (isComparingDk
                               ? "bg-amber-500/20 text-amber-300 border-amber-500/40"
                               : "bg-[#0E131F] text-slate-400 hover:text-slate-200 border-slate-800")
