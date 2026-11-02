@@ -189,11 +189,11 @@ const sortedFixtures = [...fixtures]
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
             <div className="bg-[#0E131F] border border-slate-700/80 rounded-lg p-3 text-xs space-y-1 w-full sm:w-auto">
               <div className="flex items-center gap-2 text-amber-400 font-semibold font-mono">
-                <span>ðŸ•’ Scheduled Update:</span>
+                <span class="text-amber-400 font-semibold font-mono"><span>🕒</span> <span>Scheduled Update:</span></span>
                 <span className="text-slate-200">Daily at 7:00 AM EST (Automated)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-400 font-mono">
-                <span>ðŸ“… Last Updated:</span>
+                <span class="text-slate-400 font-mono"><span>📅</span> <span>Last Updated:</span></span>
                 <span className="text-emerald-400 font-bold">{formattedLastUpdate}</span>
               </div>
             </div>
@@ -208,7 +208,7 @@ const sortedFixtures = [...fixtures]
                   : "bg-amber-600/20 hover:bg-amber-600/30 text-amber-300 border-amber-500/50 hover:border-amber-400")
               }
             >
-              <span>{refreshing ? 'â³ Syncing Live Data...' : 'âš¡ Run Manual Scrape'}</span>
+              <span><span>⚡</span> <span>Run Manual Scrape</span>'}</span>
             </button>
           </div>
         </header>
@@ -711,3 +711,4 @@ const sortedFixtures = [...fixtures]
     </div>
   );
 }
+
