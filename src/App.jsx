@@ -148,8 +148,8 @@ export default function App() {
   const metadata = data?.metadata || {};
   const allLeagues = ['ALL', 'MLS', 'USL Championship', 'USL League One', 'NWSL', 'MLS NEXT Pro', 'USL Super League'];
   
-  const sortedFixtures = [...fixtures]
-    .filter(f => selectedLeague === 'ALL' || f.league === selectedLeague)
+const sortedFixtures = [...fixtures]
+    .filter(f => (selectedLeague === 'ALL' || f.league === selectedLeague) && !f.is_completed)
     .sort((a, b) => new Date(a.kickoff_iso) - new Date(b.kickoff_iso));
 
   const parlayMetrics = calculateParlayMetrics();
