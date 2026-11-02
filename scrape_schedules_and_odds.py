@@ -1,4 +1,5 @@
-﻿# -*- coding: utf-8 -*-
+from track_model_performance import log_predictions
+# -*- coding: utf-8 -*-
 import json
 import logging
 import math
@@ -340,6 +341,7 @@ def run_pipeline():
     }
 
     os.makedirs("public/data", exist_ok=True)
+    log_predictions(output_fixtures)
     with open(ODDS_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
 

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T19:46:32.253356+00:00",
+    "generated_at": "2026-11-02T09:39:17.138897+00:00",
     "engine_status": "multisource_active",
     "fixture_count": 22
   },
@@ -447,9 +447,9 @@
       "kickoff_iso": "2026-11-01T22:00:00Z",
       "home_team": "Chattanooga FC",
       "away_team": "Columbus Crew 2",
-      "home_color": "#00529B",
+      "home_color": "#D11242",
       "away_color": "#FED100",
-      "home_emoji": "\ud83d\udc99",
+      "home_emoji": "\ud83d\udc3a",
       "away_emoji": "\ud83d\udc77",
       "model_markets": {
         "home_xg": 1.65,
@@ -1641,115 +1641,6 @@
       }
     },
     {
-      "fixture_id": "espn_401931657",
-      "league": "USL Championship",
-      "kickoff_iso": "2026-11-01T23:00Z",
-      "home_team": "New Mexico United",
-      "away_team": "Phoenix Rising FC",
-      "home_color": "#E11D48",
-      "away_color": "#C8102E",
-      "home_emoji": "\u26bd",
-      "away_emoji": "\ud83d\udd25",
-      "model_markets": {
-        "home_xg": 1.35,
-        "away_xg": 1.31,
-        "moneyline": {
-          "home": {
-            "prob": 36.2,
-            "fair_american": "+176"
-          },
-          "draw": {
-            "prob": 29.4,
-            "fair_american": "+240"
-          },
-          "away": {
-            "prob": 34.4,
-            "fair_american": "+191"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 51.3,
-            "fair_american": "-105"
-          },
-          "away": {
-            "prob": 48.7,
-            "fair_american": "+105"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.9,
-            "fair_american": "-315"
-          },
-          "under_1_5": {
-            "prob": 24.1,
-            "fair_american": "+315"
-          },
-          "over_2_5": {
-            "prob": 49.4,
-            "fair_american": "+102"
-          },
-          "under_2_5": {
-            "prob": 50.6,
-            "fair_american": "-102"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 17.1,
-            "fair_american": "+486"
-          },
-          "away_plus_1_5": {
-            "prob": 82.9,
-            "fair_american": "-486"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (New)",
-            "team": "New Mexico United",
-            "anytime_goalscorer": {
-              "prob": 33.3,
-              "fair_american": "+200"
-            },
-            "anytime_assist": {
-              "prob": 23.7,
-              "fair_american": "+323"
-            },
-            "shots_over_25": {
-              "prob": 50.6,
-              "fair_american": "-103"
-            }
-          },
-          {
-            "player_name": "Key Attacker (Pho)",
-            "team": "Phoenix Rising FC",
-            "anytime_goalscorer": {
-              "prob": 32.5,
-              "fair_american": "+208"
-            },
-            "anytime_assist": {
-              "prob": 23.0,
-              "fair_american": "+334"
-            },
-            "shots_over_25": {
-              "prob": 48.7,
-              "fair_american": "+106"
-            }
-          }
-        ]
-      }
-    },
-    {
       "fixture_id": "espn_761932",
       "league": "MLS",
       "kickoff_iso": "2026-11-02T00:00Z",
@@ -2180,6 +2071,115 @@
             "shots_over_25": {
               "prob": 39.3,
               "fair_american": "+154"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401931657",
+      "league": "USL Championship",
+      "kickoff_iso": "2026-11-02T01:32Z",
+      "home_team": "New Mexico United",
+      "away_team": "Phoenix Rising FC",
+      "home_color": "#E11D48",
+      "away_color": "#C8102E",
+      "home_emoji": "\u26bd",
+      "away_emoji": "\ud83d\udd25",
+      "model_markets": {
+        "home_xg": 1.35,
+        "away_xg": 1.31,
+        "moneyline": {
+          "home": {
+            "prob": 36.2,
+            "fair_american": "+176"
+          },
+          "draw": {
+            "prob": 29.4,
+            "fair_american": "+240"
+          },
+          "away": {
+            "prob": 34.4,
+            "fair_american": "+191"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 51.3,
+            "fair_american": "-105"
+          },
+          "away": {
+            "prob": 48.7,
+            "fair_american": "+105"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.9,
+            "fair_american": "-315"
+          },
+          "under_1_5": {
+            "prob": 24.1,
+            "fair_american": "+315"
+          },
+          "over_2_5": {
+            "prob": 49.4,
+            "fair_american": "+102"
+          },
+          "under_2_5": {
+            "prob": 50.6,
+            "fair_american": "-102"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+266"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-266"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 17.1,
+            "fair_american": "+486"
+          },
+          "away_plus_1_5": {
+            "prob": 82.9,
+            "fair_american": "-486"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (New)",
+            "team": "New Mexico United",
+            "anytime_goalscorer": {
+              "prob": 33.3,
+              "fair_american": "+200"
+            },
+            "anytime_assist": {
+              "prob": 23.7,
+              "fair_american": "+323"
+            },
+            "shots_over_25": {
+              "prob": 50.6,
+              "fair_american": "-103"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Pho)",
+            "team": "Phoenix Rising FC",
+            "anytime_goalscorer": {
+              "prob": 32.5,
+              "fair_american": "+208"
+            },
+            "anytime_assist": {
+              "prob": 23.0,
+              "fair_american": "+334"
+            },
+            "shots_over_25": {
+              "prob": 48.7,
+              "fair_american": "+106"
             }
           }
         ]

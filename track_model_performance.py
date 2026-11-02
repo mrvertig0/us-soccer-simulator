@@ -70,12 +70,60 @@ def log_predictions(fixtures):
             logged_count += 1
             
     conn.commit()
+    conn.close()
+    print(f"Logged {logged_count} new fixtures into model tracking database.")
+
+def update_results_and_grade(scraped_fixtures):
+    """
+    Takes the freshly scraped fixtures (which may now contain final scores / status from ESPN)
+    and updates any pending upcoming predictions in the SQLite database.
+    """
+    init_db()
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
     
-    # Calculate performance stats for frontend display
+    graded_count = 0
+    
+    for fx in scraped_fixtures:
+        fid = fx["fixture_id"]
+        # Check if this fixture is logged as upcoming in DB
+        cursor.execute("SELECT status, predicted_outcome FROM predictions WHERE fixture_id = ? AND status = 'upcoming'", (fid,))
+        row = cursor.fetchone()
+        
+        if row:
+            predicted_outcome = row[1]
+            
+            # Check if scraper output contains score data
+            # Adjust keys based on how your scraper returns completed scores (e.g., fx.get('home_score'))
+            h_score = fx.get("home_score")
+            a_score = fx.get("away_score")
+            is_completed = fx.get("is_completed", False) or (h_score is not None and a_score is not None and fx.get("status") in ["FT", "Full-Time", "Final", "STATUS_FULL_TIME"])
+            
+            if is_completed:
+                if h_score > a_score:
+                    actual = "home"
+                elif a_score > h_score:
+                    actual = "away"
+                else:
+                    actual = "draw"
+                    
+                is_correct = 1 if (predicted_outcome == actual) else 0
+                
+                cursor.execute("""
+                    UPDATE predictions 
+                    SET status = 'finished', home_score = ?, away_score = ?, actual_result = ?, is_correct = ?
+                    WHERE fixture_id = ?
+                """, (h_score, a_score, actual, is_correct, fid))
+                
+                graded_count += 1
+
+    conn.commit()
+    
+    # Recalculate stats for frontend
     cursor.execute("SELECT COUNT(*), SUM(is_correct), SUM(CASE WHEN status='finished' THEN 1 ELSE 0 END) FROM predictions")
     total, correct, finished = cursor.fetchone()
     
-    accuracy = round((correct / finished * 100), 1) if finished and finished > 0 else 0.0
+    accuracy = round(((correct or 0) / finished * 100), 1) if finished and finished > 0 else 0.0
     
     stats_payload = {
         "total_tracked": total or 0,
@@ -89,4 +137,5 @@ def log_predictions(fixtures):
         json.dump(stats_payload, f, indent=2)
         
     conn.close()
-    print(f"Logged {logged_count} new fixtures. Model stats exported to {STATS_JSON} (Win Rate: {accuracy}%).")
+    if graded_count > 0:
+        print(f"Graded {graded_count} newly finished matches! Updated Win Rate: {accuracy}%")
