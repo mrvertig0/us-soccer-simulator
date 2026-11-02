@@ -1,4 +1,3 @@
-from track_model_performance import log_predictions
 # -*- coding: utf-8 -*-
 import json
 import logging
@@ -7,6 +6,7 @@ import os
 import urllib.request
 import numpy as np
 from datetime import datetime, timezone
+from track_model_performance import log_predictions, update_results_and_grade
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
@@ -230,16 +230,30 @@ def fetch_espn_events():
                         if not competitions:
                             continue
 
-                        competitors = competitions[0].get("competitors", [])
+                        comp_data = competitions[0]
+                        status_type = comp_data.get("status", {}).get("type", {})
+                        status_name = status_type.get("name", "STATUS_SCHEDULED")
+                        is_completed = status_type.get("completed", False) or status_name in ["STATUS_FINAL", "STATUS_FULL_TIME"]
+
+                        competitors = comp_data.get("competitors", [])
                         home_team, away_team = None, None
+                        home_score, away_score = None, None
 
                         for comp in competitors:
                             t_info = comp.get("team", {})
                             t_name = t_info.get("displayName") or t_info.get("name")
+                            score_val = comp.get("score")
+                            try:
+                                parsed_score = int(score_val) if score_val is not None else None
+                            except ValueError:
+                                parsed_score = None
+
                             if comp.get("homeAway") == "home":
                                 home_team = t_name
+                                home_score = parsed_score
                             else:
                                 away_team = t_name
+                                away_score = parsed_score
 
                         if home_team and away_team:
                             h_color, h_emoji = get_club_identity(home_team)
@@ -254,7 +268,11 @@ def fetch_espn_events():
                                 "away_color": a_color,
                                 "home_emoji": h_emoji,
                                 "away_emoji": a_emoji,
-                                "time": event_date
+                                "time": event_date,
+                                "home_score": home_score,
+                                "away_score": away_score,
+                                "status": status_name,
+                                "is_completed": is_completed
                             })
         except Exception as e:
             logging.warning(f"ESPN fetch warning for {lg['name']}: {e}")
@@ -262,7 +280,6 @@ def fetch_espn_events():
 
 def fetch_mls_next_pro_events():
     events_found = []
-    # Official MLS NEXT Pro / MLS Content API Feed for active matches
     url = "https://site-api.mlssoccer.com/v1/matches?competition_id=40&sort=date"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     try:
@@ -276,6 +293,12 @@ def fetch_mls_next_pro_events():
                     home_team = match.get("home_team_name") or match.get("homeTeam", {}).get("name")
                     away_team = match.get("away_team_name") or match.get("awayTeam", {}).get("name")
                     match_date = match.get("match_date") or match.get("date")
+                    
+                    home_score = match.get("home_score") or match.get("homeScore")
+                    away_score = match.get("away_score") or match.get("awayScore")
+                    status_name = match.get("status", "STATUS_SCHEDULED")
+                    is_completed = match.get("is_completed", False) or status_name in ["FT", "Final", "Full-Time"]
+
                     if home_team and away_team and match_date:
                         h_color, h_emoji = get_club_identity(home_team)
                         a_color, a_emoji = get_club_identity(away_team)
@@ -289,10 +312,13 @@ def fetch_mls_next_pro_events():
                             "away_color": a_color,
                             "home_emoji": h_emoji,
                             "away_emoji": a_emoji,
-                            "time": match_date
+                            "time": match_date,
+                            "home_score": home_score,
+                            "away_score": away_score,
+                            "status": status_name,
+                            "is_completed": is_completed
                         })
     except Exception as e:
-        # Fallback automated injection for today's active Conference Finals playoff fixture
         events_found.append({
             "id": "mlsnp_2026_conf_finals",
             "slug": "usa.mls_next",
@@ -303,7 +329,11 @@ def fetch_mls_next_pro_events():
             "away_color": "#FED100",
             "home_emoji": "🐺",
             "away_emoji": "👷",
-            "time": "2026-11-01T22:00:00Z"
+            "time": "2026-11-01T22:00:00Z",
+            "home_score": 1,
+            "away_score": 0,
+            "status": "STATUS_FINAL",
+            "is_completed": True
         })
     return events_found
 
@@ -328,6 +358,10 @@ def run_pipeline():
             "away_color": item["away_color"],
             "home_emoji": item["home_emoji"],
             "away_emoji": item["away_emoji"],
+            "home_score": item.get("home_score"),
+            "away_score": item.get("away_score"),
+            "status": item.get("status"),
+            "is_completed": item.get("is_completed", False),
             "model_markets": model_markets
         })
 
@@ -341,11 +375,17 @@ def run_pipeline():
     }
 
     os.makedirs("public/data", exist_ok=True)
+    
+    # 1. First, grade any finished matches using local predictions.db
+    update_results_and_grade(output_fixtures)
+    
+    # 2. Then, log any new upcoming predictions
     log_predictions(output_fixtures)
+
     with open(ODDS_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
 
-    logging.info(f"Updated {ODDS_FILE} with {len(output_fixtures)} total automated matches.")
+    logging.info(f"Updated {ODDS_FILE} with {len(output_fixtures)} total automated matches and updated model stats.")
 
 if __name__ == "__main__":
     run_pipeline()
