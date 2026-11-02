@@ -5,7 +5,7 @@ import math
 import os
 import urllib.request
 import numpy as np
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from track_model_performance import log_predictions, update_results_and_grade
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -212,13 +212,8 @@ def fetch_espn_events():
     seen_ids = set()
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 
-    # Generate 30-day future date range window for ESPN API
-    today_str = datetime.now().strftime("%Y%m%d")
-    future_str = (datetime.now() + timedelta(days=30)).strftime("%Y%m%d")
-    date_range_param = f"{today_str}-{future_str}"
-
     for lg in ESPN_LEAGUES:
-        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg['slug']}/scoreboard?dates={date_range_param}"
+        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg['slug']}/scoreboard"
         try:
             req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=6) as resp:
