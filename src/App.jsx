@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -189,11 +189,11 @@ const sortedFixtures = [...fixtures]
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
             <div className="bg-[#0E131F] border border-slate-700/80 rounded-lg p-3 text-xs space-y-1 w-full sm:w-auto">
               <div className="flex items-center gap-2 text-amber-400 font-semibold font-mono">
-                <span>🕒 Scheduled Update:</span>
-                <span className="text-slate-200">Wednesdays at 7:00 AM EST</span>
+                <span>ðŸ•’ Scheduled Update:</span>
+                <span className="text-slate-200">Daily at 7:00 AM EST (Automated)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-400 font-mono">
-                <span>📅 Last Updated:</span>
+                <span>ðŸ“… Last Updated:</span>
                 <span className="text-emerald-400 font-bold">{formattedLastUpdate}</span>
               </div>
             </div>
@@ -208,7 +208,7 @@ const sortedFixtures = [...fixtures]
                   : "bg-amber-600/20 hover:bg-amber-600/30 text-amber-300 border-amber-500/50 hover:border-amber-400")
               }
             >
-              <span>{refreshing ? '⏳ Syncing Live Data...' : '⚡ Run Manual Scrape'}</span>
+              <span>{refreshing ? 'â³ Syncing Live Data...' : 'âš¡ Run Manual Scrape'}</span>
             </button>
           </div>
         </header>
@@ -313,7 +313,7 @@ const sortedFixtures = [...fixtures]
                             style={{ borderLeft: `6px solid ${fix.home_color || '#3B82F6'}` }}
                           >
                             <div className="flex items-center gap-2.5">
-                              <span className="text-lg">{fix.home_emoji || '⚽'}</span>
+                              <span className="text-lg">{fix.home_emoji || 'âš½'}</span>
                               <span className="font-bold text-base text-white">{fix.home_team}</span>
                             </div>
                             <span className="text-xs text-emerald-400 font-mono font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 mr-2">
@@ -329,7 +329,7 @@ const sortedFixtures = [...fixtures]
                             style={{ borderLeft: `6px solid ${fix.away_color || '#3B82F6'}` }}
                           >
                             <div className="flex items-center gap-2.5">
-                              <span className="text-lg">{fix.away_emoji || '⚽'}</span>
+                              <span className="text-lg">{fix.away_emoji || 'âš½'}</span>
                               <span className="font-bold text-base text-white">{fix.away_team}</span>
                             </div>
                             <span className="text-xs text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20 mr-2">
@@ -340,7 +340,7 @@ const sortedFixtures = [...fixtures]
 
                         {/* Model Pick Badge */}
                         <div className="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
-                          <span className="text-slate-400 font-mono">🤖 Model Pick:</span>
+                          <span className="text-slate-400 font-mono">ðŸ¤– Model Pick:</span>
                           <span className="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-bold font-mono border border-emerald-500/30">
                             {modelPickLabel} ({topProb}%)
                           </span>
@@ -355,7 +355,7 @@ const sortedFixtures = [...fixtures]
                               : "bg-[#0E131F] text-slate-400 hover:text-slate-200 border-slate-800")
                           }
                         >
-                          <span>{isComparingDk ? '▼ Hide DK Line Input' : '▶ Compare Sportsbook Line (+EV)'}</span>
+                          <span>{isComparingDk ? 'â–¼ Hide DK Line Input' : 'â–¶ Compare Sportsbook Line (+EV)'}</span>
                         </button>
                       </div>
 
