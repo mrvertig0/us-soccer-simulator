@@ -3,13 +3,13 @@
 on:
   schedule:
     - cron: '0 11 * * *' # Runs every day at 11:00 UTC (7:00 AM EST)
-  workflow_dispatch: # Allows you to manually trigger it from GitHub anytime
+  workflow_dispatch: # Allows you to manually trigger it anytime
 
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write  # Grants git push access to the GITHUB_TOKEN
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
