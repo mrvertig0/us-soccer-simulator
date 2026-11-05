@@ -129,10 +129,10 @@ export default function App() {
   };
 
   if (loading) return (
-    <div className="min-h-screen bg-[#0E131F] text-slate-100 flex items-center justify-center font-sans">
+    <div className="min-h-screen bg-[#0A1128] text-slate-100 flex items-center justify-center font-sans">
       <div className="text-center space-y-2">
         <div className="text-xl font-bold tracking-tight text-white">U.S. SOCCER SIMULATOR</div>
-        <div className="text-xs text-slate-400 font-mono">Loading Matchday Odds &amp; Model Performance...</div>
+        <div className="text-xs text-slate-300 font-mono">Loading Matchday Odds &amp; Model Performance...</div>
       </div>
     </div>
   );
@@ -159,31 +159,31 @@ export default function App() {
     : 'Unknown';
 
   return (
-    <div className="min-h-screen bg-[#0E131F] text-slate-100 font-sans p-4 md:p-8 pb-32">
+    <div className="min-h-screen bg-[#0A1128] text-slate-100 font-sans p-4 md:p-8 pb-32">
       <div className="max-w-7xl mx-auto space-y-8">
         
-        {/* Header Banner */}
-        <header className="bg-[#182032] border border-slate-700/60 rounded-xl p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 shadow-lg">
+        {/* Header Banner - Classic Navy & US Red */}
+        <header className="bg-[#101B3B] border border-blue-900/60 rounded-xl p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 shadow-xl">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-red-700 text-white font-black text-xs flex items-center justify-center rounded uppercase tracking-wider shadow">
+              <div className="w-9 h-9 bg-[#B31942] text-white font-black text-xs flex items-center justify-center rounded shadow">
                 USA
               </div>
               <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
                 U.S. Soccer Match Model Engine
               </h1>
             </div>
-            <p className="text-xs md:text-sm text-slate-400">
+            <p className="text-xs md:text-sm text-slate-300">
               Monte Carlo Poisson &amp; Dixon-Coles Goal Probability Engine
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
-            <div className="bg-[#0E131F] border border-slate-700/80 rounded-lg p-3 text-xs space-y-1 w-full sm:w-auto">
-              <div className="flex items-center gap-2 text-amber-400 font-semibold font-mono">
+            <div className="bg-[#0A1128] border border-blue-900/80 rounded-lg p-3 text-xs space-y-1 w-full sm:w-auto">
+              <div className="flex items-center gap-2 text-slate-200 font-semibold font-mono">
                 <span>&#x1F552; Scheduled Update:</span>
-                <span className="text-slate-200">Daily at 7:00 AM EST (Automated)</span>
+                <span className="text-slate-300">Daily at 7:00 AM EST (Automated)</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-400 font-mono">
+              <div className="flex items-center gap-2 text-slate-300 font-mono">
                 <span>&#x1F4C5; Last Updated:</span>
                 <span className="text-emerald-400 font-bold">{formattedLastUpdate}</span>
               </div>
@@ -195,7 +195,7 @@ export default function App() {
                 "w-full sm:w-auto px-4 py-3 rounded-lg text-xs font-mono font-bold transition-all flex items-center justify-center gap-2 border shadow " +
                 (refreshing
                   ? "bg-slate-800 text-slate-500 border-slate-700 cursor-not-allowed"
-                  : "bg-amber-600/20 hover:bg-amber-600/30 text-amber-300 border-amber-500/50 hover:border-amber-400")
+                  : "bg-blue-600/20 hover:bg-blue-600/30 text-blue-200 border-blue-500/50 hover:border-blue-400")
               }
             >
               <span>&#x26A1; Run Manual Scrape</span>
@@ -205,33 +205,33 @@ export default function App() {
 
         {/* Model Performance Tracker Banner */}
         {modelStats && (
-          <div className="bg-[#182032] border border-emerald-500/30 rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-lg">
+          <div className="bg-[#101B3B] border border-emerald-500/30 rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 <h3 className="text-sm font-bold tracking-wider text-emerald-400 uppercase">Model Accuracy Tracker</h3>
               </div>
-              <p className="text-xs text-slate-400">Automated SQLite logging &amp; grading pipeline results over time</p>
+              <p className="text-xs text-slate-300">Automated SQLite logging &amp; grading pipeline results over time</p>
             </div>
             <div className="grid grid-cols-3 gap-6 text-center w-full md:w-auto">
-              <div className="bg-[#0E131F] border border-slate-800 rounded-lg p-3">
+              <div className="bg-[#0A1128] border border-blue-900/60 rounded-lg p-3">
                 <div className="text-xl md:text-2xl font-black text-emerald-400 font-mono">{modelStats.win_rate_pct}%</div>
-                <div className="text-[10px] text-slate-400 uppercase font-bold mt-0.5">Win Rate</div>
+                <div className="text-[10px] text-slate-300 uppercase font-bold mt-0.5">Win Rate</div>
               </div>
-              <div className="bg-[#0E131F] border border-slate-800 rounded-lg p-3">
+              <div className="bg-[#0A1128] border border-blue-900/60 rounded-lg p-3">
                 <div className="text-xl md:text-2xl font-black text-white font-mono">{modelStats.correct_predictions} / {modelStats.finished_matches}</div>
-                <div className="text-[10px] text-slate-400 uppercase font-bold mt-0.5">Correct / Graded</div>
+                <div className="text-[10px] text-slate-300 uppercase font-bold mt-0.5">Correct / Graded</div>
               </div>
-              <div className="bg-[#0E131F] border border-slate-800 rounded-lg p-3">
+              <div className="bg-[#0A1128] border border-blue-900/60 rounded-lg p-3">
                 <div className="text-xl md:text-2xl font-black text-slate-200 font-mono">{modelStats.total_tracked}</div>
-                <div className="text-[10px] text-slate-400 uppercase font-bold mt-0.5">Total Tracked</div>
+                <div className="text-[10px] text-slate-300 uppercase font-bold mt-0.5">Total Tracked</div>
               </div>
             </div>
           </div>
         )}
 
         {/* League Navigation Toolbar */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-slate-800">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-blue-900/60">
           {allLeagues.map((lg) => (
             <button
               key={lg}
@@ -239,8 +239,8 @@ export default function App() {
               className={
                 "px-4 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap " +
                 (selectedLeague === lg
-                  ? "bg-slate-100 text-slate-900 font-bold"
-                  : "bg-[#182032] text-slate-400 hover:text-slate-200 border border-slate-700/60")
+                  ? "bg-white text-[#0A1128] font-bold shadow"
+                  : "bg-[#101B3B] text-slate-300 hover:text-white border border-blue-900/60")
               }
             >
               {lg}
@@ -252,13 +252,13 @@ export default function App() {
         <section className="space-y-4">
           <div className="flex justify-between items-center">
             <h2 className="text-lg font-bold text-white tracking-tight">Active Fixtures (Earliest Kickoff First)</h2>
-            <span className="text-xs text-slate-400 font-mono">
+            <span className="text-xs text-slate-300 font-mono">
               Total Matches: {sortedFixtures.length}
             </span>
           </div>
 
           {sortedFixtures.length === 0 ? (
-            <div className="bg-[#182032] border border-slate-700/60 rounded-xl p-8 text-center text-slate-400 text-sm">
+            <div className="bg-[#101B3B] border border-blue-900/60 rounded-xl p-8 text-center text-slate-300 text-sm">
               No active fixtures currently listed for {selectedLeague}.
             </div>
           ) : (
@@ -281,14 +281,14 @@ export default function App() {
                 else if (topProb === awayProb) modelPickLabel = fix.away_team;
 
                 return (
-                  <div key={fix.fixture_id} className="bg-[#182032] border border-slate-700/60 rounded-xl p-5 shadow-lg space-y-4 overflow-hidden relative">
+                  <div key={fix.fixture_id} className="bg-[#101B3B] border border-blue-900/60 rounded-xl p-5 shadow-xl space-y-4 overflow-hidden relative">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                       
                       {/* Left Block: Team Emojis & Kickoff Details */}
-                      <div className="lg:w-1/3 space-y-3 border-b lg:border-b-0 lg:border-r border-slate-800 pb-4 lg:pb-0 lg:pr-6">
+                      <div className="lg:w-1/3 space-y-3 border-b lg:border-b-0 lg:border-r border-blue-900/60 pb-4 lg:pb-0 lg:pr-6">
                         <div className="flex justify-between items-center text-xs">
-                          <span className="font-bold text-red-400 uppercase tracking-wide">{fix.league}</span>
-                          <span className="text-amber-400 font-mono font-bold">
+                          <span className="font-bold text-[#B31942] uppercase tracking-wide">{fix.league}</span>
+                          <span className="text-blue-300 font-mono font-bold">
                             {new Date(fix.kickoff_iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} EST
                           </span>
                         </div>
@@ -296,7 +296,7 @@ export default function App() {
                         <div className="space-y-2.5">
                           {/* Home Team */}
                           <div
-                            className="flex items-center justify-between pl-3 py-1.5 rounded-r bg-[#0E131F]"
+                            className="flex items-center justify-between pl-3 py-1.5 rounded-r bg-[#0A1128]"
                             style={{ borderLeft: `6px solid ${fix.home_color || '#3B82F6'}` }}
                           >
                             <div className="flex items-center gap-2.5">
@@ -308,11 +308,11 @@ export default function App() {
                             </span>
                           </div>
                           
-                          <div className="text-[10px] text-slate-500 font-bold tracking-widest uppercase pl-4">VS</div>
+                          <div className="text-[10px] text-slate-400 font-bold tracking-widest uppercase pl-4">VS</div>
                           
                           {/* Away Team */}
                           <div
-                            className="flex items-center justify-between pl-3 py-1.5 rounded-r bg-[#0E131F]"
+                            className="flex items-center justify-between pl-3 py-1.5 rounded-r bg-[#0A1128]"
                             style={{ borderLeft: `6px solid ${fix.away_color || '#3B82F6'}` }}
                           >
                             <div className="flex items-center gap-2.5">
@@ -326,8 +326,8 @@ export default function App() {
                         </div>
 
                         {/* Model Pick Badge */}
-                        <div className="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
-                          <span className="text-slate-400 font-mono">&#x1F916; Model Pick:</span>
+                        <div className="flex items-center justify-between pt-2 border-t border-blue-900/60 text-xs">
+                          <span className="text-slate-300 font-mono">&#x1F916; Model Pick:</span>
                           <span className="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-bold font-mono border border-emerald-500/30">
                             {modelPickLabel} ({topProb}%)
                           </span>
@@ -338,8 +338,8 @@ export default function App() {
                           className={
                             "w-full text-[10px] font-mono font-bold px-2.5 py-1.5 rounded transition-all flex items-center justify-center gap-1 border " +
                             (isComparingDk
-                              ? "bg-amber-500/20 text-amber-300 border-amber-500/40"
-                              : "bg-[#0E131F] text-slate-400 hover:text-slate-200 border-slate-800")
+                              ? "bg-blue-600/20 text-blue-200 border-blue-500/40"
+                              : "bg-[#0A1128] text-slate-300 hover:text-white border-blue-900/80")
                           }
                         >
                           <span>{isComparingDk ? '&#x25BC; Hide DK Line Input' : '&#x25B6; Compare Sportsbook Line (+EV)'}</span>
@@ -348,7 +348,7 @@ export default function App() {
 
                       {/* Right Block: Markets & Odds */}
                       <div className="lg:w-2/3 space-y-3">
-                        <div className="flex items-center gap-2 border-b border-slate-800 pb-2 overflow-x-auto">
+                        <div className="flex items-center gap-2 border-b border-blue-900/60 pb-2 overflow-x-auto">
                           {[
                             { key: 'ML', label: 'Moneyline' },
                             { key: 'TNB', label: 'Tie No Bet' },
@@ -362,8 +362,8 @@ export default function App() {
                               className={
                                 "px-3 py-1.5 rounded text-xs font-bold uppercase transition-all whitespace-nowrap " +
                                 (activeTab === tab.key
-                                  ? "bg-red-700 text-white shadow"
-                                  : "bg-[#0E131F] text-slate-400 hover:text-slate-200 border border-slate-800")
+                                  ? "bg-[#B31942] text-white shadow"
+                                  : "bg-[#0A1128] text-slate-300 hover:text-white border border-blue-900/80")
                               }
                             >
                               {tab.label}
@@ -382,31 +382,31 @@ export default function App() {
                               const dkLine = customDkLines[sel.key] || '';
                               const ev = calculateEV(sel.item.prob, dkLine);
                               return (
-                                <div key={sel.key} className="bg-[#0E131F] p-3 rounded-lg border border-slate-800 flex flex-col justify-between space-y-2">
+                                <div key={sel.key} className="bg-[#0A1128] p-3 rounded-lg border border-blue-900/60 flex flex-col justify-between space-y-2">
                                   <div className="flex justify-between items-center text-[10px]">
-                                    <span className="font-bold text-slate-300 truncate">{sel.label}</span>
+                                    <span className="font-bold text-slate-200 truncate">{sel.label}</span>
                                     <span className="text-emerald-400 font-mono font-bold">{sel.item.prob}%</span>
                                   </div>
                                   <button
                                     onClick={() => toggleParlayPick(fix, 'Moneyline', sel.label, dkLine || sel.item.fair_american, sel.item.prob)}
                                     className={"p-2 rounded border text-center transition-all " + (
                                       parlayPicks.some(p => p.pickId === fix.fixture_id + '_Moneyline_' + sel.label)
-                                        ? "bg-red-700 text-white border-red-500 shadow"
-                                        : "bg-[#182032] border-slate-700 hover:border-slate-500 text-slate-200"
+                                        ? "bg-[#B31942] text-white border-red-500 shadow"
+                                        : "bg-[#101B3B] border-blue-900/80 hover:border-blue-700 text-slate-200"
                                     )}
                                   >
                                     <div className="text-[9px] text-slate-400 uppercase font-sans">Model Fair Odds</div>
                                     <div className="text-base font-black text-white">{sel.item.fair_american}</div>
                                   </button>
                                   {isComparingDk && (
-                                    <div className="pt-2 border-t border-slate-800 space-y-1">
-                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">Sportsbook Line</label>
+                                    <div className="pt-2 border-t border-blue-900/60 space-y-1">
+                                      <label className="text-[8px] text-blue-300 uppercase font-semibold block">Sportsbook Line</label>
                                       <input
                                         type="text"
                                         placeholder="e.g. +140"
                                         value={dkLine}
                                         onChange={(e) => updateDkLine(sel.key, e.target.value)}
-                                        className="w-full bg-[#182032] border border-slate-700 rounded px-2 py-1 text-xs font-mono font-bold text-amber-300 focus:outline-none"
+                                        className="w-full bg-[#101B3B] border border-blue-900 rounded px-2 py-1 text-xs font-mono font-bold text-blue-200 focus:outline-none"
                                       />
                                       {ev !== null && (
                                         <div className="text-[9px] font-bold font-mono text-right pt-0.5">
@@ -435,27 +435,27 @@ export default function App() {
                               const dkLine = customDkLines[sel.key] || '';
                               const ev = calculateEV(sel.item.prob, dkLine);
                               return (
-                                <div key={sel.key} className="bg-[#0E131F] p-3 rounded-lg border border-slate-800 flex flex-col justify-between space-y-2">
+                                <div key={sel.key} className="bg-[#0A1128] p-3 rounded-lg border border-blue-900/60 flex flex-col justify-between space-y-2">
                                   <div className="flex justify-between items-center text-[10px]">
-                                    <span className="font-bold text-slate-300 truncate">{sel.label}</span>
+                                    <span className="font-bold text-slate-200 truncate">{sel.label}</span>
                                     <span className="text-emerald-400 font-mono font-bold">{sel.item.prob}%</span>
                                   </div>
                                   <button
                                     onClick={() => toggleParlayPick(fix, 'Tie No Bet', sel.label, dkLine || sel.item.fair_american, sel.item.prob)}
-                                    className="p-2 bg-[#182032] border border-slate-700 hover:border-slate-500 text-slate-200 rounded text-center"
+                                    className="p-2 bg-[#101B3B] border border-blue-900/80 hover:border-blue-700 text-slate-200 rounded text-center"
                                   >
                                     <div className="text-[9px] text-slate-400 font-sans">Model Fair Odds</div>
                                     <div className="text-base font-black text-white">{sel.item.fair_american}</div>
                                   </button>
                                   {isComparingDk && (
-                                    <div className="pt-2 border-t border-slate-800 space-y-1">
-                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">Sportsbook Line</label>
+                                    <div className="pt-2 border-t border-blue-900/60 space-y-1">
+                                      <label className="text-[8px] text-blue-300 uppercase font-semibold block">Sportsbook Line</label>
                                       <input
                                         type="text"
                                         placeholder="e.g. -150"
                                         value={dkLine}
                                         onChange={(e) => updateDkLine(sel.key, e.target.value)}
-                                        className="w-full bg-[#182032] border border-slate-700 rounded px-2 py-1 text-xs font-mono font-bold text-amber-300 focus:outline-none"
+                                        className="w-full bg-[#101B3B] border border-blue-900 rounded px-2 py-1 text-xs font-mono font-bold text-blue-200 focus:outline-none"
                                       />
                                       {ev !== null && (
                                         <div className="text-[9px] font-bold font-mono text-right pt-0.5">
@@ -484,27 +484,27 @@ export default function App() {
                               const dkLine = customDkLines[sel.key] || '';
                               const ev = calculateEV(sel.item.prob, dkLine);
                               return (
-                                <div key={sel.key} className="bg-[#0E131F] p-3 rounded-lg border border-slate-800 flex flex-col justify-between space-y-2">
+                                <div key={sel.key} className="bg-[#0A1128] p-3 rounded-lg border border-blue-900/60 flex flex-col justify-between space-y-2">
                                   <div className="flex justify-between items-center text-[10px]">
-                                    <span className="font-bold text-slate-300">{sel.label}</span>
+                                    <span className="font-bold text-slate-200">{sel.label}</span>
                                     <span className="text-emerald-400 font-mono font-bold">{sel.item.prob}%</span>
                                   </div>
                                   <button
                                     onClick={() => toggleParlayPick(fix, 'Total Goals', sel.label, dkLine || sel.item.fair_american, sel.item.prob)}
-                                    className="p-2 bg-[#182032] border border-slate-700 hover:border-slate-500 text-slate-200 rounded text-center"
+                                    className="p-2 bg-[#101B3B] border border-blue-900/80 hover:border-blue-700 text-slate-200 rounded text-center"
                                   >
                                     <div className="text-[9px] text-slate-400 font-sans">Model Fair Odds</div>
                                     <div className="text-base font-black text-white">{sel.item.fair_american}</div>
                                   </button>
                                   {isComparingDk && (
-                                    <div className="pt-2 border-t border-slate-800 space-y-1">
-                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">Sportsbook Line</label>
+                                    <div className="pt-2 border-t border-blue-900/60 space-y-1">
+                                      <label className="text-[8px] text-blue-300 uppercase font-semibold block">Sportsbook Line</label>
                                       <input
                                         type="text"
                                         placeholder="e.g. -115"
                                         value={dkLine}
                                         onChange={(e) => updateDkLine(sel.key, e.target.value)}
-                                        className="w-full bg-[#182032] border border-slate-700 rounded px-2 py-1 text-xs font-mono font-bold text-amber-300 focus:outline-none"
+                                        className="w-full bg-[#101B3B] border border-blue-900 rounded px-2 py-1 text-xs font-mono font-bold text-blue-200 focus:outline-none"
                                       />
                                       {ev !== null && (
                                         <div className="text-[9px] font-bold font-mono text-right pt-0.5">
@@ -533,27 +533,27 @@ export default function App() {
                               const dkLine = customDkLines[sel.key] || '';
                               const ev = calculateEV(sel.item.prob, dkLine);
                               return (
-                                <div key={sel.key} className="bg-[#0E131F] p-3 rounded-lg border border-slate-800 flex flex-col justify-between space-y-2">
+                                <div key={sel.key} className="bg-[#0A1128] p-3 rounded-lg border border-blue-900/60 flex flex-col justify-between space-y-2">
                                   <div className="flex justify-between items-center text-[10px]">
-                                    <span className="font-bold text-slate-300 truncate">{sel.label}</span>
+                                    <span className="font-bold text-slate-200 truncate">{sel.label}</span>
                                     <span className="text-emerald-400 font-mono font-bold">{sel.item.prob}%</span>
                                   </div>
                                   <button
                                     onClick={() => toggleParlayPick(fix, 'Spread', sel.label, dkLine || sel.item.fair_american, sel.item.prob)}
-                                    className="p-2 bg-[#182032] border border-slate-700 hover:border-slate-500 text-slate-200 rounded text-center"
+                                    className="p-2 bg-[#101B3B] border border-blue-900/80 hover:border-blue-700 text-slate-200 rounded text-center"
                                   >
                                     <div className="text-[9px] text-slate-400 font-sans">Model Fair Odds</div>
                                     <div className="text-base font-black text-white">{sel.item.fair_american}</div>
                                   </button>
                                   {isComparingDk && (
-                                    <div className="pt-2 border-t border-slate-800 space-y-1">
-                                      <label className="text-[8px] text-amber-400 uppercase font-semibold block">Sportsbook Line</label>
+                                    <div className="pt-2 border-t border-blue-900/60 space-y-1">
+                                      <label className="text-[8px] text-blue-300 uppercase font-semibold block">Sportsbook Line</label>
                                       <input
                                         type="text"
                                         placeholder="e.g. +160"
                                         value={dkLine}
                                         onChange={(e) => updateDkLine(sel.key, e.target.value)}
-                                        className="w-full bg-[#182032] border border-slate-700 rounded px-2 py-1 text-xs font-mono font-bold text-amber-300 focus:outline-none"
+                                        className="w-full bg-[#101B3B] border border-blue-900 rounded px-2 py-1 text-xs font-mono font-bold text-blue-200 focus:outline-none"
                                       />
                                       {ev !== null && (
                                         <div className="text-[9px] font-bold font-mono text-right pt-0.5">
@@ -580,18 +580,18 @@ export default function App() {
                               const dkGoalLine = customDkLines[pKey + '_goal'] || '';
                               const goalEV = calculateEV(pl.anytime_goalscorer.prob, dkGoalLine);
                               return (
-                                <div key={idx} className="bg-[#0E131F] p-3 rounded-lg border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <div key={idx} className="bg-[#0A1128] p-3 rounded-lg border border-blue-900/60 flex flex-col md:flex-row md:items-center justify-between gap-3">
                                   <div>
                                     <div className="font-sans font-bold text-slate-100 text-xs">{pl.player_name}</div>
-                                    <div className="text-[10px] text-slate-400 font-sans">{pl.team}</div>
+                                    <div className="text-[10px] text-slate-300 font-sans">{pl.team}</div>
                                   </div>
                                   <div className="flex items-center gap-4">
                                     <div className="text-center">
-                                      <div className="text-[8px] text-slate-400 font-sans">GOAL PROB</div>
+                                      <div className="text-[8px] text-slate-300 font-sans">GOAL PROB</div>
                                       <div className="font-bold text-emerald-400 text-xs">{pl.anytime_goalscorer.prob}%</div>
                                     </div>
                                     <div className="text-center">
-                                      <div className="text-[8px] text-slate-400 font-sans">FAIR ODDS</div>
+                                      <div className="text-[8px] text-slate-300 font-sans">FAIR ODDS</div>
                                       <div className="font-bold text-white text-xs">{pl.anytime_goalscorer.fair_american}</div>
                                     </div>
                                     {isComparingDk && (
@@ -601,7 +601,7 @@ export default function App() {
                                           placeholder="Line"
                                           value={dkGoalLine}
                                           onChange={(e) => updateDkLine(pKey + '_goal', e.target.value)}
-                                          className="w-full bg-[#182032] border border-slate-700 rounded px-1.5 py-0.5 text-xs font-mono text-amber-300"
+                                          className="w-full bg-[#101B3B] border border-blue-900 rounded px-1.5 py-0.5 text-xs font-mono text-blue-200"
                                         />
                                         {goalEV !== null && (
                                           <div className="text-[8px] font-bold text-right pt-0.5">
@@ -612,7 +612,7 @@ export default function App() {
                                     )}
                                     <button
                                       onClick={() => toggleParlayPick(fix, 'Anytime Goal', pl.player_name, dkGoalLine || pl.anytime_goalscorer.fair_american, pl.anytime_goalscorer.prob)}
-                                      className="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded text-xs font-bold font-mono"
+                                      className="px-2.5 py-1 bg-blue-900 hover:bg-blue-800 text-slate-200 rounded text-xs font-bold font-mono border border-blue-700"
                                     >
                                       + Add
                                     </button>
@@ -634,34 +634,34 @@ export default function App() {
 
       {/* Parlay Builder Slip */}
       {parlayPicks.length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-[#182032] border-t border-slate-700 p-4 shadow-2xl z-50">
+        <div className="fixed bottom-0 left-0 right-0 bg-[#101B3B] border-t border-blue-900 p-4 shadow-2xl z-50">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-2">
-                <span className="bg-red-700 text-white text-xs font-black px-2 py-0.5 rounded">SLIP</span>
+                <span className="bg-[#B31942] text-white text-xs font-black px-2 py-0.5 rounded">SLIP</span>
                 <span className="text-sm font-bold text-white">{parlayPicks.length} {parlayPicks.length === 1 ? 'Leg' : 'Legs'} Selected</span>
               </div>
               <div className="flex flex-wrap gap-2 mt-1">
                 {parlayPicks.map((p) => (
-                  <span key={p.pickId} className="bg-[#0E131F] text-slate-300 text-xs px-2.5 py-1 rounded border border-slate-700 flex items-center gap-1 font-mono">
+                  <span key={p.pickId} className="bg-[#0A1128] text-slate-300 text-xs px-2.5 py-1 rounded border border-blue-900 flex items-center gap-1 font-mono">
                     <span className="text-slate-400 text-[10px] uppercase font-sans">{p.marketName}:</span>
-                    <span className="text-red-400 font-bold">{p.selectionLabel}</span> ({p.oddsStr})
+                    <span className="text-[#B31942] font-bold">{p.selectionLabel}</span> ({p.oddsStr})
                   </span>
                 ))}
               </div>
             </div>
             <div className="flex items-center gap-6">
               <div className="text-right">
-                <div className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Combined Fair Odds</div>
-                <div className="text-lg font-black text-amber-400 font-mono">{parlayMetrics.americanOdds}</div>
+                <div className="text-[10px] text-slate-300 font-semibold uppercase tracking-wider">Combined Fair Odds</div>
+                <div className="text-lg font-black text-blue-300 font-mono">{parlayMetrics.americanOdds}</div>
               </div>
               <div className="text-right">
-                <div className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Model Combined Prob</div>
+                <div className="text-[10px] text-slate-300 font-semibold uppercase tracking-wider">Model Combined Prob</div>
                 <div className="text-lg font-black text-slate-100 font-mono">{parlayMetrics.combinedProb}%</div>
               </div>
               <button
                 onClick={() => setParlayPicks([])}
-                className="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold px-3 py-2 rounded border border-slate-700"
+                className="bg-blue-950 hover:bg-blue-900 text-slate-300 text-xs font-semibold px-3 py-2 rounded border border-blue-800"
               >
                 Clear
               </button>
