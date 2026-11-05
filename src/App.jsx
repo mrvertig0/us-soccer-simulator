@@ -65,13 +65,29 @@ export default function App() {
     setCustomDkLines((prev) => ({ ...prev, [key]: val }));
   };
 
-  // Local Logo Path Helper with Custom Exception Map
+  // Local Logo Path Helper with Expanded Exception Map
   function getTeamLogoPath(teamName) {
     if (!teamName) return '/logos/default.png';
 
     const customLogos = {
       'Tampa Bay Sun FC': '/logos/tampa_bay_sun.png',
       'San Diego Wave FC': '/logos/san_diego_wave_fc.svg',
+      'Red Bull New York': '/logos/new_york_red_bulls.png',
+      'New York Red Bulls': '/logos/new_york_red_bulls.png',
+      'D.C. United': '/logos/dc_united.png',
+      'CF Montreal': '/logos/cf_montreal.png',
+      'Nashville SC': '/logos/nashville_sc.svg',
+      'St. Louis CITY SC': '/logos/st_louis_city_sc.svg',
+      'San Diego FC': '/logos/san_diego_fc.svg',
+      'Seattle Sounders FC': '/logos/seattle_sounders_fc.svg',
+      'LAFC': '/logos/los_angeles_fc.png',
+      'Los Angeles FC': '/logos/los_angeles_fc.png',
+      'Lousiville City FC': '/logos/lousiville_city_fc.png',
+      'Louisville City FC': '/logos/lousiville_city_fc.png',
+      'Athletic Club Boise': '/logos/athletic_club_boise.png',
+      'Chattanooga Red Wolves': '/logos/chattanooga_red_wolves_sc.svg',
+      'Chattanooga Red Wolves SC': '/logos/chattanooga_red_wolves_sc.svg',
+      'New Mexico United': '/logos/new_mexico_united.svg'
     };
 
     if (customLogos[teamName]) {
