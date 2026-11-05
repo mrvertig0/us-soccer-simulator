@@ -65,9 +65,19 @@ export default function App() {
     setCustomDkLines((prev) => ({ ...prev, [key]: val }));
   };
 
-  // Local Logo Path Helper (slugifies team names to match public/logos/{slug}.png)
+  // Local Logo Path Helper with Custom Exception Map
   function getTeamLogoPath(teamName) {
     if (!teamName) return '/logos/default.png';
+
+    const customLogos = {
+      'Tampa Bay Sun FC': '/logos/tampa_bay_sun.png',
+      'San Diego Wave FC': '/logos/san_diego_wave_fc.svg',
+    };
+
+    if (customLogos[teamName]) {
+      return customLogos[teamName];
+    }
+
     const slug = teamName
       .toLowerCase()
       .replace(/[^a-z0-9]/g, '_')
