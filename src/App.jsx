@@ -65,6 +65,16 @@ export default function App() {
     setCustomDkLines((prev) => ({ ...prev, [key]: val }));
   };
 
+  // Local Logo Path Helper (slugifies team names to match public/logos/{slug}.png)
+  function getTeamLogoPath(teamName) {
+    if (!teamName) return '/logos/default.png';
+    const slug = teamName
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, '_')
+      .replace(/_+/g, '_');
+    return `/logos/${slug}.png`;
+  }
+
   function parseOddsToDecimal(oddsStr) {
     if (typeof oddsStr === 'number') return oddsStr;
     const str = String(oddsStr || '').trim();
@@ -284,7 +294,7 @@ export default function App() {
                   <div key={fix.fixture_id} className="bg-[#090D16] border border-slate-800/80 rounded-xl p-5 shadow-xl space-y-4 overflow-hidden relative">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                       
-                      {/* Left Block: Team Emojis & Kickoff Details */}
+                      {/* Left Block: Team Logos & Kickoff Details */}
                       <div className="lg:w-1/3 space-y-3 border-b lg:border-b-0 lg:border-r border-slate-800 pb-4 lg:pb-0 lg:pr-6">
                         <div className="flex justify-between items-center text-xs font-mono">
                           <span className="font-bold text-cyan-400 uppercase tracking-wide">{fix.league}</span>
@@ -294,13 +304,18 @@ export default function App() {
                         </div>
                         
                         <div className="space-y-2.5">
-                          {/* Home Team */}
+                          {/* Home Team with Logo */}
                           <div
                             className="flex items-center justify-between pl-3 py-2 rounded-r bg-[#05070B] border border-slate-800/60"
                             style={{ borderLeft: `6px solid ${fix.home_color || '#06B6D4'}` }}
                           >
                             <div className="flex items-center gap-2.5">
-                              <span className="text-lg">{fix.home_emoji || '&#x26BD;'}</span>
+                              <img 
+                                src={getTeamLogoPath(fix.home_team)} 
+                                alt={fix.home_team} 
+                                className="w-6 h-6 object-contain"
+                                onError={(e) => { e.target.style.display = 'none'; }}
+                              />
                               <span className="font-bold text-base text-white">{fix.home_team}</span>
                             </div>
                             <span className="text-xs text-emerald-400 font-mono font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 mr-2">
@@ -310,13 +325,18 @@ export default function App() {
                           
                           <div className="text-[10px] text-slate-500 font-mono font-bold tracking-widest uppercase pl-4">VS</div>
                           
-                          {/* Away Team */}
+                          {/* Away Team with Logo */}
                           <div
                             className="flex items-center justify-between pl-3 py-2 rounded-r bg-[#05070B] border border-slate-800/60"
                             style={{ borderLeft: `6px solid ${fix.away_color || '#06B6D4'}` }}
                           >
                             <div className="flex items-center gap-2.5">
-                              <span className="text-lg">{fix.away_emoji || '&#x26BD;'}</span>
+                              <img 
+                                src={getTeamLogoPath(fix.away_team)} 
+                                alt={fix.away_team} 
+                                className="w-6 h-6 object-contain"
+                                onError={(e) => { e.target.style.display = 'none'; }}
+                              />
                               <span className="font-bold text-base text-white">{fix.away_team}</span>
                             </div>
                             <span className="text-xs text-cyan-400 font-mono font-bold bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20 mr-2">
