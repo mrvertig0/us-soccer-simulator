@@ -76,13 +76,16 @@ export default function App() {
       'Angel City FC': '/logos/angel_city_fc.png',
       'Bay FC': '/logos/bay_fc.svg',
       'Boston Legacy': '/logos/boston_legacy.svg',
+      'Boston Fleet': '/logos/boston_legacy.svg',
       'Brooklyn FC': '/logos/brooklyn_fc.svg',
       'Carolina Ascent FC': '/logos/carolina_ascent_fc.png',
       'Chicago Stars': '/logos/chicago_stars.svg',
+      'Chicago Red Stars': '/logos/chicago_stars.svg',
       'Dallas Trinity FC': '/logos/dallas_trinity_fc.png',
       'DC Power FC': '/logos/dc_power_fc.png',
       'Fort Lauderdale United FC': '/logos/fort_lauderdale_united_fc.png',
       'Gotham FC': '/logos/gotham_fc.png',
+      'NJ/NY Gotham FC': '/logos/gotham_fc.png',
       'Houston Dash': '/logos/houston_dash.png',
       'Kansas City Current': '/logos/kansas_city_current.png',
       'North Carolina Courage': '/logos/north_carolina_courage.png',
@@ -150,6 +153,7 @@ export default function App() {
       'New England Revolution II': '/logos/new_england_revolution_2.png',
       'New Mexico United': '/logos/new_mexico_united.svg',
       'New York City FC': '/logos/new_york_city_fc.png',
+      'NYCFC': '/logos/new_york_city_fc.png',
       'New York City FC II': '/logos/new_york_city_fc_2.png',
       'New York Red Bulls': '/logos/new_york_red_bulls.png',
       'Red Bull New York': '/logos/new_york_red_bulls.png',
@@ -205,6 +209,157 @@ export default function App() {
       .replace(/[^a-z0-9]/g, '_')
       .replace(/_+/g, '_');
     return `/logos/${slug}.png`;
+  }
+
+  // Exact Team Hex Color Helper (Defaults to #FFFFFF if unlisted)
+  function getTeamColor(teamName) {
+    if (!teamName) return '#FFFFFF';
+
+    const teamHexMap = {
+      // MLS
+      'Atlanta United FC': '#80000A',
+      'Austin FC': '#00B140',
+      'Charlotte FC': '#1A85C8',
+      'Chicago Fire FC': '#7CCDEF',
+      'FC Cincinnati': '#F05323',
+      'Colorado Rapids': '#960A2C',
+      'Columbus Crew': '#FEDD00',
+      'D.C. United': '#000000',
+      'FC Dallas': '#E81F3E',
+      'Houston Dynamo FC': '#F4911E',
+      'Inter Miami CF': '#F7B5CD',
+      'LA Galaxy': '#00245D',
+      'Los Angeles FC': '#C39E6D',
+      'LAFC': '#C39E6D',
+      'Minnesota United FC': '#8CD2F4',
+      'Nashville SC': '#ECE83A',
+      'New England Revolution': '#0A2240',
+      'New York City FC': '#6CACE4',
+      'NYCFC': '#6CACE4',
+      'New York Red Bulls': '#ED1E36',
+      'Red Bull New York': '#ED1E36',
+      'Orlando City SC': '#633492',
+      'Philadelphia Union': '#071B2C',
+      'Portland Timbers': '#00482B',
+      'Real Salt Lake': '#B30838',
+      'San Diego FC': '#051C2C',
+      'San Jose Earthquakes': '#0067B1',
+      'Seattle Sounders FC': '#61D332',
+      'Sporting Kansas City': '#002F65',
+      'St. Louis CITY SC': '#001837',
+      'Toronto FC': '#B81137',
+      'Vancouver Whitecaps FC': '#00245E',
+
+      // USL Championship
+      'Birmingham Legion FC': '#A28D5B',
+      'Charleston Battery': '#FECB00',
+      'Colorado Springs Switchbacks FC': '#00AEEF',
+      'Detroit City FC': '#431211',
+      'El Paso Locomotive FC': '#031D40',
+      'FC Tulsa': '#BE9C60',
+      'Hartford Athletic': '#009A4D',
+      'Indy Eleven': '#14213A',
+      'Las Vegas Lights FC': '#EE378B',
+      'Loudoun United FC': '#EC222F',
+      'Louisville City FC': '#400079',
+      'Lousiville City FC': '#400079',
+      'Miami FC': '#F03E1E',
+      'Monterey Bay FC': '#03FEF7',
+      'New Mexico United': '#FCF000',
+      'North Carolina FC': '#AB0433',
+      'Oakland Roots SC': '#000000',
+      'Orange County SC': '#FF6720',
+      'Phoenix Rising FC': '#EC1C24',
+      'Pittsburgh Riverhounds SC': '#FFC72A',
+      'Rhode Island FC': '#071A35',
+      'Sacramento Republic FC': '#E8D3A2',
+      'San Antonio FC': '#000000',
+      'Tampa Bay Rowdies': '#4A8B2C',
+
+      // MLS NEXT Pro & Reserve Sides
+      'Chattanooga FC': '#002D56',
+      'Huntsville City FC': '#0F1145',
+      'Carolina Core FC': '#FD5101',
+      'Ventura County FC': '#00245E',
+      'Atlanta United 2': '#80000A',
+      'Austin FC II': '#00B140',
+      'Chicago Fire FC II': '#7CCDEF',
+      'Colorado Rapids 2': '#960A2C',
+      'Columbus Crew 2': '#FEDD00',
+      'Crown Legacy FC': '#1A85C8',
+      'FC Cincinnati 2': '#F05323',
+      'Houston Dynamo 2': '#F4911E',
+      'Inter Miami CF II': '#F7B5CD',
+      'LA Galaxy II': '#00245D',
+      'Los Angeles FC 2': '#C39E6D',
+      'Minnesota United FC 2': '#8CD2F4',
+      'New England Revolution II': '#0A2240',
+      'New York City FC II': '#6CACE4',
+      'New York Red Bulls II': '#ED1E36',
+      'Orlando City B': '#633492',
+      'Philadelphia Union II': '#071B2C',
+      'Portland Timbers 2': '#00482B',
+      'Real Monarchs': '#B30838',
+      'San Jose Earthquakes II': '#0067B1',
+      'Tacoma Defiance': '#61D332',
+      'Sporting KC II': '#002F65',
+      'St. Louis City 2': '#001837',
+      'Toronto FC II': '#B81137',
+      'Whitecaps FC 2': '#00245E',
+
+      // USL League One
+      'Antelope Valley United FC': '#13322B',
+      'AV Alta FC': '#13322B',
+      'Central Valley Fuego FC': '#60A511',
+      'Charlotte Independence': '#DDCBA4',
+      'Chattanooga Red Wolves SC': '#730B12',
+      'Chattanooga Red Wolves': '#730B12',
+      'Forward Madison FC': '#EF95CF',
+      'Greenville Triumph SC': '#60A845',
+      'Lexington SC': '#00FF1E',
+      'One Knoxville SC': '#ECE7CF',
+      'Union Omaha': '#D2FE01',
+      'Portland Hearts of Pine': '#293D2A',
+      'Richmond Kickers': '#E31735',
+      'Spokane Velocity': '#0097B7',
+      'South Georgia Tormenta FC': '#C5004C',
+      'Athletic Club Boise': '#228848',
+
+      // NWSL
+      'Angel City FC': '#FFB3AB',
+      'Bay FC': '#051C2C',
+      'Boston Legacy': '#26D07C',
+      'Boston Fleet': '#26D07C',
+      'Chicago Stars': '#41B6E6',
+      'Chicago Red Stars': '#41B6E6',
+      'Houston Dash': '#FF6900',
+      'Kansas City Current': '#64CCC9',
+      'NJ/NY Gotham FC': '#9ADBE8',
+      'Gotham FC': '#9ADBE8',
+      'North Carolina Courage': '#01426A',
+      'Orlando Pride': '#5F249F',
+      'Portland Thorns FC': '#C8102E',
+      'Racing Louisville FC': '#C5B4E3',
+      'San Diego Wave FC': '#E31C79',
+      'Seattle Reign FC': '#292431',
+      'Utah Royals': '#00205B',
+      'Washington Spirit': '#EDE939',
+
+      // USL Super League
+      'Brooklyn FC': '#000000',
+      'Carolina Ascent FC': '#445CC7',
+      'Dallas Trinity FC': '#54052B',
+      'Fort Lauderdale United FC': '#003087',
+      'Tampa Bay Sun FC': '#FBDF49',
+      'Tampa Bay Sun': '#FBDF49',
+      'DC Power FC': '#197CE2',
+
+      // CF Montreal variants
+      'CF Montreal': '#00245E',
+      'CF Montréal': '#00245E'
+    };
+
+    return teamHexMap[teamName] || '#FFFFFF';
   }
 
   function parseOddsToDecimal(oddsStr) {
@@ -436,10 +591,10 @@ export default function App() {
                         </div>
                         
                         <div className="space-y-2.5">
-                          {/* Home Team with Logo */}
+                          {/* Home Team with Logo & Custom Color Border */}
                           <div
                             className="flex items-center justify-between pl-3 py-2 rounded-r bg-[#05070B] border border-slate-800/60"
-                            style={{ borderLeft: `6px solid ${fix.home_color || '#06B6D4'}` }}
+                            style={{ borderLeft: `6px solid ${getTeamColor(fix.home_team)}` }}
                           >
                             <div className="flex items-center gap-2.5">
                               <img 
@@ -457,10 +612,10 @@ export default function App() {
                           
                           <div className="text-[10px] text-slate-500 font-mono font-bold tracking-widest uppercase pl-4">VS</div>
                           
-                          {/* Away Team with Logo */}
+                          {/* Away Team with Logo & Custom Color Border */}
                           <div
                             className="flex items-center justify-between pl-3 py-2 rounded-r bg-[#05070B] border border-slate-800/60"
-                            style={{ borderLeft: `6px solid ${fix.away_color || '#06B6D4'}` }}
+                            style={{ borderLeft: `6px solid ${getTeamColor(fix.away_team)}` }}
                           >
                             <div className="flex items-center gap-2.5">
                               <img 
