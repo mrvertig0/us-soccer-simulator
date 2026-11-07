@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-07T11:44:27.752065+00:00",
+    "generated_at": "2026-11-07T11:51:28.389296+00:00",
     "engine_status": "multisource_active",
     "fixture_count": 23
   },
@@ -2496,11 +2496,11 @@
       "league": "MLS NEXT Pro",
       "kickoff_iso": "2026-11-08T20:00:00Z",
       "home_team": "Chattanooga FC",
-      "away_team": "Crown Legacy FC",
+      "away_team": "LAFC 2",
       "home_color": "#D11242",
-      "away_color": "#0F172A",
+      "away_color": "#C39E67",
       "home_emoji": "\ud83d\udc3a",
-      "away_emoji": "\ud83d\udc51",
+      "away_emoji": "\ud83d\udda4",
       "home_score": null,
       "away_score": null,
       "status": "STATUS_SCHEDULED",
@@ -2587,7 +2587,7 @@
           },
           {
             "player_name": "MLS Next Attacker",
-            "team": "Crown Legacy FC",
+            "team": "LAFC 2",
             "anytime_goalscorer": {
               "prob": 29.2,
               "fair_american": "+242"
