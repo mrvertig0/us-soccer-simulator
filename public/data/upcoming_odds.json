@@ -1,6 +1,10 @@
 {
   "metadata": {
+<<<<<<< Updated upstream
     "generated_at": "2026-11-07T11:33:20.562049+00:00",
+=======
+    "generated_at": "2026-11-07T11:42:41.014644+00:00",
+>>>>>>> Stashed changes
     "engine_status": "multisource_active",
     "fixture_count": 23
   },
@@ -2599,6 +2603,119 @@
             "shots_over_25": {
               "prob": 2.5,
               "fair_american": "+3878"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "mlsnp_2026_cup_final",
+      "league": "MLS NEXT Pro",
+      "kickoff_iso": "2026-11-08T20:00:00Z",
+      "home_team": "Chattanooga FC",
+      "away_team": "Crown Legacy FC",
+      "home_color": "#D11242",
+      "away_color": "#0F172A",
+      "home_emoji": "\ud83d\udc3a",
+      "away_emoji": "\ud83d\udc51",
+      "home_score": null,
+      "away_score": null,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 1.58,
+        "away_xg": 1.08,
+        "moneyline": {
+          "home": {
+            "prob": 47.1,
+            "fair_american": "+112"
+          },
+          "draw": {
+            "prob": 28.4,
+            "fair_american": "+252"
+          },
+          "away": {
+            "prob": 24.5,
+            "fair_american": "+308"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 65.8,
+            "fair_american": "-192"
+          },
+          "away": {
+            "prob": 34.2,
+            "fair_american": "+192"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-313"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+313"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.2,
+            "fair_american": "+267"
+          },
+          "under_3_5": {
+            "prob": 72.8,
+            "fair_american": "-267"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 24.9,
+            "fair_american": "+301"
+          },
+          "away_plus_1_5": {
+            "prob": 75.1,
+            "fair_american": "-301"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker",
+            "team": "Chattanooga FC",
+            "anytime_goalscorer": {
+              "prob": 42.5,
+              "fair_american": "+135"
+            },
+            "anytime_assist": {
+              "prob": 32.6,
+              "fair_american": "+206"
+            },
+            "shots_over_25": {
+              "prob": 65.7,
+              "fair_american": "-192"
+            }
+          },
+          {
+            "player_name": "MLS Next Attacker",
+            "team": "Crown Legacy FC",
+            "anytime_goalscorer": {
+              "prob": 29.2,
+              "fair_american": "+242"
+            },
+            "anytime_assist": {
+              "prob": 26.1,
+              "fair_american": "+283"
+            },
+            "shots_over_25": {
+              "prob": 44.8,
+              "fair_american": "+123"
             }
           }
         ]
