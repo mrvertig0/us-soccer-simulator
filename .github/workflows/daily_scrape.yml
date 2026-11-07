@@ -27,10 +27,10 @@ jobs:
       - name: Run Scraper & Model Grader Pipeline
         run: python scrape_schedules_and_odds.py
 
-      - name: Commit and push if data changed
+      - name: Commit and Push Updated Odds & Accuracy Stats
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: automated daily odds and model stats refresh [skip ci]"
+          commit_message: "Automated odds update & model accuracy refresh [skip ci]"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
           file_pattern: "public/data/ predictions.db"
