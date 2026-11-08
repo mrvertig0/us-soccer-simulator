@@ -1,236 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-11-07T23:41:55.792628+00:00",
+    "generated_at": "2026-11-08T09:08:17.038724+00:00",
     "engine_status": "multisource_active",
-    "fixture_count": 23
+    "fixture_count": 24
   },
   "fixtures": [
-    {
-      "fixture_id": "espn_401932976",
-      "league": "NWSL",
-      "kickoff_iso": "2026-11-07T17:00Z",
-      "home_team": "Kansas City Current",
-      "away_team": "Angel City FC",
-      "home_color": "#C8102E",
-      "away_color": "#E17000",
-      "home_emoji": "\ud83c\udf0a",
-      "away_emoji": "\ud83d\udc7c",
-      "home_score": 1,
-      "away_score": 0,
-      "status": "STATUS_FINAL_AET",
-      "is_completed": true,
-      "model_markets": {
-        "home_xg": 2.23,
-        "away_xg": 0.43,
-        "moneyline": {
-          "home": {
-            "prob": 77.3,
-            "fair_american": "-341"
-          },
-          "draw": {
-            "prob": 17.7,
-            "fair_american": "+465"
-          },
-          "away": {
-            "prob": 5.0,
-            "fair_american": "+1913"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 94.0,
-            "fair_american": "-1556"
-          },
-          "away": {
-            "prob": 6.0,
-            "fair_american": "+1556"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 74.6,
-            "fair_american": "-294"
-          },
-          "under_1_5": {
-            "prob": 25.4,
-            "fair_american": "+294"
-          },
-          "over_2_5": {
-            "prob": 48.3,
-            "fair_american": "+107"
-          },
-          "under_2_5": {
-            "prob": 51.7,
-            "fair_american": "-107"
-          },
-          "over_3_5": {
-            "prob": 25.8,
-            "fair_american": "+288"
-          },
-          "under_3_5": {
-            "prob": 74.2,
-            "fair_american": "-288"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 53.2,
-            "fair_american": "-114"
-          },
-          "away_plus_1_5": {
-            "prob": 46.8,
-            "fair_american": "+114"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (Kan)",
-            "team": "Kansas City Current",
-            "anytime_goalscorer": {
-              "prob": 48.8,
-              "fair_american": "+105"
-            },
-            "anytime_assist": {
-              "prob": 36.0,
-              "fair_american": "+178"
-            },
-            "shots_over_25": {
-              "prob": 82.2,
-              "fair_american": "-461"
-            }
-          },
-          {
-            "player_name": "Key Attacker (Ang)",
-            "team": "Angel City FC",
-            "anytime_goalscorer": {
-              "prob": 12.1,
-              "fair_american": "+726"
-            },
-            "anytime_assist": {
-              "prob": 8.2,
-              "fair_american": "+1114"
-            },
-            "shots_over_25": {
-              "prob": 5.6,
-              "fair_american": "+1672"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "espn_401878612",
-      "league": "USL Super League",
-      "kickoff_iso": "2026-11-07T19:00Z",
-      "home_team": "Brooklyn FC",
-      "away_team": "Carolina Ascent FC",
-      "home_color": "#111827",
-      "away_color": "#0047AB",
-      "home_emoji": "\ud83c\udf09",
-      "away_emoji": "\u26bd",
-      "home_score": 2,
-      "away_score": 2,
-      "status": "STATUS_FULL_TIME",
-      "is_completed": true,
-      "model_markets": {
-        "home_xg": 0.93,
-        "away_xg": 1.73,
-        "moneyline": {
-          "home": {
-            "prob": 18.8,
-            "fair_american": "+433"
-          },
-          "draw": {
-            "prob": 26.8,
-            "fair_american": "+273"
-          },
-          "away": {
-            "prob": 54.4,
-            "fair_american": "-119"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 25.6,
-            "fair_american": "+290"
-          },
-          "away": {
-            "prob": 74.4,
-            "fair_american": "-290"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.6,
-            "fair_american": "-311"
-          },
-          "under_1_5": {
-            "prob": 24.4,
-            "fair_american": "+311"
-          },
-          "over_2_5": {
-            "prob": 49.2,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.8,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.0,
-            "fair_american": "+270"
-          },
-          "under_3_5": {
-            "prob": 73.0,
-            "fair_american": "-270"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 6.8,
-            "fair_american": "+1376"
-          },
-          "away_plus_1_5": {
-            "prob": 93.2,
-            "fair_american": "-1376"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (Bro)",
-            "team": "Brooklyn FC",
-            "anytime_goalscorer": {
-              "prob": 24.3,
-              "fair_american": "+311"
-            },
-            "anytime_assist": {
-              "prob": 17.0,
-              "fair_american": "+489"
-            },
-            "shots_over_25": {
-              "prob": 28.5,
-              "fair_american": "+250"
-            }
-          },
-          {
-            "player_name": "Key Attacker (Car)",
-            "team": "Carolina Ascent FC",
-            "anytime_goalscorer": {
-              "prob": 40.5,
-              "fair_american": "+147"
-            },
-            "anytime_assist": {
-              "prob": 29.2,
-              "fair_american": "+242"
-            },
-            "shots_over_25": {
-              "prob": 67.2,
-              "fair_american": "-205"
-            }
-          }
-        ]
-      }
-    },
     {
       "fixture_id": "espn_761934",
       "league": "MLS",
@@ -1146,9 +920,9 @@
       "home_emoji": "\ud83c\udf33",
       "away_emoji": "\ud83e\ude93",
       "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "away_score": 2,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.39,
         "away_xg": 1.27,
@@ -1258,10 +1032,10 @@
       "away_color": "#862633",
       "home_emoji": "\ud83e\udd20",
       "away_emoji": "\ud83c\udfd4\ufe0f",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 3,
+      "away_score": 1,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.32,
         "away_xg": 1.34,
@@ -1372,9 +1146,9 @@
       "home_emoji": "\u26a1",
       "away_emoji": "\u26bd",
       "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "away_score": 1,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.44,
         "away_xg": 1.22,
@@ -1484,10 +1258,10 @@
       "away_color": "#0051BA",
       "home_emoji": "\ud83e\udd86",
       "away_emoji": "\u26a1",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 3,
+      "away_score": 1,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.53,
         "away_xg": 1.13,
@@ -1597,10 +1371,10 @@
       "away_color": "#00245D",
       "home_emoji": "\ud83d\udc51",
       "away_emoji": "\ud83c\udf0c",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 2,
+      "away_score": 1,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 2.19,
         "away_xg": 0.47,
@@ -1711,9 +1485,9 @@
       "home_emoji": "\ud83c\udf0a",
       "away_emoji": "\u26bd",
       "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "away_score": 1,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.66,
         "away_xg": 1.0,
@@ -1823,10 +1597,10 @@
       "away_color": "#C39E67",
       "home_emoji": "\ud83c\udf32",
       "away_emoji": "\ud83d\udda4",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 2,
+      "away_score": 1,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.89,
         "away_xg": 0.77,
@@ -1936,10 +1710,10 @@
       "away_color": "#E11D48",
       "home_emoji": "\ud83c\udfc7",
       "away_emoji": "\u26bd",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 3,
+      "away_score": 2,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.31,
         "away_xg": 1.35,
@@ -2049,10 +1823,10 @@
       "away_color": "#DB2777",
       "home_emoji": "\ud83d\udd0b",
       "away_emoji": "\u26bd",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 3,
+      "away_score": 3,
+      "status": "STATUS_FINAL_PEN",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.27,
         "away_xg": 1.39,
@@ -2153,119 +1927,6 @@
       }
     },
     {
-      "fixture_id": "espn_401933018",
-      "league": "USL League One",
-      "kickoff_iso": "2026-11-08T02:00Z",
-      "home_team": "Athletic Club Boise",
-      "away_team": "Chattanooga Red Wolves",
-      "home_color": "#059669",
-      "away_color": "#059669",
-      "home_emoji": "\u26bd",
-      "away_emoji": "\u26bd",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
-      "model_markets": {
-        "home_xg": 1.98,
-        "away_xg": 0.68,
-        "moneyline": {
-          "home": {
-            "prob": 66.3,
-            "fair_american": "-197"
-          },
-          "draw": {
-            "prob": 22.9,
-            "fair_american": "+336"
-          },
-          "away": {
-            "prob": 10.8,
-            "fair_american": "+828"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 86.0,
-            "fair_american": "-615"
-          },
-          "away": {
-            "prob": 14.0,
-            "fair_american": "+615"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.2,
-            "fair_american": "-304"
-          },
-          "under_1_5": {
-            "prob": 24.8,
-            "fair_american": "+304"
-          },
-          "over_2_5": {
-            "prob": 48.8,
-            "fair_american": "+105"
-          },
-          "under_2_5": {
-            "prob": 51.2,
-            "fair_american": "-105"
-          },
-          "over_3_5": {
-            "prob": 26.5,
-            "fair_american": "+277"
-          },
-          "under_3_5": {
-            "prob": 73.5,
-            "fair_american": "-277"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 41.6,
-            "fair_american": "+140"
-          },
-          "away_plus_1_5": {
-            "prob": 58.4,
-            "fair_american": "-140"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (Ath)",
-            "team": "Athletic Club Boise",
-            "anytime_goalscorer": {
-              "prob": 44.8,
-              "fair_american": "+123"
-            },
-            "anytime_assist": {
-              "prob": 32.7,
-              "fair_american": "+206"
-            },
-            "shots_over_25": {
-              "prob": 75.6,
-              "fair_american": "-310"
-            }
-          },
-          {
-            "player_name": "Key Attacker (Cha)",
-            "team": "Chattanooga Red Wolves",
-            "anytime_goalscorer": {
-              "prob": 18.5,
-              "fair_american": "+442"
-            },
-            "anytime_assist": {
-              "prob": 12.7,
-              "fair_american": "+686"
-            },
-            "shots_over_25": {
-              "prob": 15.7,
-              "fair_american": "+537"
-            }
-          }
-        ]
-      }
-    },
-    {
       "fixture_id": "espn_401933009",
       "league": "USL Championship",
       "kickoff_iso": "2026-11-08T02:30Z",
@@ -2275,10 +1936,10 @@
       "away_color": "#00205B",
       "home_emoji": "\u26bd",
       "away_emoji": "\ud83c\udfd4\ufe0f",
-      "home_score": 0,
+      "home_score": 4,
       "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.13,
         "away_xg": 1.53,
@@ -2388,10 +2049,10 @@
       "away_color": "#DC2626",
       "home_emoji": "\ud83e\udd81",
       "away_emoji": "\u26bd",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 2,
+      "away_score": 1,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 2.35,
         "away_xg": 0.31,
@@ -2486,6 +2147,119 @@
             "shots_over_25": {
               "prob": 2.5,
               "fair_american": "+3878"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401932958",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-08T17:30Z",
+      "home_team": "Gotham FC",
+      "away_team": "Seattle Reign FC",
+      "home_color": "#80D8DA",
+      "away_color": "#002B49",
+      "home_emoji": "\ud83d\uddfd",
+      "away_emoji": "\ud83d\udc51",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 1.56,
+        "away_xg": 1.1,
+        "moneyline": {
+          "home": {
+            "prob": 46.2,
+            "fair_american": "+117"
+          },
+          "draw": {
+            "prob": 28.5,
+            "fair_american": "+250"
+          },
+          "away": {
+            "prob": 25.3,
+            "fair_american": "+295"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 64.6,
+            "fair_american": "-182"
+          },
+          "away": {
+            "prob": 35.4,
+            "fair_american": "+182"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-313"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+313"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+267"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-267"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 24.2,
+            "fair_american": "+313"
+          },
+          "away_plus_1_5": {
+            "prob": 75.8,
+            "fair_american": "-313"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Got)",
+            "team": "Gotham FC",
+            "anytime_goalscorer": {
+              "prob": 37.4,
+              "fair_american": "+168"
+            },
+            "anytime_assist": {
+              "prob": 26.8,
+              "fair_american": "+273"
+            },
+            "shots_over_25": {
+              "prob": 60.3,
+              "fair_american": "-152"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Sea)",
+            "team": "Seattle Reign FC",
+            "anytime_goalscorer": {
+              "prob": 28.1,
+              "fair_american": "+256"
+            },
+            "anytime_assist": {
+              "prob": 19.7,
+              "fair_american": "+406"
+            },
+            "shots_over_25": {
+              "prob": 37.7,
+              "fair_american": "+165"
             }
           }
         ]
@@ -2599,6 +2373,345 @@
             "shots_over_25": {
               "prob": 44.8,
               "fair_american": "+123"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401932957",
+      "league": "NWSL",
+      "kickoff_iso": "2026-11-08T20:00Z",
+      "home_team": "Washington Spirit",
+      "away_team": "Portland Thorns FC",
+      "home_color": "#E31837",
+      "away_color": "#B31B1B",
+      "home_emoji": "\ud83d\udc09",
+      "away_emoji": "\ud83c\udf39",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 2.69,
+        "away_xg": 0.3,
+        "moneyline": {
+          "home": {
+            "prob": 86.2,
+            "fair_american": "-624"
+          },
+          "draw": {
+            "prob": 11.7,
+            "fair_american": "+755"
+          },
+          "away": {
+            "prob": 2.1,
+            "fair_american": "+4619"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 97.6,
+            "fair_american": "-4067"
+          },
+          "away": {
+            "prob": 2.4,
+            "fair_american": "+4067"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 79.3,
+            "fair_american": "-383"
+          },
+          "under_1_5": {
+            "prob": 20.7,
+            "fair_american": "+383"
+          },
+          "over_2_5": {
+            "prob": 54.9,
+            "fair_american": "-122"
+          },
+          "under_2_5": {
+            "prob": 45.1,
+            "fair_american": "+122"
+          },
+          "over_3_5": {
+            "prob": 31.2,
+            "fair_american": "+220"
+          },
+          "under_3_5": {
+            "prob": 68.8,
+            "fair_american": "-220"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 65.8,
+            "fair_american": "-192"
+          },
+          "away_plus_1_5": {
+            "prob": 34.2,
+            "fair_american": "+192"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Trinity Rodman",
+            "team": "Washington Spirit",
+            "anytime_goalscorer": {
+              "prob": 59.9,
+              "fair_american": "-150"
+            },
+            "anytime_assist": {
+              "prob": 54.2,
+              "fair_american": "-118"
+            },
+            "shots_over_25": {
+              "prob": 96.8,
+              "fair_american": "-3070"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Por)",
+            "team": "Portland Thorns FC",
+            "anytime_goalscorer": {
+              "prob": 8.6,
+              "fair_american": "+1062"
+            },
+            "anytime_assist": {
+              "prob": 5.8,
+              "fair_american": "+1617"
+            },
+            "shots_over_25": {
+              "prob": 2.3,
+              "fair_american": "+4226"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401878610",
+      "league": "USL Super League",
+      "kickoff_iso": "2026-11-08T22:00Z",
+      "home_team": "Dallas Trinity FC",
+      "away_team": "Sporting Jax",
+      "home_color": "#002D62",
+      "away_color": "#2563EB",
+      "home_emoji": "\ud83e\udd20",
+      "away_emoji": "\u26bd",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 1.86,
+        "away_xg": 0.8,
+        "moneyline": {
+          "home": {
+            "prob": 60.7,
+            "fair_american": "-154"
+          },
+          "draw": {
+            "prob": 25.0,
+            "fair_american": "+300"
+          },
+          "away": {
+            "prob": 14.4,
+            "fair_american": "+597"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 80.9,
+            "fair_american": "-423"
+          },
+          "away": {
+            "prob": 19.1,
+            "fair_american": "+423"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.5,
+            "fair_american": "-307"
+          },
+          "under_1_5": {
+            "prob": 24.5,
+            "fair_american": "+307"
+          },
+          "over_2_5": {
+            "prob": 49.0,
+            "fair_american": "+104"
+          },
+          "under_2_5": {
+            "prob": 51.0,
+            "fair_american": "-104"
+          },
+          "over_3_5": {
+            "prob": 26.8,
+            "fair_american": "+273"
+          },
+          "under_3_5": {
+            "prob": 73.2,
+            "fair_american": "-273"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 36.3,
+            "fair_american": "+175"
+          },
+          "away_plus_1_5": {
+            "prob": 63.7,
+            "fair_american": "-175"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Dal)",
+            "team": "Dallas Trinity FC",
+            "anytime_goalscorer": {
+              "prob": 42.8,
+              "fair_american": "+134"
+            },
+            "anytime_assist": {
+              "prob": 31.1,
+              "fair_american": "+222"
+            },
+            "shots_over_25": {
+              "prob": 71.8,
+              "fair_american": "-255"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Spo)",
+            "team": "Sporting Jax",
+            "anytime_goalscorer": {
+              "prob": 21.3,
+              "fair_american": "+369"
+            },
+            "anytime_assist": {
+              "prob": 14.8,
+              "fair_american": "+576"
+            },
+            "shots_over_25": {
+              "prob": 21.7,
+              "fair_american": "+362"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401933017",
+      "league": "USL League One",
+      "kickoff_iso": "2026-11-09T00:00Z",
+      "home_team": "Charlotte Independence",
+      "away_team": "Forward Madison FC",
+      "home_color": "#E11D48",
+      "away_color": "#EE3524",
+      "home_emoji": "\u26bd",
+      "away_emoji": "\ud83e\udda9",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 2.53,
+        "away_xg": 0.3,
+        "moneyline": {
+          "home": {
+            "prob": 84.5,
+            "fair_american": "-546"
+          },
+          "draw": {
+            "prob": 13.0,
+            "fair_american": "+667"
+          },
+          "away": {
+            "prob": 2.4,
+            "fair_american": "+4013"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 97.2,
+            "fair_american": "-3476"
+          },
+          "away": {
+            "prob": 2.8,
+            "fair_american": "+3476"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 77.0,
+            "fair_american": "-334"
+          },
+          "under_1_5": {
+            "prob": 23.0,
+            "fair_american": "+334"
+          },
+          "over_2_5": {
+            "prob": 51.6,
+            "fair_american": "-107"
+          },
+          "under_2_5": {
+            "prob": 48.4,
+            "fair_american": "+107"
+          },
+          "over_3_5": {
+            "prob": 28.3,
+            "fair_american": "+253"
+          },
+          "under_3_5": {
+            "prob": 71.7,
+            "fair_american": "-253"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 62.8,
+            "fair_american": "-169"
+          },
+          "away_plus_1_5": {
+            "prob": 37.2,
+            "fair_american": "+169"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Cha)",
+            "team": "Charlotte Independence",
+            "anytime_goalscorer": {
+              "prob": 53.2,
+              "fair_american": "-114"
+            },
+            "anytime_assist": {
+              "prob": 39.7,
+              "fair_american": "+152"
+            },
+            "shots_over_25": {
+              "prob": 88.0,
+              "fair_american": "-736"
+            }
+          },
+          {
+            "player_name": "Key Attacker (For)",
+            "team": "Forward Madison FC",
+            "anytime_goalscorer": {
+              "prob": 8.6,
+              "fair_american": "+1062"
+            },
+            "anytime_assist": {
+              "prob": 5.8,
+              "fair_american": "+1617"
+            },
+            "shots_over_25": {
+              "prob": 2.3,
+              "fair_american": "+4226"
             }
           }
         ]
