@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-11T19:27:31.435444+00:00",
+    "generated_at": "2026-11-12T18:43:09.811734+00:00",
     "engine_status": "multisource_active",
     "fixture_count": 20
   },
@@ -1814,113 +1814,113 @@
       }
     },
     {
-      "fixture_id": "espn_401878609",
+      "fixture_id": "espn_401878608",
       "league": "USL Super League",
-      "kickoff_iso": "2026-11-12T00:00Z",
-      "home_team": "DC Power FC",
-      "away_team": "Brooklyn FC",
-      "home_color": "#2563EB",
-      "away_color": "#111827",
-      "home_emoji": "\u26bd",
-      "away_emoji": "\ud83c\udf09",
+      "kickoff_iso": "2026-11-14T00:30Z",
+      "home_team": "Lexington SC",
+      "away_team": "Fort Lauderdale United FC",
+      "home_color": "#00529B",
+      "away_color": "#059669",
+      "home_emoji": "\ud83d\udc0e",
+      "away_emoji": "\u26bd",
       "home_score": 0,
       "away_score": 0,
       "status": "STATUS_SCHEDULED",
       "is_completed": false,
       "model_markets": {
-        "home_xg": 2.35,
-        "away_xg": 0.31,
+        "home_xg": 1.85,
+        "away_xg": 0.81,
         "moneyline": {
           "home": {
-            "prob": 82.1,
-            "fair_american": "-459"
+            "prob": 60.2,
+            "fair_american": "-151"
           },
           "draw": {
-            "prob": 14.9,
-            "fair_american": "+571"
+            "prob": 25.1,
+            "fair_american": "+298"
           },
           "away": {
-            "prob": 3.0,
-            "fair_american": "+3273"
+            "prob": 14.7,
+            "fair_american": "+582"
           }
         },
         "tie_no_bet": {
           "home": {
-            "prob": 96.5,
-            "fair_american": "-2770"
+            "prob": 80.4,
+            "fair_american": "-410"
           },
           "away": {
-            "prob": 3.5,
-            "fair_american": "+2770"
+            "prob": 19.6,
+            "fair_american": "+410"
           }
         },
         "totals": {
           "over_1_5": {
-            "prob": 74.2,
-            "fair_american": "-288"
+            "prob": 75.5,
+            "fair_american": "-308"
           },
           "under_1_5": {
-            "prob": 25.8,
-            "fair_american": "+288"
+            "prob": 24.5,
+            "fair_american": "+308"
           },
           "over_2_5": {
-            "prob": 47.9,
-            "fair_american": "+109"
+            "prob": 49.0,
+            "fair_american": "+104"
           },
           "under_2_5": {
-            "prob": 52.1,
-            "fair_american": "-109"
+            "prob": 51.0,
+            "fair_american": "-104"
           },
           "over_3_5": {
-            "prob": 25.3,
-            "fair_american": "+296"
+            "prob": 26.8,
+            "fair_american": "+273"
           },
           "under_3_5": {
-            "prob": 74.7,
-            "fair_american": "-296"
+            "prob": 73.2,
+            "fair_american": "-273"
           }
         },
         "spread": {
           "home_minus_1_5": {
-            "prob": 58.8,
-            "fair_american": "-143"
+            "prob": 35.9,
+            "fair_american": "+179"
           },
           "away_plus_1_5": {
-            "prob": 41.2,
-            "fair_american": "+143"
+            "prob": 64.1,
+            "fair_american": "-179"
           }
         },
         "player_props": [
           {
-            "player_name": "Key Attacker (DC )",
-            "team": "DC Power FC",
+            "player_name": "Key Attacker (Lex)",
+            "team": "Lexington SC",
             "anytime_goalscorer": {
-              "prob": 50.6,
-              "fair_american": "-102"
+              "prob": 42.6,
+              "fair_american": "+135"
             },
             "anytime_assist": {
-              "prob": 37.5,
-              "fair_american": "+167"
+              "prob": 30.9,
+              "fair_american": "+223"
             },
             "shots_over_25": {
-              "prob": 84.8,
-              "fair_american": "-557"
+              "prob": 71.5,
+              "fair_american": "-250"
             }
           },
           {
-            "player_name": "Key Attacker (Bro)",
-            "team": "Brooklyn FC",
+            "player_name": "Key Attacker (For)",
+            "team": "Fort Lauderdale United FC",
             "anytime_goalscorer": {
-              "prob": 8.9,
-              "fair_american": "+1026"
+              "prob": 21.6,
+              "fair_american": "+364"
             },
             "anytime_assist": {
-              "prob": 6.0,
-              "fair_american": "+1563"
+              "prob": 15.0,
+              "fair_american": "+569"
             },
             "shots_over_25": {
-              "prob": 2.5,
-              "fair_american": "+3878"
+              "prob": 22.2,
+              "fair_american": "+351"
             }
           }
         ]
