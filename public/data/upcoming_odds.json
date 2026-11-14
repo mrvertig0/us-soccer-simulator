@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-11-13T18:25:39.820823+00:00",
+    "generated_at": "2026-11-14T16:51:50.025622+00:00",
     "engine_status": "multisource_active",
-    "fixture_count": 7
+    "fixture_count": 8
   },
   "fixtures": [
     {
@@ -113,119 +113,6 @@
             "shots_over_25": {
               "prob": 44.8,
               "fair_american": "+123"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "espn_401878608",
-      "league": "USL Super League",
-      "kickoff_iso": "2026-11-14T00:30Z",
-      "home_team": "Lexington SC",
-      "away_team": "Fort Lauderdale United FC",
-      "home_color": "#00529B",
-      "away_color": "#059669",
-      "home_emoji": "\ud83d\udc0e",
-      "away_emoji": "\u26bd",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
-      "model_markets": {
-        "home_xg": 1.85,
-        "away_xg": 0.81,
-        "moneyline": {
-          "home": {
-            "prob": 60.2,
-            "fair_american": "-151"
-          },
-          "draw": {
-            "prob": 25.1,
-            "fair_american": "+298"
-          },
-          "away": {
-            "prob": 14.7,
-            "fair_american": "+582"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 80.4,
-            "fair_american": "-410"
-          },
-          "away": {
-            "prob": 19.6,
-            "fair_american": "+410"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.5,
-            "fair_american": "-308"
-          },
-          "under_1_5": {
-            "prob": 24.5,
-            "fair_american": "+308"
-          },
-          "over_2_5": {
-            "prob": 49.0,
-            "fair_american": "+104"
-          },
-          "under_2_5": {
-            "prob": 51.0,
-            "fair_american": "-104"
-          },
-          "over_3_5": {
-            "prob": 26.8,
-            "fair_american": "+273"
-          },
-          "under_3_5": {
-            "prob": 73.2,
-            "fair_american": "-273"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 35.9,
-            "fair_american": "+179"
-          },
-          "away_plus_1_5": {
-            "prob": 64.1,
-            "fair_american": "-179"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (Lex)",
-            "team": "Lexington SC",
-            "anytime_goalscorer": {
-              "prob": 42.6,
-              "fair_american": "+135"
-            },
-            "anytime_assist": {
-              "prob": 30.9,
-              "fair_american": "+223"
-            },
-            "shots_over_25": {
-              "prob": 71.5,
-              "fair_american": "-250"
-            }
-          },
-          {
-            "player_name": "Key Attacker (For)",
-            "team": "Fort Lauderdale United FC",
-            "anytime_goalscorer": {
-              "prob": 21.6,
-              "fair_american": "+364"
-            },
-            "anytime_assist": {
-              "prob": 15.0,
-              "fair_american": "+569"
-            },
-            "shots_over_25": {
-              "prob": 22.2,
-              "fair_american": "+351"
             }
           }
         ]
@@ -565,6 +452,232 @@
             "shots_over_25": {
               "prob": 5.6,
               "fair_american": "+1672"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401878628",
+      "league": "USL Super League",
+      "kickoff_iso": "2026-11-15T22:00Z",
+      "home_team": "Sporting Jax",
+      "away_team": "DC Power FC",
+      "home_color": "#2563EB",
+      "away_color": "#2563EB",
+      "home_emoji": "\u26bd",
+      "away_emoji": "\u26bd",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 1.16,
+        "away_xg": 1.5,
+        "moneyline": {
+          "home": {
+            "prob": 27.8,
+            "fair_american": "+260"
+          },
+          "draw": {
+            "prob": 28.9,
+            "fair_american": "+246"
+          },
+          "away": {
+            "prob": 43.3,
+            "fair_american": "+131"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 39.1,
+            "fair_american": "+156"
+          },
+          "away": {
+            "prob": 60.9,
+            "fair_american": "-156"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-314"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+314"
+          },
+          "over_2_5": {
+            "prob": 49.4,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.6,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+266"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-266"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 11.7,
+            "fair_american": "+751"
+          },
+          "away_plus_1_5": {
+            "prob": 88.3,
+            "fair_american": "-751"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Spo)",
+            "team": "Sporting Jax",
+            "anytime_goalscorer": {
+              "prob": 29.4,
+              "fair_american": "+240"
+            },
+            "anytime_assist": {
+              "prob": 20.7,
+              "fair_american": "+383"
+            },
+            "shots_over_25": {
+              "prob": 40.9,
+              "fair_american": "+144"
+            }
+          },
+          {
+            "player_name": "Key Attacker (DC )",
+            "team": "DC Power FC",
+            "anytime_goalscorer": {
+              "prob": 36.2,
+              "fair_american": "+176"
+            },
+            "anytime_assist": {
+              "prob": 25.9,
+              "fair_american": "+286"
+            },
+            "shots_over_25": {
+              "prob": 57.7,
+              "fair_american": "-136"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401878607",
+      "league": "USL Super League",
+      "kickoff_iso": "2026-11-15T22:00Z",
+      "home_team": "Tampa Bay Sun FC",
+      "away_team": "Dallas Trinity FC",
+      "home_color": "#005A36",
+      "away_color": "#002D62",
+      "home_emoji": "\ud83c\udf34",
+      "away_emoji": "\ud83e\udd20",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 1.6,
+        "away_xg": 1.06,
+        "moneyline": {
+          "home": {
+            "prob": 48.1,
+            "fair_american": "+108"
+          },
+          "draw": {
+            "prob": 28.2,
+            "fair_american": "+254"
+          },
+          "away": {
+            "prob": 23.7,
+            "fair_american": "+322"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 67.0,
+            "fair_american": "-203"
+          },
+          "away": {
+            "prob": 33.0,
+            "fair_american": "+203"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-313"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+313"
+          },
+          "over_2_5": {
+            "prob": 49.3,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.7,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.2,
+            "fair_american": "+267"
+          },
+          "under_3_5": {
+            "prob": 72.8,
+            "fair_american": "-267"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 25.7,
+            "fair_american": "+289"
+          },
+          "away_plus_1_5": {
+            "prob": 74.3,
+            "fair_american": "-289"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (Tam)",
+            "team": "Tampa Bay Sun FC",
+            "anytime_goalscorer": {
+              "prob": 38.1,
+              "fair_american": "+162"
+            },
+            "anytime_assist": {
+              "prob": 27.4,
+              "fair_american": "+265"
+            },
+            "shots_over_25": {
+              "prob": 62.0,
+              "fair_american": "-163"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Dal)",
+            "team": "Dallas Trinity FC",
+            "anytime_goalscorer": {
+              "prob": 27.2,
+              "fair_american": "+267"
+            },
+            "anytime_assist": {
+              "prob": 19.1,
+              "fair_american": "+423"
+            },
+            "shots_over_25": {
+              "prob": 35.6,
+              "fair_american": "+181"
             }
           }
         ]
