@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-11-15T17:35:28.486922+00:00",
+    "generated_at": "2026-11-16T20:49:27.361050+00:00",
     "engine_status": "multisource_active",
-    "fixture_count": 8
+    "fixture_count": 7
   },
   "fixtures": [
     {
@@ -241,10 +241,10 @@
       "away_color": "#C8102E",
       "home_emoji": "\ud83d\uddfd",
       "away_emoji": "\ud83c\udf0a",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 1,
+      "away_score": 2,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.05,
         "away_xg": 1.61,
@@ -354,10 +354,10 @@
       "away_color": "#2563EB",
       "home_emoji": "\u26bd",
       "away_emoji": "\u26bd",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 1,
+      "away_score": 1,
+      "status": "STATUS_FULL_TIME",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.16,
         "away_xg": 1.5,
@@ -452,119 +452,6 @@
             "shots_over_25": {
               "prob": 57.7,
               "fair_american": "-136"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "espn_401878607",
-      "league": "USL Super League",
-      "kickoff_iso": "2026-11-15T22:00Z",
-      "home_team": "Tampa Bay Sun FC",
-      "away_team": "Dallas Trinity FC",
-      "home_color": "#005A36",
-      "away_color": "#002D62",
-      "home_emoji": "\ud83c\udf34",
-      "away_emoji": "\ud83e\udd20",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_POSTPONED",
-      "is_completed": false,
-      "model_markets": {
-        "home_xg": 1.6,
-        "away_xg": 1.06,
-        "moneyline": {
-          "home": {
-            "prob": 48.1,
-            "fair_american": "+108"
-          },
-          "draw": {
-            "prob": 28.2,
-            "fair_american": "+254"
-          },
-          "away": {
-            "prob": 23.7,
-            "fair_american": "+322"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 67.0,
-            "fair_american": "-203"
-          },
-          "away": {
-            "prob": 33.0,
-            "fair_american": "+203"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.8,
-            "fair_american": "-313"
-          },
-          "under_1_5": {
-            "prob": 24.2,
-            "fair_american": "+313"
-          },
-          "over_2_5": {
-            "prob": 49.3,
-            "fair_american": "+103"
-          },
-          "under_2_5": {
-            "prob": 50.7,
-            "fair_american": "-103"
-          },
-          "over_3_5": {
-            "prob": 27.2,
-            "fair_american": "+267"
-          },
-          "under_3_5": {
-            "prob": 72.8,
-            "fair_american": "-267"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 25.7,
-            "fair_american": "+289"
-          },
-          "away_plus_1_5": {
-            "prob": 74.3,
-            "fair_american": "-289"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (Tam)",
-            "team": "Tampa Bay Sun FC",
-            "anytime_goalscorer": {
-              "prob": 38.1,
-              "fair_american": "+162"
-            },
-            "anytime_assist": {
-              "prob": 27.4,
-              "fair_american": "+265"
-            },
-            "shots_over_25": {
-              "prob": 62.0,
-              "fair_american": "-163"
-            }
-          },
-          {
-            "player_name": "Key Attacker (Dal)",
-            "team": "Dallas Trinity FC",
-            "anytime_goalscorer": {
-              "prob": 27.2,
-              "fair_american": "+267"
-            },
-            "anytime_assist": {
-              "prob": 19.1,
-              "fair_american": "+423"
-            },
-            "shots_over_25": {
-              "prob": 35.6,
-              "fair_american": "+181"
             }
           }
         ]
