@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-16T20:49:27.361050+00:00",
+    "generated_at": "2026-11-17T19:38:55.981230+00:00",
     "engine_status": "multisource_active",
     "fixture_count": 7
   },
@@ -467,10 +467,10 @@
       "away_color": "#8A1538",
       "home_emoji": "\u26bd",
       "away_emoji": "\ud83e\udd81",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
+      "home_score": 1,
+      "away_score": 2,
+      "status": "STATUS_FINAL_AET",
+      "is_completed": true,
       "model_markets": {
         "home_xg": 1.11,
         "away_xg": 1.55,
