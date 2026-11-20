@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-11-19T19:22:55.967601+00:00",
+    "generated_at": "2026-11-20T18:58:47.795378+00:00",
     "engine_status": "multisource_active",
-    "fixture_count": 9
+    "fixture_count": 10
   },
   "fixtures": [
     {
@@ -232,232 +232,6 @@
       }
     },
     {
-      "fixture_id": "espn_401933535",
-      "league": "MLS",
-      "kickoff_iso": "2026-11-20T00:30Z",
-      "home_team": "Orlando City SC",
-      "away_team": "FC Cincinnati",
-      "home_color": "#DC2626",
-      "away_color": "#F05A22",
-      "home_emoji": "\u26bd",
-      "away_emoji": "\ud83e\udd81",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
-      "model_markets": {
-        "home_xg": 1.99,
-        "away_xg": 0.67,
-        "moneyline": {
-          "home": {
-            "prob": 66.8,
-            "fair_american": "-201"
-          },
-          "draw": {
-            "prob": 22.7,
-            "fair_american": "+340"
-          },
-          "away": {
-            "prob": 10.5,
-            "fair_american": "+852"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 86.4,
-            "fair_american": "-636"
-          },
-          "away": {
-            "prob": 13.6,
-            "fair_american": "+636"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.2,
-            "fair_american": "-303"
-          },
-          "under_1_5": {
-            "prob": 24.8,
-            "fair_american": "+303"
-          },
-          "over_2_5": {
-            "prob": 48.8,
-            "fair_american": "+105"
-          },
-          "under_2_5": {
-            "prob": 51.2,
-            "fair_american": "-105"
-          },
-          "over_3_5": {
-            "prob": 26.5,
-            "fair_american": "+277"
-          },
-          "under_3_5": {
-            "prob": 73.5,
-            "fair_american": "-277"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 42.1,
-            "fair_american": "+138"
-          },
-          "away_plus_1_5": {
-            "prob": 57.9,
-            "fair_american": "-138"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (Orl)",
-            "team": "Orlando City SC",
-            "anytime_goalscorer": {
-              "prob": 45.0,
-              "fair_american": "+122"
-            },
-            "anytime_assist": {
-              "prob": 32.8,
-              "fair_american": "+205"
-            },
-            "shots_over_25": {
-              "prob": 75.9,
-              "fair_american": "-315"
-            }
-          },
-          {
-            "player_name": "Key Attacker (FC )",
-            "team": "FC Cincinnati",
-            "anytime_goalscorer": {
-              "prob": 18.2,
-              "fair_american": "+449"
-            },
-            "anytime_assist": {
-              "prob": 12.5,
-              "fair_american": "+697"
-            },
-            "shots_over_25": {
-              "prob": 15.2,
-              "fair_american": "+557"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fixture_id": "espn_401933555",
-      "league": "MLS",
-      "kickoff_iso": "2026-11-20T03:00Z",
-      "home_team": "Seattle Sounders FC",
-      "away_team": "Real Salt Lake",
-      "home_color": "#5D9741",
-      "away_color": "#B30838",
-      "home_emoji": "\ud83c\udf32",
-      "away_emoji": "\ud83d\udc51",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
-      "model_markets": {
-        "home_xg": 1.32,
-        "away_xg": 1.34,
-        "moneyline": {
-          "home": {
-            "prob": 34.8,
-            "fair_american": "+187"
-          },
-          "draw": {
-            "prob": 29.4,
-            "fair_american": "+240"
-          },
-          "away": {
-            "prob": 35.8,
-            "fair_american": "+180"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 49.4,
-            "fair_american": "+103"
-          },
-          "away": {
-            "prob": 50.6,
-            "fair_american": "-103"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 75.9,
-            "fair_american": "-315"
-          },
-          "under_1_5": {
-            "prob": 24.1,
-            "fair_american": "+315"
-          },
-          "over_2_5": {
-            "prob": 49.4,
-            "fair_american": "+102"
-          },
-          "under_2_5": {
-            "prob": 50.6,
-            "fair_american": "-102"
-          },
-          "over_3_5": {
-            "prob": 27.3,
-            "fair_american": "+266"
-          },
-          "under_3_5": {
-            "prob": 72.7,
-            "fair_american": "-266"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 16.2,
-            "fair_american": "+519"
-          },
-          "away_plus_1_5": {
-            "prob": 83.8,
-            "fair_american": "-519"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (Sea)",
-            "team": "Seattle Sounders FC",
-            "anytime_goalscorer": {
-              "prob": 32.7,
-              "fair_american": "+206"
-            },
-            "anytime_assist": {
-              "prob": 23.2,
-              "fair_american": "+331"
-            },
-            "shots_over_25": {
-              "prob": 49.2,
-              "fair_american": "+103"
-            }
-          },
-          {
-            "player_name": "Key Attacker (Rea)",
-            "team": "Real Salt Lake",
-            "anytime_goalscorer": {
-              "prob": 33.1,
-              "fair_american": "+202"
-            },
-            "anytime_assist": {
-              "prob": 23.5,
-              "fair_american": "+325"
-            },
-            "shots_over_25": {
-              "prob": 50.1,
-              "fair_american": "-101"
-            }
-          }
-        ]
-      }
-    },
-    {
       "fixture_id": "espn_401935130",
       "league": "USL Championship",
       "kickoff_iso": "2026-11-21T17:00Z",
@@ -571,6 +345,232 @@
       }
     },
     {
+      "fixture_id": "espn_401933733",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-21T19:00Z",
+      "home_team": "New England Revolution",
+      "away_team": "Philadelphia Union",
+      "home_color": "#0A2240",
+      "away_color": "#002D55",
+      "home_emoji": "\ud83c\udfa9",
+      "away_emoji": "\ud83d\udd14",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 2.09,
+        "away_xg": 0.57,
+        "moneyline": {
+          "home": {
+            "prob": 71.3,
+            "fair_american": "-248"
+          },
+          "draw": {
+            "prob": 20.7,
+            "fair_american": "+382"
+          },
+          "away": {
+            "prob": 7.9,
+            "fair_american": "+1158"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 90.0,
+            "fair_american": "-897"
+          },
+          "away": {
+            "prob": 10.0,
+            "fair_american": "+897"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.0,
+            "fair_american": "-300"
+          },
+          "under_1_5": {
+            "prob": 25.0,
+            "fair_american": "+300"
+          },
+          "over_2_5": {
+            "prob": 48.6,
+            "fair_american": "+106"
+          },
+          "under_2_5": {
+            "prob": 51.4,
+            "fair_american": "-106"
+          },
+          "over_3_5": {
+            "prob": 26.2,
+            "fair_american": "+281"
+          },
+          "under_3_5": {
+            "prob": 73.8,
+            "fair_american": "-281"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 46.7,
+            "fair_american": "+114"
+          },
+          "away_plus_1_5": {
+            "prob": 53.3,
+            "fair_american": "-114"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (New)",
+            "team": "New England Revolution",
+            "anytime_goalscorer": {
+              "prob": 46.6,
+              "fair_american": "+115"
+            },
+            "anytime_assist": {
+              "prob": 34.2,
+              "fair_american": "+193"
+            },
+            "shots_over_25": {
+              "prob": 78.7,
+              "fair_american": "-370"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Phi)",
+            "team": "Philadelphia Union",
+            "anytime_goalscorer": {
+              "prob": 15.7,
+              "fair_american": "+536"
+            },
+            "anytime_assist": {
+              "prob": 10.8,
+              "fair_american": "+828"
+            },
+            "shots_over_25": {
+              "prob": 10.8,
+              "fair_american": "+828"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401933732",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-21T21:00Z",
+      "home_team": "FC Dallas",
+      "away_team": "Portland Timbers",
+      "home_color": "#E31B23",
+      "away_color": "#004812",
+      "home_emoji": "\ud83e\udd20",
+      "away_emoji": "\ud83e\ude93",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 0.98,
+        "away_xg": 1.68,
+        "moneyline": {
+          "home": {
+            "prob": 20.6,
+            "fair_american": "+385"
+          },
+          "draw": {
+            "prob": 27.4,
+            "fair_american": "+265"
+          },
+          "away": {
+            "prob": 52.0,
+            "fair_american": "-108"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 28.4,
+            "fair_american": "+252"
+          },
+          "away": {
+            "prob": 71.6,
+            "fair_american": "-252"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.7,
+            "fair_american": "-312"
+          },
+          "under_1_5": {
+            "prob": 24.3,
+            "fair_american": "+312"
+          },
+          "over_2_5": {
+            "prob": 49.2,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.8,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.1,
+            "fair_american": "+269"
+          },
+          "under_3_5": {
+            "prob": 72.9,
+            "fair_american": "-269"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 7.7,
+            "fair_american": "+1195"
+          },
+          "away_plus_1_5": {
+            "prob": 92.3,
+            "fair_american": "-1195"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (FC )",
+            "team": "FC Dallas",
+            "anytime_goalscorer": {
+              "prob": 25.5,
+              "fair_american": "+293"
+            },
+            "anytime_assist": {
+              "prob": 17.8,
+              "fair_american": "+462"
+            },
+            "shots_over_25": {
+              "prob": 31.2,
+              "fair_american": "+220"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Por)",
+            "team": "Portland Timbers",
+            "anytime_goalscorer": {
+              "prob": 39.6,
+              "fair_american": "+153"
+            },
+            "anytime_assist": {
+              "prob": 28.5,
+              "fair_american": "+250"
+            },
+            "shots_over_25": {
+              "prob": 65.2,
+              "fair_american": "-188"
+            }
+          }
+        ]
+      }
+    },
+    {
       "fixture_id": "espn_401878606",
       "league": "USL Super League",
       "kickoff_iso": "2026-11-21T22:00Z",
@@ -678,6 +678,119 @@
             "shots_over_25": {
               "prob": 59.9,
               "fair_american": "-149"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401933739",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-21T23:00Z",
+      "home_team": "Inter Miami CF",
+      "away_team": "Columbus Crew",
+      "home_color": "#F7B5CD",
+      "away_color": "#FED100",
+      "home_emoji": "\ud83e\udda9",
+      "away_emoji": "\ud83d\udc77",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 1.82,
+        "away_xg": 0.84,
+        "moneyline": {
+          "home": {
+            "prob": 58.7,
+            "fair_american": "-142"
+          },
+          "draw": {
+            "prob": 25.6,
+            "fair_american": "+291"
+          },
+          "away": {
+            "prob": 15.7,
+            "fair_american": "+539"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 79.0,
+            "fair_american": "-375"
+          },
+          "away": {
+            "prob": 21.0,
+            "fair_american": "+375"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.5,
+            "fair_american": "-308"
+          },
+          "under_1_5": {
+            "prob": 24.5,
+            "fair_american": "+308"
+          },
+          "over_2_5": {
+            "prob": 49.1,
+            "fair_american": "+104"
+          },
+          "under_2_5": {
+            "prob": 50.9,
+            "fair_american": "-104"
+          },
+          "over_3_5": {
+            "prob": 26.9,
+            "fair_american": "+272"
+          },
+          "under_3_5": {
+            "prob": 73.1,
+            "fair_american": "-272"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 34.6,
+            "fair_american": "+189"
+          },
+          "away_plus_1_5": {
+            "prob": 65.4,
+            "fair_american": "-189"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Lionel Messi",
+            "team": "Inter Miami CF",
+            "anytime_goalscorer": {
+              "prob": 49.9,
+              "fair_american": "+100"
+            },
+            "anytime_assist": {
+              "prob": 53.4,
+              "fair_american": "-115"
+            },
+            "shots_over_25": {
+              "prob": 90.9,
+              "fair_american": "-1000"
+            }
+          },
+          {
+            "player_name": "Cucho Hernandez",
+            "team": "Columbus Crew",
+            "anytime_goalscorer": {
+              "prob": 28.5,
+              "fair_american": "+250"
+            },
+            "anytime_assist": {
+              "prob": 22.3,
+              "fair_american": "+349"
+            },
+            "shots_over_25": {
+              "prob": 44.6,
+              "fair_american": "+124"
             }
           }
         ]
