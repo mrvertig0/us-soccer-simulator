@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-20T18:58:47.795378+00:00",
+    "generated_at": "2026-11-21T17:53:18.978628+00:00",
     "engine_status": "multisource_active",
     "fixture_count": 10
   },
@@ -241,9 +241,9 @@
       "away_color": "#7B2CBF",
       "home_emoji": "\ud83e\udd81",
       "away_emoji": "\ud83c\udfc7",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "STATUS_FIRST_HALF",
       "is_completed": false,
       "model_markets": {
         "home_xg": 1.96,
