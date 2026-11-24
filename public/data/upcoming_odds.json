@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-23T22:28:13.075767+00:00",
+    "generated_at": "2026-11-24T21:00:10.871665+00:00",
     "engine_status": "multisource_active",
     "fixture_count": 6
   },
@@ -458,119 +458,6 @@
       }
     },
     {
-      "fixture_id": "espn_401933728",
-      "league": "MLS",
-      "kickoff_iso": "2026-11-24T01:00Z",
-      "home_team": "St. Louis CITY SC",
-      "away_team": "LAFC",
-      "home_color": "#DD004A",
-      "away_color": "#C39E67",
-      "home_emoji": "\u26bd",
-      "away_emoji": "\ud83d\udda4",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "STATUS_SCHEDULED",
-      "is_completed": false,
-      "model_markets": {
-        "home_xg": 2.3,
-        "away_xg": 0.36,
-        "moneyline": {
-          "home": {
-            "prob": 80.2,
-            "fair_american": "-404"
-          },
-          "draw": {
-            "prob": 16.1,
-            "fair_american": "+522"
-          },
-          "away": {
-            "prob": 3.7,
-            "fair_american": "+2575"
-          }
-        },
-        "tie_no_bet": {
-          "home": {
-            "prob": 95.5,
-            "fair_american": "-2144"
-          },
-          "away": {
-            "prob": 4.5,
-            "fair_american": "+2144"
-          }
-        },
-        "totals": {
-          "over_1_5": {
-            "prob": 74.4,
-            "fair_american": "-290"
-          },
-          "under_1_5": {
-            "prob": 25.6,
-            "fair_american": "+290"
-          },
-          "over_2_5": {
-            "prob": 48.1,
-            "fair_american": "+108"
-          },
-          "under_2_5": {
-            "prob": 51.9,
-            "fair_american": "-108"
-          },
-          "over_3_5": {
-            "prob": 25.5,
-            "fair_american": "+293"
-          },
-          "under_3_5": {
-            "prob": 74.5,
-            "fair_american": "-293"
-          }
-        },
-        "spread": {
-          "home_minus_1_5": {
-            "prob": 56.5,
-            "fair_american": "-130"
-          },
-          "away_plus_1_5": {
-            "prob": 43.5,
-            "fair_american": "+130"
-          }
-        },
-        "player_props": [
-          {
-            "player_name": "Key Attacker (St.)",
-            "team": "St. Louis CITY SC",
-            "anytime_goalscorer": {
-              "prob": 49.8,
-              "fair_american": "+101"
-            },
-            "anytime_assist": {
-              "prob": 36.9,
-              "fair_american": "+171"
-            },
-            "shots_over_25": {
-              "prob": 83.7,
-              "fair_american": "-515"
-            }
-          },
-          {
-            "player_name": "Key Attacker (LAF)",
-            "team": "LAFC",
-            "anytime_goalscorer": {
-              "prob": 10.2,
-              "fair_american": "+877"
-            },
-            "anytime_assist": {
-              "prob": 6.9,
-              "fair_american": "+1339"
-            },
-            "shots_over_25": {
-              "prob": 3.7,
-              "fair_american": "+2631"
-            }
-          }
-        ]
-      }
-    },
-    {
       "fixture_id": "espn_401878607",
       "league": "USL Super League",
       "kickoff_iso": "2026-11-24T23:00Z",
@@ -678,6 +565,119 @@
             "shots_over_25": {
               "prob": 35.6,
               "fair_american": "+181"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "espn_401933738",
+      "league": "MLS",
+      "kickoff_iso": "2026-11-25T03:00Z",
+      "home_team": "San Jose Earthquakes",
+      "away_team": "Houston Dynamo FC",
+      "home_color": "#0051BA",
+      "away_color": "#FF6B00",
+      "home_emoji": "\u26a1",
+      "away_emoji": "\u26a1",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "STATUS_SCHEDULED",
+      "is_completed": false,
+      "model_markets": {
+        "home_xg": 1.51,
+        "away_xg": 1.15,
+        "moneyline": {
+          "home": {
+            "prob": 43.7,
+            "fair_american": "+129"
+          },
+          "draw": {
+            "prob": 28.9,
+            "fair_american": "+246"
+          },
+          "away": {
+            "prob": 27.4,
+            "fair_american": "+265"
+          }
+        },
+        "tie_no_bet": {
+          "home": {
+            "prob": 61.5,
+            "fair_american": "-160"
+          },
+          "away": {
+            "prob": 38.5,
+            "fair_american": "+160"
+          }
+        },
+        "totals": {
+          "over_1_5": {
+            "prob": 75.8,
+            "fair_american": "-314"
+          },
+          "under_1_5": {
+            "prob": 24.2,
+            "fair_american": "+314"
+          },
+          "over_2_5": {
+            "prob": 49.4,
+            "fair_american": "+103"
+          },
+          "under_2_5": {
+            "prob": 50.6,
+            "fair_american": "-103"
+          },
+          "over_3_5": {
+            "prob": 27.3,
+            "fair_american": "+266"
+          },
+          "under_3_5": {
+            "prob": 72.7,
+            "fair_american": "-266"
+          }
+        },
+        "spread": {
+          "home_minus_1_5": {
+            "prob": 22.4,
+            "fair_american": "+347"
+          },
+          "away_plus_1_5": {
+            "prob": 77.6,
+            "fair_american": "-347"
+          }
+        },
+        "player_props": [
+          {
+            "player_name": "Key Attacker (San)",
+            "team": "San Jose Earthquakes",
+            "anytime_goalscorer": {
+              "prob": 36.4,
+              "fair_american": "+175"
+            },
+            "anytime_assist": {
+              "prob": 26.1,
+              "fair_american": "+284"
+            },
+            "shots_over_25": {
+              "prob": 58.1,
+              "fair_american": "-139"
+            }
+          },
+          {
+            "player_name": "Key Attacker (Hou)",
+            "team": "Houston Dynamo FC",
+            "anytime_goalscorer": {
+              "prob": 29.2,
+              "fair_american": "+243"
+            },
+            "anytime_assist": {
+              "prob": 20.5,
+              "fair_american": "+387"
+            },
+            "shots_over_25": {
+              "prob": 40.4,
+              "fair_american": "+148"
             }
           }
         ]
